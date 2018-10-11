@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Directory {
     private String path;
-//you didn't override toString();
+
     @Override
     public String toString() {
         return getClass().getName() + "@path:" + path;
