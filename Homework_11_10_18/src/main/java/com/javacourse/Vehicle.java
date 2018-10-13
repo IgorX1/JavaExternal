@@ -1,6 +1,8 @@
 package com.javacourse;
 
-public abstract class Vehicle {
+import java.util.Objects;
+
+public abstract class Vehicle implements Cloneable{
 
     protected int price;
     protected int speed;
@@ -28,5 +30,29 @@ public abstract class Vehicle {
 
     public void setYearManufactured(int yearManufactured) {
         this.yearManufactured = yearManufactured;
+    }
+
+    @Override
+    public Vehicle clone(){
+        try{
+            return (Vehicle)super.clone();
+        }catch (CloneNotSupportedException exc){
+            throw new AssertionError();
+        }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Vehicle vehicle = (Vehicle) o;
+        return price == vehicle.price &&
+                speed == vehicle.speed &&
+                yearManufactured == vehicle.yearManufactured;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(price, speed, yearManufactured);
     }
 }
