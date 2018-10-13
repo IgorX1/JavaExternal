@@ -4,15 +4,15 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Fibonacci {
-    private ArrayList<Integer> fib = new ArrayList<Integer>();
+    private static ArrayList<Integer> fib = new ArrayList<Integer>();
 
-    public void showResultsOfCalculations(){
+    public static void showFibonacciNumbersWithMinMaxAndPercentage(){
         fillFibArray();
         showMaxOddAndEvenFib();
         showPercentageOfOddAndEven();
     }
 
-    private void fillFibArray(){
+    private static void fillFibArray(){
         int f0 = 0, f1 = 1, next = 0;
         int n = getNumOfFibonacciNumbers();
         for(int i=0; i<n; ++i){
@@ -34,13 +34,13 @@ public class Fibonacci {
         }
     }
 
-    private int getNumOfFibonacciNumbers(){
+    private static int getNumOfFibonacciNumbers(){
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the number of fibonacci numbers to generate:");
         return scanner.nextInt();
     }
 
-    private void showMaxOddAndEvenFib(){
+    private static void showMaxOddAndEvenFib(){
         for(int i=fib.size()-1; i>=0; --i){
             if(Number.isEven(fib.get(i))){
                 System.out.println("Maximal even fibonacci number:"+ fib.get(i));
@@ -55,7 +55,7 @@ public class Fibonacci {
         }
     }
 
-    private void showPercentageOfOddAndEven(){
+    private static void showPercentageOfOddAndEven(){
         int numOfOdd = 0, numOfEven = 0;
         for(int i=0; i<fib.size(); ++i){
             if(Number.isEven(fib.get(i))){

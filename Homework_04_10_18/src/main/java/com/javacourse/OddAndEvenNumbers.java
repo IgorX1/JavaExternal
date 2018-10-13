@@ -4,39 +4,26 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class OddAndEvenNumbers {
-    private Number[] numbers;
+    private static Number[] numbers;
 
-    public OddAndEvenNumbers(){
-    }
-
-    public void showOddAndEvenNumbersInConsole(){
-        Interval interval = getIntervalFromUser();
+    public static void showOddAndEvenNumbersInConsole(){
+        Interval interval = Interval.getInstanceFromConsole();
         fillNumberArrayAndCheckIfEven(interval);
         showEvenFromStart();
         showOddFromEnd();
-        showSumOfOddAndEvenNumbers();
+        showSumOfEvenNumbers();
+        showSumOfOddNumbers();
     }
 
-    private Interval getIntervalFromUser(){
-        Scanner scanner = new Scanner(System.in);
-        int a, b;//boundaries of the interval
-
-        System.out.print("Enter start of the interval:");
-        a = scanner.nextInt();
-        System.out.print("Enter end of the interval:");
-        b = scanner.nextInt();
-
-        return new Interval(a,b);
-    }
-
-    private void fillNumberArrayAndCheckIfEven(Interval interval){
+    private static Number[] fillNumberArrayAndCheckIfEven(Interval interval){
         numbers = new Number[interval.getLength()];
         for(int i=interval.getStart(), j=0; j<numbers.length; ++i, ++j){
             numbers[j] = new Number(i);
         }
+        return numbers;
     }
 
-    private void showEvenFromStart(){
+    private static void showEvenFromStart(){
         System.out.println("Even numbers:");
         for(Number n: numbers){
             if(n.isEven())
@@ -45,7 +32,7 @@ public class OddAndEvenNumbers {
         if(numbers.length>0) System.out.println();
     }
 
-    private void showOddFromEnd(){
+    private static void showOddFromEnd(){
         System.out.println("Odd numbers:");
         for(Number n: numbers){
             if(!n.isEven())
@@ -54,16 +41,27 @@ public class OddAndEvenNumbers {
         if(numbers.length>0) System.out.println();
     }
 
-    private void showSumOfOddAndEvenNumbers(){
-        int evenSum = 0, oddSum = 0;
+    private static int showSumOfEvenNumbers(){
+        int evenSum = 0;
         for(Number n: numbers){
             if(n.isEven())
                 evenSum += n.getValue();
-            else oddSum += n.getValue();
         }
         if(numbers.length>0){
             System.out.println("Even sum:"+evenSum);
+        }
+        return evenSum;
+    }
+
+    private static int showSumOfOddNumbers() {
+        int oddSum = 0;
+        for(Number n: numbers){
+            if(!n.isEven())
+                oddSum += n.getValue();
+        }
+        if(numbers.length>0){
             System.out.println("Odd sum:"+oddSum);
         }
+        return oddSum;
     }
 }
