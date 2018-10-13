@@ -28,8 +28,8 @@ public class TextFile extends File{
         if (!super.equals(o)) return false;
         TextFile textFile = (TextFile) o;
         return content.toString().equals(textFile.content.toString()) &&
-                Objects.equals(directory, textFile.directory) &&
-                Objects.equals(name, textFile.name);
+                directory.equals(textFile.directory) &&
+                name.equals(textFile.name);
     }
 
     /*I decided to calculate hash on the string representation of content,

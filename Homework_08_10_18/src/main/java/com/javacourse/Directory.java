@@ -14,7 +14,7 @@ public class Directory {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Directory directory = (Directory) o;
-        return Objects.equals(path, directory.path);
+        return path.equals(directory.path);
     }
 
     @Override

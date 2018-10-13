@@ -15,6 +15,7 @@ public abstract class File {
 
     public File(String path, String name) {
         this.directory = new Directory.DirectoryBuilder(path).name(name).build();
+        this.name = name;
     }
 
     @Override
@@ -30,8 +31,8 @@ public abstract class File {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         File file = (File) o;
-        return Objects.equals(directory, file.directory) &&
-                Objects.equals(name, file.name);
+        return directory.equals(file.directory) &&
+                name.equals(file.name);
     }
 
     @Override

@@ -10,6 +10,8 @@ public class App
     {
         TextFile a = new TextFile("123", "123");
         TextFile b = new TextFile("123", "123");
+        a.appendContent("abc");
+        b.appendContent("abc");
         System.out.println( a.equals(b) );
         System.out.println(a.hashCode());
         System.out.println(b.hashCode());
