@@ -1,7 +1,7 @@
 package com.javacourse;
 
 public class AmphibiousCar extends Vehicle implements Rideable, Swimable {
-    public AmphibiousCar(int price, int speed, int year) {
+    public AmphibiousCar(int speed, int year,int price) {
         this.price = price;
         this.speed = speed;
         this.yearManufactured = year;
