@@ -1,8 +1,6 @@
 package com.javacourse;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class VehicleFinder {
 
@@ -46,18 +44,41 @@ public class VehicleFinder {
     }
 
     public static List<Vehicle> getWithMaximalSpeed(List<Vehicle> vehicles){
-        Vehicle maximalSpeed = Collections.max(vehicles, (v1, v2)->{return v1.getSpeed()-v2.getSpeed();});
+        int maximalSpeed = Collections
+                .max(vehicles, (v1, v2)->{return v1.getSpeed()-v2.getSpeed();})
+                .getSpeed();
         List<Vehicle> res = new ArrayList();
-        vehicles.forEach(x->{if(x.getSpeed()==maximalSpeed.getSpeed()) res.add(x);});
+        vehicles.forEach(x->{
+            if(x.getSpeed()==maximalSpeed) res.add(x);
+        });
         return  res;
     }
 
     //TODO: implement it
     public static List<Vehicle> getWithMinPriceAndMaxSpeedYoungerThan5Years(List<Vehicle> vehicles){
+        final int AGE_LIMIT = 5;
+        int currentYear = Calendar.getInstance().get(Calendar.YEAR);
+
+        int minPrice = Collections
+                .min(vehicles, (Vehicle v1,Vehicle v2)->{return v1.getSpeed()-v2.getSpeed();})
+                .getPrice();
+
+        int maxSpeed = Collections
+                .max(vehicles, new Comparator<Vehicle>() {
+                    @Override
+                    public int compare(Vehicle v1, Vehicle v2) {
+                        return v1.getSpeed()-v2.getSpeed();
+                    }
+                }).getSpeed();
+
         List<Vehicle> res = new ArrayList();
-        for(var v:vehicles){
-            //if(v instanceof )
-        }
+        vehicles.forEach(x->{
+            if(x.getSpeed()==maxSpeed
+                && x.getPrice()==minPrice
+                && currentYear - x.getYearManufactured() < AGE_LIMIT){
+                res.add(x);
+            }
+        });
         return res;
     }
 
