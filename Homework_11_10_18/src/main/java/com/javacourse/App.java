@@ -22,6 +22,16 @@ public class App
 
         FilteredResult query3 = VehicleFinder.getFilteredByWaysOfMOving(vehicles);
         System.out.println(query3);
+
+        query = VehicleFinder.getWithMaximalSpeed(query3.flyable);
+        System.out.println("Flyable with maximal speed:");
+        query.forEach(n-> System.out.println(n));
+        query = VehicleFinder.getWithMaximalSpeed(query3.rideable);
+        System.out.println("Flyable with maximal rideable:");
+        query.forEach(n-> System.out.println(n));
+        query = VehicleFinder.getWithMaximalSpeed(query3.swimable);
+        System.out.println("Swimable with maximal speed:");
+        query.forEach(n-> System.out.println(n));
     }
 
     private static void fillVehicles(){

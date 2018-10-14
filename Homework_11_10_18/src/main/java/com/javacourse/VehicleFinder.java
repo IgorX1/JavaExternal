@@ -5,14 +5,6 @@ import java.util.Collections;
 import java.util.List;
 
 public class VehicleFinder {
-    //TODO: implement it
-    public static List<Vehicle> getWithMinPriceAndMaxSpeedYoungerThan5Years(List<Vehicle> vehicles){
-        List<Vehicle> res = new ArrayList();
-        for(var v:vehicles){
-            //if(v instanceof )
-        }
-        return res;
-    }
 
     public static List<Vehicle> getPlanesWithHeightMoreThan5000YearAfter2000(List<Vehicle> vehicles){
         final int YEAR_LIMIT = 2000;
@@ -54,7 +46,20 @@ public class VehicleFinder {
     }
 
     public static List<Vehicle> getWithMaximalSpeed(List<Vehicle> vehicles){
-
+        Vehicle maximalSpeed = Collections.max(vehicles, (v1, v2)->{return v1.getSpeed()-v2.getSpeed();});
+        List<Vehicle> res = new ArrayList();
+        vehicles.forEach(x->{if(x.getSpeed()==maximalSpeed.getSpeed()) res.add(x);});
+        return  res;
     }
+
+    //TODO: implement it
+    public static List<Vehicle> getWithMinPriceAndMaxSpeedYoungerThan5Years(List<Vehicle> vehicles){
+        List<Vehicle> res = new ArrayList();
+        for(var v:vehicles){
+            //if(v instanceof )
+        }
+        return res;
+    }
+
 
 }
