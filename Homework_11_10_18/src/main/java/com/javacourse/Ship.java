@@ -75,8 +75,8 @@ public class Ship extends Vehicle implements Swimable {
         if (!(o instanceof Ship)) return false;
         if (!super.equals(o)) return false;//allows us not to check these fields below
         Ship ship = (Ship) o;
-        return numberOfPassengers == ship.numberOfPassengers &&
-                port == ship.port;
+        return numberOfPassengers == ship.numberOfPassengers
+                && port == ship.port;
     }
 
     @Override

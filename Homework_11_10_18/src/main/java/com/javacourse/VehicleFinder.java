@@ -21,13 +21,13 @@ public class VehicleFinder {
         final int SPEED_HIGH_LIMIT = 500;
         final int SPEED_LOW_LIMIT = 200;
 
-        List<Vehicle> res = new ArrayList();
+        List<Vehicle> filteredVehicles = new ArrayList();
         for(var v:vehicles){
             if(!(v instanceof Plane) && v.getSpeed()>SPEED_LOW_LIMIT && v.getSpeed()<SPEED_HIGH_LIMIT){
-                res.add(v);
+                filteredVehicles.add(v);
             }
         }
-        return res;
+        return filteredVehicles;
     }
 
     public static FilteredResult getFilteredByWaysOfMOving(List<Vehicle> vehicles){
