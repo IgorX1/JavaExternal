@@ -5,7 +5,7 @@ import java.util.*;
 public class VehicleFinder {
 
     public static List<Vehicle> getPlanesWithHeightMoreThan5000YearAfter2000(List<Vehicle> vehicles){
-        List<Vehicle> res = new ArrayList();
+        List<Vehicle> res = new ArrayList<>();
         for(var v:vehicles){
             if(isPlaneWithHeightMoreThan5000YearAfter2000(v)){
                 res.add(v);
@@ -25,7 +25,7 @@ public class VehicleFinder {
     }
 
     public static List<Vehicle> getNotPlaneWithSpeedBetween200And500(List<Vehicle> vehicles){
-        List<Vehicle> filteredVehicles = new ArrayList();
+        List<Vehicle> filteredVehicles = new ArrayList<>();
         for(var v:vehicles){
             if(isNotPlaneWithSpeedBetween200And500(v)){
                 filteredVehicles.add(v);
