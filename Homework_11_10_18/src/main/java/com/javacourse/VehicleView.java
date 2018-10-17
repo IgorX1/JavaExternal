@@ -3,6 +3,8 @@ package com.javacourse;
 import java.util.ArrayList;
 
 public class VehicleView {
+    public static final String WRONG_INPUT_INT_DATA = "Wrong input! Repeat please! ";
+
     public void pringQueryResults(ArrayList<Vehicle> vehicles){
         vehicles.forEach(System.out::println);
     }
@@ -21,8 +23,7 @@ public class VehicleView {
         System.out.println("1)Get planes by height and year");
         System.out.println("2)Get NOT planes by speed in segment");
         System.out.println("3)Get all vehicles with maximal speed");
-        System.out.println("4)Get vehicles grouped by ways of moving");
-        System.out.println("5)Get vehicles with minimal price maximal speed younger then X");
-        System.out.println("6)Exit");
+        System.out.println("4)Get vehicles with minimal price maximal speed younger then X");
+        System.out.println("5)Exit");
     }
 }
