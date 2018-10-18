@@ -67,7 +67,9 @@ public class VehicleController {
         }catch (ProgramShouldBeTerminatedException exc){
             return true;
         }
-        catch ()
+        catch (MenuItemNotExistingExcpetion exc){
+
+        }
 
         return false;
     }
@@ -106,7 +108,7 @@ public class VehicleController {
 
     private int getParamFromConsole(String msg, Scanner sc){
         view.printMessage(msg);
-        int param = 0;
+        int paramForSearching = 0;
         while( ! sc.hasNextInt()) {
             view.printMessage(view.WRONG_INPUT_INT_DATA);
             view.printMessage(msg);
