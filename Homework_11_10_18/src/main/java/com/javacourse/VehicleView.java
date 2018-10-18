@@ -5,6 +5,7 @@ import java.util.List;
 
 public class VehicleView {
     public static final String WRONG_INPUT_INT_DATA = "Wrong input! Repeat please! ";
+    public static final String RPT_INPUT = "Repeat your input";
 
     public void pringQueryResults(List<Vehicle> vehicles){
         vehicles.forEach(System.out::println);
