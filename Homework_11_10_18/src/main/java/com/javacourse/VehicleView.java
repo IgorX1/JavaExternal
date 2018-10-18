@@ -1,15 +1,16 @@
 package com.javacourse;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class VehicleView {
     public static final String WRONG_INPUT_INT_DATA = "Wrong input! Repeat please! ";
 
-    public void pringQueryResults(ArrayList<Vehicle> vehicles){
+    public void pringQueryResults(List<Vehicle> vehicles){
         vehicles.forEach(System.out::println);
     }
 
-    public void pringQueryResults(ArrayList<Vehicle> vehicles, String message){
+    public void pringQueryResults(List<Vehicle> vehicles, String message){
         System.out.println(message);
         vehicles.forEach(System.out::println);
     }
@@ -26,4 +27,5 @@ public class VehicleView {
         System.out.println("4)Get vehicles with minimal price maximal speed younger then X");
         System.out.println("5)Exit");
     }
+
 }

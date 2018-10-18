@@ -1,6 +1,5 @@
 package com.javacourse;
 
-import java.awt.*;
 import java.util.*;
 
 public class VehicleController {
@@ -55,12 +54,27 @@ public class VehicleController {
         Scanner sc = new Scanner(System.in);
         while(true){
             model.clearResultingVehicles();
-
+            if(stopIfNecessary(sc))
+                break;
+            view.pringQueryResults(model.getResultingVehicles());
         }
     }
 
+    private boolean stopIfNecessary(Scanner sc){
+        try
+        {
+            model.setResultingVehicles(getResultOnUsersChoice(getUserChoice(sc), sc));
+        }catch (ProgramShouldBeTerminatedException exc){
+            return true;
+        }
+        catch ()
+
+        return false;
+    }
+
     private int getUserChoice(Scanner sc){
-        view.printMessage("Choose the menu item");
+        view.showMenu();
+        view.printMessage("Choose the menu item:");
         while( ! sc.hasNextInt()) {
             view.printMessage(view.WRONG_INPUT_INT_DATA);
             view.printMessage("Choose the menu item");
@@ -68,5 +82,39 @@ public class VehicleController {
         }
         return sc.nextInt();
     }
+    private List<Vehicle> getResultOnUsersChoice(int choice, Scanner sc){
+        switch (choice){
+            case 1:
+                int height = getParamFromConsole("Height value:", sc);
+                int year = getParamFromConsole("Year value:", sc);
+                return VehicleFinder.getPlanesWithHeightMoreThanXYearAfterY(vehicleList, year, height);
+            case 2:
+                int minspeed = getParamFromConsole("Min speed", sc);
+                int maxspeed = getParamFromConsole("Max speed", sc);
+                return  VehicleFinder.getNotPlaneWithSpeedBetweenXAndY(vehicleList, minspeed, maxspeed);
+            case 3:
+                return VehicleFinder.getWithMaximalSpeed(vehicleList);
+            case 4:
+                int ageLimit = getParamFromConsole("Age limit", sc);
+                return  VehicleFinder.getWithMinPriceAndMaxSpeedYoungerThanXYears(vehicleList, ageLimit);
+            case 5:
+                throw new ProgramShouldBeTerminatedException();
+            default:
+                throw new MenuItemNotExistingExcpetion("Such menu item does not exist");
+        }
+    }
+
+    private int getParamFromConsole(String msg, Scanner sc){
+        view.printMessage(msg);
+        int param = 0;
+        while( ! sc.hasNextInt()) {
+            view.printMessage(view.WRONG_INPUT_INT_DATA);
+            view.printMessage(msg);
+            sc.next();
+        }
+        return sc.nextInt();
+
+    }
+
 
 }
