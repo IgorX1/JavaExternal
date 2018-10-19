@@ -49,7 +49,15 @@ public class VehicleController {
         Scanner sc = new Scanner(System.in);
         do{
             view.showMenu();
-
+            try {
+                view.pringQueryResults(getResultOnUsersChoice(getUserChoice(sc),sc));
+            } catch (WrongParameterFromConsoleException exc) {
+                view.printMessage(exc.getMessage());
+            } catch (MenuItemNotExistingExcpetion exc){
+                view.printMessage(exc.getMessage());
+            } finally {
+                //LOGGING
+            }
         }while(shouldProceed(sc));
     }
 
@@ -67,36 +75,7 @@ public class VehicleController {
         return false;
     }
 
-    private List<Vehicle> processVehicleQuery(){
-
-    }
-
-    /*public void processUser(){
-        Scanner sc = new Scanner(System.in);
-        while(true){
-            model.clearResultingVehicles();
-            if(stopIfNecessary(sc))
-                break;
-            view.pringQueryResults(model.getResultingVehicles());
-        }
-    }
-
-    private boolean stopIfNecessary(Scanner sc){
-        try
-        {
-            model.setResultingVehicles(getResultOnUsersChoice(getUserChoice(sc), sc));
-        }catch (ProgramShouldBeTerminatedException exc){
-            return true;
-        }
-        catch (MenuItemNotExistingExcpetion exc){
-
-        }
-
-        return false;
-    }
-
     private int getUserChoice(Scanner sc){
-        view.showMenu();
         view.printMessage("Choose the menu item:");
         while( ! sc.hasNextInt()) {
             view.printMessage(view.WRONG_INPUT_INT_DATA);
@@ -105,23 +84,22 @@ public class VehicleController {
         }
         return sc.nextInt();
     }
+
     private List<Vehicle> getResultOnUsersChoice(int choice, Scanner sc){
         switch (choice){
-            case 1:
+            case MenuItems.PLANES_WITH_HEIGHT_MORE_THAN_X_YEAR_AFTER_Y:
                 int height = getParamFromConsole("Height value:", sc);
                 int year = getParamFromConsole("Year value:", sc);
-                return VehicleFinder.getPlanesWithHeightMoreThanXYearAfterY(vehicleList, year, height);
-            case 2:
+                return VehicleFinder.getPlanesWithHeightMoreThanXYearAfterY(model.getVehicles(), year, height);
+            case MenuItems.NOT_PLANE_WITH_SPEED_BETWEEN_X_AND_Y:
                 int minspeed = getParamFromConsole("Min speed", sc);
                 int maxspeed = getParamFromConsole("Max speed", sc);
-                return  VehicleFinder.getNotPlaneWithSpeedBetweenXAndY(vehicleList, minspeed, maxspeed);
-            case 3:
-                return VehicleFinder.getWithMaximalSpeed(vehicleList);
-            case 4:
+                return  VehicleFinder.getNotPlaneWithSpeedBetweenXAndY(model.getVehicles(), minspeed, maxspeed);
+            case MenuItems.WITH_MAXIMAL_SPEED:
+                return VehicleFinder.getWithMaximalSpeed(model.getVehicles());
+            case MenuItems.WITH_MIN_PRICE_AND_MAX_SPEED_YOUNGER_THAN_X_YEARS:
                 int ageLimit = getParamFromConsole("Age limit", sc);
-                return  VehicleFinder.getWithMinPriceAndMaxSpeedYoungerThanXYears(vehicleList, ageLimit);
-            case 5:
-                throw new ProgramShouldBeTerminatedException();
+                return  VehicleFinder.getWithMinPriceAndMaxSpeedYoungerThanXYears(model.getVehicles(), ageLimit);
             default:
                 throw new MenuItemNotExistingExcpetion("Such menu item does not exist");
         }
@@ -129,7 +107,6 @@ public class VehicleController {
 
     private int getParamFromConsole(String msg, Scanner sc){
         view.printMessage(msg);
-        int paramForSearching = 0;
         while( ! sc.hasNextInt()) {
             view.printMessage(view.WRONG_INPUT_INT_DATA);
             view.printMessage(msg);
@@ -137,7 +114,6 @@ public class VehicleController {
         }
         return sc.nextInt();
 
-    }*/
-
+    }
 
 }

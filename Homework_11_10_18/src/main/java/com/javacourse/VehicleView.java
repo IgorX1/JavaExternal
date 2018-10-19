@@ -26,7 +26,6 @@ public class VehicleView {
         System.out.println("2)Get NOT planes by speed in segment");
         System.out.println("3)Get all vehicles with maximal speed");
         System.out.println("4)Get vehicles with minimal price maximal speed younger then X");
-        System.out.println("5)Exit");
     }
 
 }
