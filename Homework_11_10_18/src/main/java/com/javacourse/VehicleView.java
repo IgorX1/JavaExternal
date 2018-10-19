@@ -20,6 +20,10 @@ public class VehicleView {
         System.out.println(message);
     }
 
+    public void printError(String message){
+        System.err.println(message);
+    }
+
     public void showMenu(){
         System.out.println("______VEHICLE FINDER MENU:______");
         System.out.println("1)Get planes by height and year");

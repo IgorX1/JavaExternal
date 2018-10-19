@@ -1,15 +1,19 @@
 package com.javacourse;
 
 import java.util.*;
+import org.apache.log4j.Logger;
+import org.apache.log4j.xml.DOMConfigurator;
 
 public class VehicleController {
 
     private VehicleView view;
     private VehicleModel model;
+    private static Logger logger = Logger.getLogger(VehicleController.class);
 
     public VehicleController(VehicleView view,VehicleModel model) {
         this.view = view;
         this.model = model;
+        DOMConfigurator.configure("log4j.xml");
         fillVehicles();
     }
 
@@ -51,12 +55,10 @@ public class VehicleController {
             view.showMenu();
             try {
                 view.pringQueryResults(getResultOnUsersChoice(getUserChoice(sc),sc));
-            } catch (WrongParameterFromConsoleException exc) {
-                view.printMessage(exc.getMessage());
-            } catch (MenuItemNotExistingExcpetion exc){
-                view.printMessage(exc.getMessage());
-            } finally {
-                //LOGGING
+            } catch (WrongParameterFromConsoleException
+                    | MenuItemNotExistingExcpetion exc) {
+                view.printError("User input problem has occured.");
+                logger.debug(exc.getMessage());
             }
         }while(shouldProceed(sc));
     }
@@ -152,6 +154,6 @@ public class VehicleController {
 
     private void checkFirstParamIsLessThanSecond(int first, int second){
         if(first>second)
-            throw new WrongParameterFromConsoleException("First parameter can't be greater than the second one")
+            throw new WrongParameterFromConsoleException("First parameter can't be greater than the second one");
     }
 }
