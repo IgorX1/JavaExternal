@@ -6,8 +6,15 @@ import org.apache.log4j.xml.DOMConfigurator;
 
 public class VehicleController {
 
+    //MVC architecture entities
     private VehicleView view;
     private VehicleModel model;
+
+    //localization entities
+    private Locale locale;
+    private ResourceBundle resourceBundle;
+
+    //Log4j logger
     private static Logger logger;
 
     static {
@@ -56,16 +63,40 @@ public class VehicleController {
 
     public void processUser(){
         Scanner sc = new Scanner(System.in);
+        localizeLanguage(sc);
         do{
             view.showMenu();
             try {
                 view.pringQueryResults(getResultOnUsersChoice(getUserChoice(sc),sc));
             } catch (WrongParameterFromConsoleException
                     | MenuItemNotExistingExcpetion exc) {
-                view.printError("User input problem has occured.");
+                view.printError(resourceBundle.getString("data.inputError"));
                 logger.debug(exc.getMessage());
             }
         }while(shouldProceed(sc));
+    }
+
+    private void localizeLanguage(Scanner sc) {
+        view.printMessage("Choose language/Выберите язык/Оберіть мову");
+        view.printMessage("1-English");
+        view.printMessage("2-Русский");
+        view.printMessage("3-Українська");
+        locale = new Locale(getAndParseLanguageChoice(sc).getLangCode());
+        resourceBundle = ResourceBundle.getBundle("dictionary", locale);
+    }
+
+    private LanguageEnum getAndParseLanguageChoice(Scanner sc){
+        String langChoice = sc.nextLine();
+        switch (langChoice){
+            case "1":
+                return LanguageEnum.EN;
+            case "2":
+                return LanguageEnum.RU;
+            case "3":
+                return LanguageEnum.UA;
+            default:
+                return LanguageEnum.EN;
+        }
     }
 
     private boolean shouldProceed(Scanner sc){
