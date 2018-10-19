@@ -1,7 +1,7 @@
 package com.javacourse;
 
-public class MenuItemNotExistingExcpetion extends RuntimeException {
-    public MenuItemNotExistingExcpetion(String message) {
+class MenuItemNotExistingExcpetion extends RuntimeException {
+    MenuItemNotExistingExcpetion(String message) {
         super(message);
     }
 }

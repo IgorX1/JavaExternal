@@ -8,13 +8,18 @@ public class VehicleController {
 
     private VehicleView view;
     private VehicleModel model;
-    private static Logger logger = Logger.getLogger(VehicleController.class);
+    private static Logger logger;
+
+    static {
+        logger = Logger.getLogger(VehicleController.class);
+    }
 
     public VehicleController(VehicleView view,VehicleModel model) {
         this.view = view;
         this.model = model;
-        DOMConfigurator.configure("log4j.xml");
         fillVehicles();
+
+        DOMConfigurator.configure("log/log4j.xml");
     }
 
     private void fillVehicles(){
@@ -65,6 +70,7 @@ public class VehicleController {
 
     private boolean shouldProceed(Scanner sc){
         view.printMessage("Would you like to proceed?(YES/NO)");
+        sc.nextLine();//clean scanner's buffer
         while(sc.hasNextLine()){
             ShouldProceedEnum shouldProceed = ShouldProceedEnum.parseUserChoice(sc.nextLine());
             if(shouldProceed == ShouldProceedEnum.YES)
@@ -91,22 +97,22 @@ public class VehicleController {
         switch (choice){
             case MenuItems.PLANES_WITH_HEIGHT_MORE_THAN_X_YEAR_AFTER_Y:
                 int height = getParamFromConsole("Height value:", sc);
-                chechHeight(height);
+                checkHeight(height);
                 int year = getParamFromConsole("Year value:", sc);
-                chechYear(year);
+                checkYear(year);
                 return VehicleFinder.getPlanesWithHeightMoreThanXYearAfterY(model.getVehicles(), year, height);
             case MenuItems.NOT_PLANE_WITH_SPEED_BETWEEN_X_AND_Y:
-                int minspeed = getParamFromConsole("Min speed", sc);
-                chechSpeed(minspeed);
-                int maxspeed = getParamFromConsole("Max speed", sc);
-                chechSpeed(maxspeed);
-                checkFirstParamIsLessThanSecond(minspeed, maxspeed);
-                return  VehicleFinder.getNotPlaneWithSpeedBetweenXAndY(model.getVehicles(), minspeed, maxspeed);
+                int minSpeed = getParamFromConsole("Min speed", sc);
+                checkSpeed(minSpeed);
+                int maxSpeed = getParamFromConsole("Max speed", sc);
+                checkSpeed(maxSpeed);
+                checkFirstParamIsLessThanSecond(minSpeed, maxSpeed);
+                return  VehicleFinder.getNotPlaneWithSpeedBetweenXAndY(model.getVehicles(), minSpeed, maxSpeed);
             case MenuItems.WITH_MAXIMAL_SPEED:
                 return VehicleFinder.getWithMaximalSpeed(model.getVehicles());
             case MenuItems.WITH_MIN_PRICE_AND_MAX_SPEED_YOUNGER_THAN_X_YEARS:
                 int ageLimit = getParamFromConsole("Age limit", sc);
-                chechAge(ageLimit);
+                checkAge(ageLimit);
                 return  VehicleFinder.getWithMinPriceAndMaxSpeedYoungerThanXYears(model.getVehicles(), ageLimit);
             default:
                 throw new MenuItemNotExistingExcpetion("Such menu item does not exist");
@@ -124,28 +130,28 @@ public class VehicleController {
 
     }
 
-    private void chechHeight(int param){
+    private void checkHeight(int param){
         final int HEIGHT_MAX = 100000;
         final int HEIGHT_MIN = 500;
         if(param<=HEIGHT_MIN || param>=HEIGHT_MAX)
             throw new WrongParameterFromConsoleException("The height parameter has inadequate value");
     }
 
-    private void chechYear(int param){
+    private void checkYear(int param){
         final int YEAR_MAX = Calendar.getInstance().get(Calendar.YEAR);;
         final int YEAR_MIN = 1900;
         if(param<=YEAR_MIN || param>=YEAR_MAX)
             throw new WrongParameterFromConsoleException("The year parameter has inadequate value");
     }
 
-    private void chechSpeed(int param){
+    private void checkSpeed(int param){
         final int SPEED_MAX = 2000;
         final int SPEED_MIN = 20;
         if(param<=SPEED_MIN || param>=SPEED_MAX)
             throw new WrongParameterFromConsoleException("The speed parameter has inadequate value");
     }
 
-    private void chechAge(int param){
+    private void checkAge(int param){
         final int AGE_MAX = Calendar.getInstance().get(Calendar.YEAR) - 1900;
         final int AGE_MIN = 0;
         if(param<=AGE_MIN || param>=AGE_MAX)
