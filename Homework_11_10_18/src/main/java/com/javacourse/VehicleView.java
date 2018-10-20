@@ -2,34 +2,38 @@ package com.javacourse;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ResourceBundle;
 
-public class VehicleView {
-    public static final String WRONG_INPUT_INT_DATA = "Wrong input! Repeat please! ";
-    public static final String RPT_INPUT = "Repeat your input";
+class VehicleView {
+    static private ResourceBundle resourceBundle;
 
-    public void pringQueryResults(List<Vehicle> vehicles){
+    //In case custom locale not chosen, the default locale will be used
+    static {
+        resourceBundle = ResourceBundle.getBundle("dictionary");
+    }
+
+    static void setResourceBundle(ResourceBundle resourceBundle) {
+        VehicleView.resourceBundle = resourceBundle;
+    }
+
+    void printQueryResults(List<Vehicle> vehicles){
         vehicles.forEach(System.out::println);
     }
 
-    public void pringQueryResults(List<Vehicle> vehicles, String message){
-        System.out.println(message);
-        vehicles.forEach(System.out::println);
-    }
-
-    public void printMessage(String message){
+    void printMessage(String message){
         System.out.println(message);
     }
 
-    public void printError(String message){
+    void printError(String message){
         System.err.println(message);
     }
 
-    public void showMenu(){
-        System.out.println("______VEHICLE FINDER MENU:______");
-        System.out.println("1)Get planes by height and year");
-        System.out.println("2)Get NOT planes by speed in segment");
-        System.out.println("3)Get all vehicles with maximal speed");
-        System.out.println("4)Get vehicles with minimal price maximal speed younger then X");
+    void showMenu(){
+        System.out.println(resourceBundle.getString("data.menuHeader"));
+        System.out.println(resourceBundle.getString("data.menuItem1"));
+        System.out.println(resourceBundle.getString("data.menuItem2"));
+        System.out.println(resourceBundle.getString("data.menuItem3"));
+        System.out.println(resourceBundle.getString("data.menuItem4"));
     }
 
 }

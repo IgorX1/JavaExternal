@@ -3,6 +3,7 @@ package com.javacourse;
 import java.util.*;
 import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
+import static com.javacourse.ConstantValues.*;
 
 public class VehicleController {
 
@@ -26,6 +27,7 @@ public class VehicleController {
         this.model = model;
         fillVehicles();
 
+        //Set configuration file for the log4j logger
         DOMConfigurator.configure("log/log4j.xml");
     }
 
@@ -67,9 +69,10 @@ public class VehicleController {
         do{
             view.showMenu();
             try {
-                view.pringQueryResults(getResultOnUsersChoice(getUserChoice(sc),sc));
+                view.printQueryResults(getResultOnUsersChoice(getUserChoice(sc),sc));
             } catch (WrongParameterFromConsoleException
-                    | MenuItemNotExistingExcpetion exc) {
+                    | MenuItemNotExistingExcpetion
+                    | NumberFormatException exc) {
                 view.printError(resourceBundle.getString("data.inputError"));
                 logger.debug(exc.getMessage());
             }
@@ -82,7 +85,8 @@ public class VehicleController {
         view.printMessage("2-Русский");
         view.printMessage("3-Українська");
         locale = new Locale(getAndParseLanguageChoice(sc).getLangCode());
-        resourceBundle = ResourceBundle.getBundle("dictionary", locale);
+        resourceBundle = ResourceBundle.getBundle(LOCAL_BUNDLE_NAME, locale);
+        view.setResourceBundle(resourceBundle);
     }
 
     private LanguageEnum getAndParseLanguageChoice(Scanner sc){
@@ -100,8 +104,8 @@ public class VehicleController {
     }
 
     private boolean shouldProceed(Scanner sc){
-        view.printMessage("Would you like to proceed?(YES/NO)");
-        sc.nextLine();//clean scanner's buffer
+        view.printMessage(resourceBundle.getString("data.shouldProceed")+"(YES/NO)");
+        //sc.nextLine();//clean scanner's buffer
         while(sc.hasNextLine()){
             ShouldProceedEnum shouldProceed = ShouldProceedEnum.parseUserChoice(sc.nextLine());
             if(shouldProceed == ShouldProceedEnum.YES)
@@ -109,40 +113,45 @@ public class VehicleController {
             if(shouldProceed == ShouldProceedEnum.NO)
                 return  false;
 
-            view.printMessage(VehicleView.WRONG_INPUT_INT_DATA + VehicleView.RPT_INPUT);
+            view.printMessage(resourceBundle.getString("data.wrongInput"));
         }
         return false;
     }
 
     private int getUserChoice(Scanner sc){
-        view.printMessage("Choose the menu item:");
-        while( ! sc.hasNextInt()) {
-            view.printMessage(view.WRONG_INPUT_INT_DATA);
-            view.printMessage("Choose the menu item");
+        view.printMessage(resourceBundle.getString("data.chooseTheMenuItem"));
+        while(!sc.hasNextLine()) {
+            view.printMessage(resourceBundle.getString("data.wrongInput"));
+            view.printMessage(resourceBundle.getString("data.chooseTheMenuItem"));
             sc.next();
         }
-        return sc.nextInt();
+
+        int choice = Integer.parseInt(sc.nextLine());
+        if(choice<LEAST_MENU_ITEM || choice>GREATEST_MENU_ITEM)
+            throw new MenuItemNotExistingExcpetion("Such menu item does not exist");
+
+        return choice;
     }
 
     private List<Vehicle> getResultOnUsersChoice(int choice, Scanner sc){
         switch (choice){
             case MenuItems.PLANES_WITH_HEIGHT_MORE_THAN_X_YEAR_AFTER_Y:
-                int height = getParamFromConsole("Height value:", sc);
+                int height = getParamFromConsole(resourceBundle.getString("data.heightValue")+":", sc);
                 checkHeight(height);
-                int year = getParamFromConsole("Year value:", sc);
+                int year = getParamFromConsole(resourceBundle.getString("data.yearValue")+":", sc);
                 checkYear(year);
                 return VehicleFinder.getPlanesWithHeightMoreThanXYearAfterY(model.getVehicles(), year, height);
             case MenuItems.NOT_PLANE_WITH_SPEED_BETWEEN_X_AND_Y:
-                int minSpeed = getParamFromConsole("Min speed", sc);
+                int minSpeed = getParamFromConsole(resourceBundle.getString("data.minSpeed")+":", sc);
                 checkSpeed(minSpeed);
-                int maxSpeed = getParamFromConsole("Max speed", sc);
+                int maxSpeed = getParamFromConsole(resourceBundle.getString("data.maxSpeed")+":", sc);
                 checkSpeed(maxSpeed);
                 checkFirstParamIsLessThanSecond(minSpeed, maxSpeed);
                 return  VehicleFinder.getNotPlaneWithSpeedBetweenXAndY(model.getVehicles(), minSpeed, maxSpeed);
             case MenuItems.WITH_MAXIMAL_SPEED:
                 return VehicleFinder.getWithMaximalSpeed(model.getVehicles());
             case MenuItems.WITH_MIN_PRICE_AND_MAX_SPEED_YOUNGER_THAN_X_YEARS:
-                int ageLimit = getParamFromConsole("Age limit", sc);
+                int ageLimit = getParamFromConsole(resourceBundle.getString("data.ageLimit")+":", sc);
                 checkAge(ageLimit);
                 return  VehicleFinder.getWithMinPriceAndMaxSpeedYoungerThanXYears(model.getVehicles(), ageLimit);
             default:
@@ -152,12 +161,21 @@ public class VehicleController {
 
     private int getParamFromConsole(String msg, Scanner sc){
         view.printMessage(msg);
-        while( ! sc.hasNextInt()) {
-            view.printMessage(view.WRONG_INPUT_INT_DATA);
+        while( ! sc.hasNextLine()) {
+            view.printMessage(resourceBundle.getString("data.wrongInput"));
             view.printMessage(msg);
             sc.next();
         }
-        return sc.nextInt();
+
+
+        int choice = 0;
+        try {
+            choice = Integer.parseInt(sc.nextLine());
+        } catch (NumberFormatException e) {
+            throw new WrongParameterFromConsoleException("Expected numeric format");
+        }
+
+        return choice;
 
     }
 
