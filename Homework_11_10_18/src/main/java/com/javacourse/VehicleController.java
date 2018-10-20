@@ -105,7 +105,6 @@ public class VehicleController {
 
     private boolean shouldProceed(Scanner sc){
         view.printMessage(resourceBundle.getString("data.shouldProceed")+"(YES/NO)");
-        //sc.nextLine();//clean scanner's buffer
         while(sc.hasNextLine()){
             ShouldProceedEnum shouldProceed = ShouldProceedEnum.parseUserChoice(sc.nextLine());
             if(shouldProceed == ShouldProceedEnum.YES)
@@ -120,12 +119,6 @@ public class VehicleController {
 
     private int getUserChoice(Scanner sc){
         view.printMessage(resourceBundle.getString("data.chooseTheMenuItem"));
-        while(!sc.hasNextLine()) {
-            view.printMessage(resourceBundle.getString("data.wrongInput"));
-            view.printMessage(resourceBundle.getString("data.chooseTheMenuItem"));
-            sc.next();
-        }
-
         int choice = Integer.parseInt(sc.nextLine());
         if(choice<LEAST_MENU_ITEM || choice>GREATEST_MENU_ITEM)
             throw new MenuItemNotExistingExcpetion("Such menu item does not exist");
@@ -161,22 +154,13 @@ public class VehicleController {
 
     private int getParamFromConsole(String msg, Scanner sc){
         view.printMessage(msg);
-        while( ! sc.hasNextLine()) {
-            view.printMessage(resourceBundle.getString("data.wrongInput"));
-            view.printMessage(msg);
-            sc.next();
-        }
-
-
         int choice = 0;
         try {
             choice = Integer.parseInt(sc.nextLine());
         } catch (NumberFormatException e) {
             throw new WrongParameterFromConsoleException("Expected numeric format");
         }
-
         return choice;
-
     }
 
     private void checkHeight(int param){

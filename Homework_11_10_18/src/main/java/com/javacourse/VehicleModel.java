@@ -17,13 +17,20 @@ public class VehicleModel {
         return vehicles;
     }
 
-    public void clearVehicles(){
-        if(vehicles.size()>0)
+    public boolean clearVehicles(){
+        if(vehicles==null)
+            return false;
+
+        if(vehicles.size()>0){
             vehicles.clear();
+            return true;
+        }
+        return  false;
     }
 
-    public void add(Vehicle v){
+    public int add(Vehicle v){
         vehicles.add(v);
+        return vehicles.size();
     }
 
 
