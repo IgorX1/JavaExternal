@@ -41,6 +41,8 @@ public class VehicleModelTest {
     }
 
     @Test
-    public void add() {
+    public void add_null_returnsFalse() {
+        assertTrue(model.add(new AmphibiousCar(DEFAULT_SPEED, DEFAULT_YEAR, DEFAULT_PRICE)));
+        assertFalse(model.add(null));
     }
 }

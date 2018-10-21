@@ -28,9 +28,12 @@ public class VehicleModel {
         return  false;
     }
 
-    public int add(Vehicle v){
-        vehicles.add(v);
-        return vehicles.size();
+    public boolean add(Vehicle v){
+        if(v!=null){
+            vehicles.add(v);
+            return true;
+        }
+        return false;
     }
 
 

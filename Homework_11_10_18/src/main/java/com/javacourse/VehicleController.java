@@ -89,7 +89,7 @@ public class VehicleController {
         view.setResourceBundle(resourceBundle);
     }
 
-    private LanguageEnum getAndParseLanguageChoice(Scanner sc){
+    LanguageEnum getAndParseLanguageChoice(Scanner sc){
         String langChoice = sc.nextLine();
         switch (langChoice){
             case "1":
