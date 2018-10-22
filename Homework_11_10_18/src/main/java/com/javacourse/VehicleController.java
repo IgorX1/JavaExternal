@@ -7,6 +7,7 @@ import static com.javacourse.ConstantValues.*;
 
 public class VehicleController {
 
+    public static final int STARTING_YEAR = 1900;
     //MVC architecture entities
     private VehicleView view;
     private VehicleModel model;
@@ -126,7 +127,7 @@ public class VehicleController {
         return choice;
     }
 
-    private List<Vehicle> getResultOnUsersChoice(int choice, Scanner sc){
+     List<Vehicle> getResultOnUsersChoice(int choice, Scanner sc){
         switch (choice){
             case MenuItems.PLANES_WITH_HEIGHT_MORE_THAN_X_YEAR_AFTER_Y:
                 int height = getParamFromConsole(resourceBundle.getString("data.heightValue")+":", sc);
@@ -163,35 +164,35 @@ public class VehicleController {
         return choice;
     }
 
-    private void checkHeight(int param){
+    void checkHeight(int param){
         final int HEIGHT_MAX = 100000;
         final int HEIGHT_MIN = 500;
         if(param<=HEIGHT_MIN || param>=HEIGHT_MAX)
             throw new WrongParameterFromConsoleException("The height parameter has inadequate value");
     }
 
-    private void checkYear(int param){
+    void checkYear(int param){
         final int YEAR_MAX = Calendar.getInstance().get(Calendar.YEAR);;
-        final int YEAR_MIN = 1900;
+        final int YEAR_MIN = STARTING_YEAR;
         if(param<=YEAR_MIN || param>=YEAR_MAX)
             throw new WrongParameterFromConsoleException("The year parameter has inadequate value");
     }
 
-    private void checkSpeed(int param){
+    void checkSpeed(int param){
         final int SPEED_MAX = 2000;
         final int SPEED_MIN = 20;
         if(param<=SPEED_MIN || param>=SPEED_MAX)
             throw new WrongParameterFromConsoleException("The speed parameter has inadequate value");
     }
 
-    private void checkAge(int param){
-        final int AGE_MAX = Calendar.getInstance().get(Calendar.YEAR) - 1900;
+    void checkAge(int param){
+        final int AGE_MAX = Calendar.getInstance().get(Calendar.YEAR) - STARTING_YEAR;
         final int AGE_MIN = 0;
         if(param<=AGE_MIN || param>=AGE_MAX)
             throw new WrongParameterFromConsoleException("The age parameter has inadequate value");
     }
 
-    private void checkFirstParamIsLessThanSecond(int first, int second){
+    void checkFirstParamIsLessThanSecond(int first, int second){
         if(first>second)
             throw new WrongParameterFromConsoleException("First parameter can't be greater than the second one");
     }

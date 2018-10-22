@@ -36,7 +36,7 @@ public class VehicleModelTest {
     }
 
     @Test
-    public void clearVehicles_null_returnsFalse(){
+    public void clearVehicles_empty_returnsFalse(){
         assertFalse(model.clearVehicles());
     }
 
