@@ -5,3 +5,6 @@ Create abstract class Vehicle. Create classes Car, Ship, Plane, which inherit th
 4. добавить к данной иерархии машину-амфибию, и БетМобиль,
 5. создать 3 масива сгупированых по Интерфейсам Flyable, MoveAble, SwimAble
 6. найти в полученных масивах механизмы с максимальной скоростью
+
+
+MVC architectural pattern is used for the business logic implementation. Junit unit-tests are written for some classes. User menu is localized for three languages: EN, RU, UA. Log4j is used for logging program errors
