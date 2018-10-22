@@ -21,8 +21,6 @@ import static org.junit.Assert.*;
 public class VehicleControllerTest {
 
     private static final int WRONG_MENU_ITEM = -1;
-    private static final int WRONG_HEIGHT_MIN= 100001;
-    private static final int WRONG_HEIGHT_MAX = 444;
     private static final int STARTING_YEAR = 1900;
 
     VehicleModel model = new VehicleModel();
