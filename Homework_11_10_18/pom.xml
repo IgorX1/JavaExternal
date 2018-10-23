@@ -44,15 +44,6 @@
       <version>1.10.19</version>
       <scope>test</scope>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/com.novocode/junit-interface -->
-    <!-- https://mvnrepository.com/artifact/com.novocode/junit-interface -->
-    <dependency>
-      <groupId>com.novocode</groupId>
-      <artifactId>junit-interface</artifactId>
-      <version>0.11-RC1</version>
-      <scope>test</scope>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/pl.pragmatists/JUnitParams -->
     <dependency>
       <groupId>pl.pragmatists</groupId>
       <artifactId>JUnitParams</artifactId>

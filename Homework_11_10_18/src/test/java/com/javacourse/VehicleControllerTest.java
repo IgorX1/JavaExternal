@@ -1,31 +1,46 @@
 package com.javacourse;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.cglib.core.Local;
+
+import static org.mockito.Mockito.*;
 
 import java.util.*;
-
-import static org.hamcrest.MatcherAssert.assertThat;
-
 
 @RunWith(JUnitParamsRunner.class)
 public class VehicleControllerTest {
 
-    private static final int WRONG_MENU_ITEM = -1;
     private static final int STARTING_YEAR = 1900;
 
     VehicleCollectionModel model = new VehicleCollectionModel();
     VehicleView view = new VehicleView();
     VehicleController vc=new VehicleController(view, model);
 
-    @Test(expected = MenuItemNotExistingExcpetion.class)
-    public void getResultOnUsersChoice() {
-        vc.getResultOnUsersChoice(WRONG_MENU_ITEM, new Scanner(System.in));
+    @Test
+    public void getLocaleBasedOnUsersChoice_returnsRightLocale(){
+        String correctLang = "ukr";
+        String correctLangCode= "3";
+
+        Locale expected = new Locale(correctLang);
+        Locale actual = vc.getLocaleBasedOnUsersChoice(correctLangCode);
+        assertEquals(expected, actual);
     }
+
+    @Test
+    public void getLocaleBasedOnUsersChoice_languageNotSupported_returnsDefaultLocale(){
+        String correctLang = "en";
+        String correctLangCode= "-1";
+
+        Locale expected = new Locale(correctLang);
+        Locale actual = vc.getLocaleBasedOnUsersChoice(correctLangCode);
+        assertEquals(expected, actual);
+    }
+
+
 
     @Parameters
     public static Collection<Object[]> dataHeight() {

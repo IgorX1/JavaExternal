@@ -1,3 +1,4 @@
 2018-10-22 08:52:14 DEBUG VehicleController:77 - For input string: "erterte"
 2018-10-22 08:52:39 DEBUG VehicleController:77 - Such menu item does not exist
 2018-10-22 08:52:51 DEBUG VehicleController:77 - For input string: "btbty"
+2018-10-23 13:03:01 DEBUG VehicleController:82 - The height parameter has inadequate value
