@@ -2,21 +2,20 @@ package com.javacourse;
 
 import org.junit.After;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class VehicleModelTest {
+public class VehicleCollectionModelTest {
 
-    VehicleModel model;
+    VehicleCollectionModel model;
     private static final int DEFAULT_SPEED = 1000;
     private static final int DEFAULT_YEAR = 2000;
     private static final int DEFAULT_PRICE = 10000;
 
     @Before
     public void setUp() throws Exception {
-        model = new VehicleModel();
+        model = new VehicleCollectionModel();
     }
 
     @After

@@ -5,7 +5,7 @@ public class App
     public static void main( String[] args )
     {
         VehicleView view = new VehicleView();
-        VehicleModel model = new VehicleModel();
+        VehicleCollectionModel model = new VehicleCollectionModel();
         VehicleController controller = new VehicleController(view, model);
         controller.processUser();
     }

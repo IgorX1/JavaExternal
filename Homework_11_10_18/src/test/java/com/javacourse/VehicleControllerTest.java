@@ -1,20 +1,15 @@
 package com.javacourse;
 
-import static junitparams.JUnitParamsRunner.$;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import java.util.*;
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.*;
-
-import static org.junit.Assert.*;
 
 
 @RunWith(JUnitParamsRunner.class)
@@ -23,7 +18,7 @@ public class VehicleControllerTest {
     private static final int WRONG_MENU_ITEM = -1;
     private static final int STARTING_YEAR = 1900;
 
-    VehicleModel model = new VehicleModel();
+    VehicleCollectionModel model = new VehicleCollectionModel();
     VehicleView view = new VehicleView();
     VehicleController vc=new VehicleController(view, model);
 

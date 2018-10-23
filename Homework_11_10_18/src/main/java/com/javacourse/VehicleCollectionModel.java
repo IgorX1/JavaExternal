@@ -2,10 +2,10 @@ package com.javacourse;
 
 import java.util.*;
 
-public class VehicleModel {
+public class VehicleCollectionModel {
     private List<Vehicle> vehicles;
 
-    public VehicleModel() {
+    public VehicleCollectionModel() {
         vehicles = new ArrayList<>();
     }
 

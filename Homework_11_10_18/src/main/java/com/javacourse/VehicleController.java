@@ -7,10 +7,11 @@ import static com.javacourse.ConstantValues.*;
 
 public class VehicleController {
 
-    public static final int STARTING_YEAR = 1900;
+    private static final int STARTING_YEAR = 1900;
+
     //MVC architecture entities
     private VehicleView view;
-    private VehicleModel model;
+    private VehicleCollectionModel model;
 
     //localization entities
     private Locale locale;
@@ -23,7 +24,7 @@ public class VehicleController {
         logger = Logger.getLogger(VehicleController.class);
     }
 
-    public VehicleController(VehicleView view,VehicleModel model) {
+    public VehicleController(VehicleView view, VehicleCollectionModel model) {
         this.view = view;
         this.model = model;
         fillVehicles();
