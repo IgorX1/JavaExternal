@@ -163,7 +163,7 @@ public class VehicleController {
         }
     }
 
-    int getParamFromConsole(String msg){
+    private int getParamFromConsole(String msg){
         view.printMessage(msg);
         int choice = 0;
         try {

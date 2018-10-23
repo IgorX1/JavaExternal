@@ -40,7 +40,34 @@ public class VehicleControllerTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void parseLanguageChoice_correctLanguage(){
+        LanguageEnum expected = LanguageEnum.UA;
+        LanguageEnum actual = vc.parseLanguageChoice("3");
+        assertEquals(expected, actual);
+    }
 
+    @Test
+    public void parseLanguageChoice_wrongLanguage_returnsDefault(){
+        LanguageEnum expected = LanguageEnum.EN;
+        LanguageEnum actual = vc.parseLanguageChoice("-1");
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldProceed_answerYes_returnTrue(){
+        assertTrue(vc.shouldProceed("yes"));
+        assertTrue(vc.shouldProceed("Yes"));
+        assertTrue(vc.shouldProceed("YES"));
+    }
+
+    @Test
+    public void shouldProceed_answerNoOrWrong_returnFalse(){
+        String wrongInput = "12a5";
+        assertFalse(vc.shouldProceed("No"));
+        assertFalse(vc.shouldProceed("NO"));
+        assertFalse(vc.shouldProceed(wrongInput));
+    }
 
     @Parameters
     public static Collection<Object[]> dataHeight() {
@@ -102,7 +129,7 @@ public class VehicleControllerTest {
     @Test(expected = WrongParameterFromConsoleException.class)
     @Parameters(method = "dataAge")
     public void checkAge_wrongParam_exception(int a) {
-        vc.checkYear(a);
+        vc.checkAge(a);
     }
 
     @Parameters
