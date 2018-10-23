@@ -16,8 +16,12 @@ public class PostfixTransformatorTest {
     }
 
     @Test
-    public void transform(){
-
+    public void transformCorrectInput(){
+        Object[] actual = transformator.transform().toArray();
+        Object[] expected = new String[]{
+                "12", "5", "7", "*", "+"
+        };
+        assertArrayEquals(expected, actual);
     }
 
 }

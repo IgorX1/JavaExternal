@@ -22,6 +22,8 @@ public class Tokenizer {
                 else throw new TokenNotSupportedException(c+" can't be a token");
             }
         }
+        if(currentToken.length()>0)
+            tokens.add(currentToken.toString());
         return tokens;
     }
 

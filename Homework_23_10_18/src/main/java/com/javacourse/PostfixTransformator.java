@@ -13,7 +13,11 @@ public class PostfixTransformator {
         stack = new MyStack(input.length());
     }
 
-    public String transform() {
+    public ArrayList<String> transform() {
+        //allocate new objects every ime this method is called
+        this.output = new ArrayList<>();
+        stack = new MyStack();
+
         for(String s: input){
             switch (s){
                 case "+":
@@ -23,15 +27,57 @@ public class PostfixTransformator {
                 case "*":
                 case "/":
                     gotOperator(s, 2);
+                    break;
                 case "(":
                     stack.push(s);
                     break;
                 case ")":
-                    gotClosingParenthies();
+                    gotClosingParentheses(s);
+                    break;
+                default:
+                    output.add(s);
                     break;
 
             }
         }
-        return null;
+
+        while(!stack.isEmpty()){
+            output.add(stack.pop());
+        }
+
+        return output;
     }
+
+    void gotOperator(String currentOpeartor, int priority1) {
+        while(!stack.isEmpty()){
+            String operatorTop = stack.pop();
+            if(operatorTop.equals("(")){
+                stack.push(operatorTop);
+                break;
+            }else {
+                int priority2;
+                if(operatorTop.equals("+")||operatorTop.equals("-")){
+                    priority2 = 1;
+                }else
+                    priority2 = 2;
+                if(priority2<priority1){
+                    stack.push(operatorTop);
+                    break;
+                }else {
+                    output.add(operatorTop);
+                }
+            }
+        }
+        stack.push(currentOpeartor);
+    }
+
+    void gotClosingParentheses(String current) {
+        while (!stack.isEmpty()){
+            String top = stack.pop();
+            if(top.equals("("))
+                break;
+            else output.add(top);
+        }
+    }
+
 }
