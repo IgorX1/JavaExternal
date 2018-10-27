@@ -9,6 +9,7 @@ import static org.junit.Assert.*;
 
 public class PostfixParserTest {
     PostfixParser parser;
+    public static final double DELTA = 0.001;
 
     @Before
     public void setUp() throws Exception {
@@ -36,7 +37,7 @@ public class PostfixParserTest {
         fillTokenList(expected);
         parser = new PostfixParser(expected);
 
-        assertEquals(10, parser.parse());
+        assertEquals(10, parser.parse(), DELTA);
     }
 
     private void fillTokenList(ArrayList tokens) {

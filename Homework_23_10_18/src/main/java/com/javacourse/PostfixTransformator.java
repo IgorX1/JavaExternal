@@ -28,6 +28,9 @@ public class PostfixTransformator {
                 case "/":
                     gotOperator(s, 2);
                     break;
+                case "sin":
+                    gotOperator(s, 3);
+                    break;
                 case "(":
                     stack.push(s);
                     break;
@@ -48,7 +51,7 @@ public class PostfixTransformator {
         return output;
     }
 
-    void gotOperator(String currentOpeartor, int priority1) {
+    void gotOperator(String currentOperator, int priority1) {
         while(!stack.isEmpty()){
             String operatorTop = stack.pop();
             if(operatorTop.equals("(")){
@@ -58,8 +61,9 @@ public class PostfixTransformator {
                 int priority2;
                 if(operatorTop.equals("+")||operatorTop.equals("-")){
                     priority2 = 1;
-                }else
+                }else if(operatorTop.equals("*")||operatorTop.equals("/"))
                     priority2 = 2;
+                else priority2 = 3;
                 if(priority2<priority1){
                     stack.push(operatorTop);
                     break;
@@ -68,7 +72,7 @@ public class PostfixTransformator {
                 }
             }
         }
-        stack.push(currentOpeartor);
+        stack.push(currentOperator);
     }
 
     void gotClosingParentheses(String current) {

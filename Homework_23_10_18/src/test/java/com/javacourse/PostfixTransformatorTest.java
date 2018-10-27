@@ -24,4 +24,14 @@ public class PostfixTransformatorTest {
         assertArrayEquals(expected, actual);
     }
 
+    @Test
+    public void transformCorrectInputWithMathFunction(){
+        transformator = new PostfixTransformator("sin(1/2*3)");
+        Object[] actual = transformator.transform().toArray();
+        Object[] expected = new String[]{
+                "1", "2", "/", "3", "*", "sin"
+        };
+        assertArrayEquals(expected, actual);
+    }
+
 }

@@ -11,13 +11,15 @@ public class Tokenizer {
             if(c==EMPTY)
                 continue;
             if(isOperator(c)){
-                if(currentToken.length()>0){
-                    tokens.add(currentToken.toString());
-                    currentToken.setLength(0);
+                if (currentToken.length()>0) {
+                    if(isAllowedFormatOfToken(currentToken.toString())){
+                        tokens.add(currentToken.toString());
+                        currentToken.setLength(0);
+                    }else throw new TokenNotSupportedException(currentToken+" can't be a token");
                 }
                 tokens.add(Character.toString(c));
             }else{
-                if(Character.isDigit(c))
+                if(Character.isDigit(c) || Character.isLetter(c))
                     currentToken.append(c);
                 else throw new TokenNotSupportedException(c+" can't be a token");
             }
@@ -25,6 +27,23 @@ public class Tokenizer {
         if(currentToken.length()>0)
             tokens.add(currentToken.toString());
         return tokens;
+    }
+
+   static boolean isAllowedFormatOfToken(String token){
+        return isInteger(token) || isMathFunction(token);
+   }
+
+   static boolean isInteger(String s) {
+        try {
+            Integer.parseInt(s);
+        } catch(NumberFormatException | NullPointerException e) {
+            return false;
+        }
+        return true;
+    }
+
+    static boolean isMathFunction(String s){
+        return s.equals("sin");
     }
 
    static boolean isOperator(char c){

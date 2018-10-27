@@ -23,10 +23,18 @@ public class TokenizerTest {
         assertArrayEquals(actual.toArray(), expected);
     }
 
-    @Test(expected = TokenNotSupportedException.class)
-    public void tokenize_wrongToken_excetyion(){
+    @Test
+    public void tokenizeReturnsCorrectTokenListWithSinus(){
         tokenizer = new Tokenizer();
-        tokenizer.tokenize("122$12");
+        ArrayList<String> actual = tokenizer.tokenize("12+sin(0)*(3-7)");
+        String[] expected = new String[]{"12", "+", "sin", "(", "0", ")" ,"*", "(", "3", "-", "7", ")"};
+        assertArrayEquals(actual.toArray(), expected);
+    }
+
+    @Test(expected = TokenNotSupportedException.class)
+    public void tokenize_wrongToken_exception(){
+        tokenizer = new Tokenizer();
+        tokenizer.tokenize("122+x+12");
     }
 
     @Test
