@@ -1,5 +1,6 @@
 package com.javacourse;
 
+import java.util.EmptyStackException;
 import java.util.Scanner;
 import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
@@ -38,8 +39,9 @@ class CalculationController {
             }catch (NumberFormatException
                     | ArithmeticException
                     | WrongReversePolishNotationFormat
-                    | TokenNotSupportedException exc){
-                view.printMessage(exc.getMessage());
+                    | TokenNotSupportedException
+                    | EmptyStackException exc){
+                view.printMessage("Unable to process the expression");
                 logger.debug(exc.getMessage());
             }
 

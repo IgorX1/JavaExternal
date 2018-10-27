@@ -14,6 +14,7 @@ public class PostfixTransformator {
     }
 
     public ArrayList<String> transform() {
+        analizaBasicParanthesesCorrectness(input);
         //allocate new objects every ime this method is called
         this.output = new ArrayList<>();
         stack = new MyStack();
@@ -50,6 +51,16 @@ public class PostfixTransformator {
         }
 
         return output;
+    }
+
+    void analizaBasicParanthesesCorrectness(ArrayList<String> tokens){
+        String prev, next = tokens.get(0);
+        for(int i=1; i<tokens.size(); ++i){
+            prev = next;
+            next = tokens.get(i);
+            if(prev.equals("(")&&next.equals(")"))
+                throw new TokenNotSupportedException("Empty parentheses are not acceptable");
+        }
     }
 
     void gotOperator(String currentOperator, int priority1) {
