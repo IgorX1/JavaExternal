@@ -5,7 +5,7 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aedd7ac4-375a-4141-960b-356d7793d96c" name="Default Changelist" comment="" />
+    <list default="true" id="aedd7ac4-375a-4141-960b-356d7793d96c" name="Default Changelist" comment="Add" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,27 +22,37 @@
     </option>
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Homework_11_10_18$VehicleCollectionModelTest.ic" NAME="VehicleCollectionModelTest Coverage Results" MODIFIED="1540672394671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.javacourse.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/Homework_11_10_18$VehicleModelTest_clearVehicles_null_returnsFalse.ic" NAME="VehicleModelTest.clearVehicles_null_returnsFalse Coverage Results" MODIFIED="1540071262704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.javacourse.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Homework_11_10_18$VehicleControllerTest_checkAge_wrongParam_exception.ic" NAME="VehicleControllerTest.checkAge_wrongParam_exception Coverage Results" MODIFIED="1540291799759" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.javacourse.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/Homework_11_10_18$VehicleFinderTest.ic" NAME="VehicleFinderTest Coverage Results" MODIFIED="1540673035429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.javacourse.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/Homework_11_10_18$VehicleModelTest.ic" NAME="VehicleModelTest Coverage Results" MODIFIED="1540107300319" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.javacourse.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Homework_11_10_18$VehicleControllerTest.ic" NAME="VehicleControllerTest Coverage Results" MODIFIED="1540291867651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Homework_11_10_18$VehicleControllerTest.ic" NAME="VehicleControllerTest Coverage Results" MODIFIED="1540672407683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.javacourse.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Homework_11_10_18$App.ic" NAME="App Coverage Results" MODIFIED="1540672386167" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.javacourse.*</FILTER>
     </SUITE>
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="215" />
+    <option name="myElementSize" value="229" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="1561277556">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="12" />
+          <entry key="project.closed" value="13" />
+          <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="2" />
@@ -51,7 +61,7 @@
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -59,7 +69,7 @@
           <entry key="MockMaker" value="1" />
           <entry key="class" value="1" />
           <entry key="html" value="1" />
-          <entry key="java" value="190" />
+          <entry key="java" value="196" />
           <entry key="log" value="15" />
           <entry key="properties" value="29" />
           <entry key="xml" value="10" />
@@ -69,7 +79,7 @@
         <counts>
           <entry key="CLASS" value="1" />
           <entry key="HTML" value="1" />
-          <entry key="JAVA" value="190" />
+          <entry key="JAVA" value="196" />
           <entry key="PLAIN_TEXT" value="16" />
           <entry key="Properties" value="29" />
           <entry key="XML" value="10" />
@@ -77,16 +87,16 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="10970" />
+          <entry key="java" value="11063" />
           <entry key="properties" value="1210" />
-          <entry key="txt" value="801" />
+          <entry key="txt" value="804" />
           <entry key="xml" value="128" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="10970" />
-          <entry key="PLAIN_TEXT" value="801" />
+          <entry key="JAVA" value="11063" />
+          <entry key="PLAIN_TEXT" value="804" />
           <entry key="Properties" value="1210" />
           <entry key="XML" value="128" />
         </counts>
@@ -108,14 +118,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/javacourse/VehicleControllerTest.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/VehicleFinder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="94" column="11" lean-forward="true" selection-start-line="94" selection-start-column="11" selection-end-line="94" selection-end-column="11" />
+            <state relative-caret-position="250">
+              <caret line="16" column="63" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="63" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/javacourse/VehicleFinderTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1375">
+              <caret line="55" column="5" lean-forward="true" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/VehicleController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-125">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/javacourse/VehicleCollectionModelTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -189,6 +229,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/dictionary_ukr.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/javacourse/VehicleController.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/javacourse/VehicleControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/javacourse/VehicleFinderTest.java" />
       </list>
     </option>
   </component>
@@ -211,8 +252,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -278,16 +317,19 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540301516243" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540673047932" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -306,123 +348,6 @@
       <recent name="E:\Epam Java Course\Homework\JavaExternal\Homework_11_10_18\log" />
     </key>
   </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/README.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/pom.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/com/javacourse/App.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/com/javacourse/VehicleController.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/java/com/javacourse/VehicleModelTest.java</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/logfile.log</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/java/com/javacourse/VehicleControllerTest.java</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Homework_11_10_18.iml</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
-  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -435,7 +360,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="JUnit.VehicleFinderTest">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.javacourse.App" />
       <module name="Homework_11_10_18" />
@@ -449,7 +374,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VehicleControllerTest.getAndParseLanguageChoice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VehicleCollectionModelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Homework_11_10_18" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.javacourse.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.javacourse" />
+      <option name="MAIN_CLASS_NAME" value="com.javacourse.VehicleCollectionModelTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VehicleControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Homework_11_10_18" />
       <extension name="coverage">
         <pattern>
@@ -459,15 +398,11 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.javacourse" />
       <option name="MAIN_CLASS_NAME" value="com.javacourse.VehicleControllerTest" />
-      <option name="METHOD_NAME" value="getAndParseLanguageChoice" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea " />
-      <option name="PARAMETERS" value="" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VehicleModelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VehicleFinderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Homework_11_10_18" />
       <extension name="coverage">
         <pattern>
@@ -476,12 +411,12 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.javacourse" />
-      <option name="MAIN_CLASS_NAME" value="com.javacourse.VehicleModelTest" />
+      <option name="MAIN_CLASS_NAME" value="com.javacourse.VehicleFinderTest" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VehicleModelTest.add_null_returnsFalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VehicleFinderTest.isPlaneWithHeightMoreThanXYearAfterYReturnsExpectedResult" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Homework_11_10_18" />
       <extension name="coverage">
         <pattern>
@@ -490,43 +425,27 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.javacourse" />
-      <option name="MAIN_CLASS_NAME" value="com.javacourse.VehicleModelTest" />
-      <option name="METHOD_NAME" value="add_null_returnsFalse" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="VehicleModelTest.clearVehicles_null_returnsFalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Homework_11_10_18" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.javacourse.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.javacourse" />
-      <option name="MAIN_CLASS_NAME" value="com.javacourse.VehicleModelTest" />
-      <option name="METHOD_NAME" value="clearVehicles_null_returnsFalse" />
+      <option name="MAIN_CLASS_NAME" value="com.javacourse.VehicleFinderTest" />
+      <option name="METHOD_NAME" value="isPlaneWithHeightMoreThanXYearAfterYReturnsExpectedResult" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.VehicleModelTest.clearVehicles_null_returnsFalse" />
-      <item itemvalue="JUnit.VehicleModelTest.add_null_returnsFalse" />
-      <item itemvalue="JUnit.VehicleControllerTest.getAndParseLanguageChoice" />
       <item itemvalue="Application.App" />
-      <item itemvalue="JUnit.VehicleModelTest" />
+      <item itemvalue="JUnit.VehicleCollectionModelTest" />
+      <item itemvalue="JUnit.VehicleControllerTest" />
+      <item itemvalue="JUnit.VehicleFinderTest.isPlaneWithHeightMoreThanXYearAfterYReturnsExpectedResult" />
+      <item itemvalue="JUnit.VehicleFinderTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.VehicleModelTest" />
+        <item itemvalue="JUnit.VehicleFinderTest" />
+        <item itemvalue="JUnit.VehicleFinderTest.isPlaneWithHeightMoreThanXYearAfterYReturnsExpectedResult" />
+        <item itemvalue="JUnit.VehicleControllerTest" />
+        <item itemvalue="JUnit.VehicleCollectionModelTest" />
         <item itemvalue="Application.App" />
-        <item itemvalue="JUnit.VehicleControllerTest.getAndParseLanguageChoice" />
-        <item itemvalue="JUnit.VehicleModelTest.add_null_returnsFalse" />
-        <item itemvalue="JUnit.VehicleModelTest.clearVehicles_null_returnsFalse" />
       </list>
     </recent_temporary>
   </component>
@@ -552,6 +471,7 @@
       <workItem from="1540105738404" duration="2473000" />
       <workItem from="1540109046154" duration="1529000" />
       <workItem from="1540286408164" duration="5607000" />
+      <workItem from="1540672364072" duration="706000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit with basic classes without functionality">
       <created>1539448119263</created>
@@ -711,24 +631,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="VehicleControllerTest_shouldProceed_answerYes_returnTrue - 2018.10.23 at 13h 47m 16s.xml">
-      <configuration name="VehicleControllerTest.shouldProceed_answerYes_returnTrue" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VehicleControllerTest_shouldProceed_answerNoOrWrong_returnFalse - 2018.10.23 at 13h 48m 29s.xml">
-      <configuration name="VehicleControllerTest.shouldProceed_answerNoOrWrong_returnFalse" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VehicleControllerTest_shouldProceed_answerNoOrWrong_returnFalse - 2018.10.23 at 13h 48m 50s.xml">
-      <configuration name="VehicleControllerTest.shouldProceed_answerNoOrWrong_returnFalse" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VehicleControllerTest_shouldProceed_answerNoOrWrong_returnFalse - 2018.10.23 at 13h 48m 57s.xml">
-      <configuration name="VehicleControllerTest.shouldProceed_answerNoOrWrong_returnFalse" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VehicleControllerTest_shouldProceed_answerNoOrWrong_returnFalse - 2018.10.23 at 13h 49m 11s.xml">
-      <configuration name="VehicleControllerTest.shouldProceed_answerNoOrWrong_returnFalse" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VehicleControllerTest_checkAge_wrongParam_exception - 2018.10.23 at 13h 49m 50s.xml">
-      <configuration name="VehicleControllerTest.checkAge_wrongParam_exception" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="VehicleControllerTest_checkAge_wrongParam_exception - 2018.10.23 at 13h 50m 03s.xml">
       <configuration name="VehicleControllerTest.checkAge_wrongParam_exception" configurationId="JUnit" />
     </history-entry>
@@ -741,22 +643,39 @@
     <history-entry file="VehicleControllerTest - 2018.10.23 at 13h 51m 10s.xml">
       <configuration name="VehicleControllerTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="VehicleCollectionModelTest - 2018.10.27 at 23h 33m 16s.xml">
+      <configuration name="VehicleCollectionModelTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VehicleControllerTest - 2018.10.27 at 23h 33m 30s.xml">
+      <configuration name="VehicleControllerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VehicleFinderTest_isPlaneWithHeightMoreThanXYearAfterYReturnsExpectedResult - 2018.10.27 at 23h 39m 18s.xml">
+      <configuration name="VehicleFinderTest.isPlaneWithHeightMoreThanXYearAfterYReturnsExpectedResult" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VehicleFinderTest_isPlaneWithHeightMoreThanXYearAfterYReturnsExpectedResult - 2018.10.27 at 23h 39m 45s.xml">
+      <configuration name="VehicleFinderTest.isPlaneWithHeightMoreThanXYearAfterYReturnsExpectedResult" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VehicleFinderTest_isPlaneWithHeightMoreThanXYearAfterYReturnsExpectedResult - 2018.10.27 at 23h 42m 58s.xml">
+      <configuration name="VehicleFinderTest.isPlaneWithHeightMoreThanXYearAfterYReturnsExpectedResult" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VehicleFinderTest - 2018.10.27 at 23h 43m 57s.xml">
+      <configuration name="VehicleFinderTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55865000" />
+    <option name="totallyTimeSpent" value="56571000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29194632" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29597315" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Capture Tool" order="6" />
-      <window_info anchor="bottom" id="Extract Method" weight="0.32907802" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3602837" />
@@ -771,6 +690,7 @@
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32907802" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.32907802" />
+      <window_info anchor="bottom" id="Extract Method" order="14" weight="0.32907802" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -813,27 +733,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Increased test coverage for contoller, labguage enum and some other classes" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/util/function/Consumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/lang/Iterable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="74" column="26" lean-forward="true" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/util/Comparator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5399">
-          <caret line="108" column="17" selection-start-line="108" selection-start-column="17" selection-end-line="108" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/lang/Throwable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
@@ -902,13 +801,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/MenuItems.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/ProgramShouldBeTerminatedException.java" />
     <entry file="file://$PROJECT_DIR$/resources/config.properties" />
     <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/util/ResourceBundle.java">
@@ -949,13 +841,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/VehicleModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="707">
-          <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/VehicleModel.java" />
     <entry file="file://$PROJECT_DIR$/src/test/resources/mockito-extensions/org.mockito.plugins.MockMaker">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -970,13 +856,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/javacourse/VehicleModelTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="875">
-          <caret line="43" selection-start-line="43" selection-end-line="44" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/javacourse/VehicleModelTest.java" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-177">
@@ -1040,22 +920,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="5" column="12" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="12" />
-          <folding>
-            <element signature="e#160#161#0" expanded="true" />
-            <element signature="e#200#201#0" expanded="true" />
-            <element signature="e#235#236#0" expanded="true" />
-            <element signature="e#266#267#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/VehicleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-88">
-          <caret line="155" column="11" selection-start-line="155" selection-start-column="11" selection-end-line="155" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1063,11 +927,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#376#377#0" expanded="true" />
-            <element signature="e#1238#1239#0" expanded="true" />
-            <element signature="e#1305#1306#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1078,20 +937,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/VehicleFinder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="16" column="70" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/FilteredResult.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
           <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1106,10 +955,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-          <folding>
-            <element signature="e#2350#2351#0" expanded="true" />
-            <element signature="e#2431#2432#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1117,17 +962,61 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="607">
           <caret line="78" column="19" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="19" />
-          <folding>
-            <element signature="e#2235#2236#0" expanded="true" />
-            <element signature="e#2314#2315#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/javacourse/VehicleCollectionModelTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/AmphibiousCar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-100">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/MenuItems.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/javacourse/VehicleControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="94" column="11" lean-forward="true" selection-start-line="94" selection-start-column="11" selection-end-line="94" selection-end-column="11" />
+        <state relative-caret-position="875">
+          <caret line="94" column="11" selection-start-line="94" selection-start-column="11" selection-end-line="94" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/VehicleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-125">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/VehicleFinder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="16" column="63" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/javacourse/VehicleFinderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1375">
+          <caret line="55" column="5" lean-forward="true" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
