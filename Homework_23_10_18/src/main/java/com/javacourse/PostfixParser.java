@@ -11,17 +11,22 @@ public class PostfixParser {
         this.reversePolishNotation = reversePolishNotation;
     }
 
-    public int parse(){
+    public double parse(){
         stack = new MyStack();
-        int leftOperand, rightOperand, answer;
+        double leftOperand, rightOperand, answer;
 
         try {
             for(String current: reversePolishNotation){
-                if(isInteger(current))
+                if(isNumber(current))
                     stack.push(current);
+                else if(Tokenizer.isMathFunction(current)){
+                    leftOperand = Double.parseDouble(stack.pop());
+                    answer = Math.sin(leftOperand);
+                    stack.push(Double.toString(answer));
+                }
                 else{
-                    rightOperand = Integer.parseInt(stack.pop());
-                    leftOperand = Integer.parseInt(stack.pop());
+                    rightOperand = Double.parseDouble(stack.pop());
+                    leftOperand = Double.parseDouble(stack.pop());
                     switch (current){
                         case "+":
                             answer = leftOperand + rightOperand;
@@ -38,19 +43,19 @@ public class PostfixParser {
                         default:
                             answer = 0;
                     }
-                    stack.push(Integer.toString(answer));
+                    stack.push(Double.toString(answer));
                 }
             }
         } catch (NumberFormatException | EmptyStackException exc) {
             throw new WrongReversePolishNotationFormat("Unacceptable RPN format");
         }
-        answer = Integer.parseInt(stack.pop());
+        answer = Double.parseDouble(stack.pop());
         return answer;
     }
 
-    boolean isInteger(String s){
+    boolean isNumber(String s){
         try {
-            Integer.parseInt(s);
+            Double.parseDouble(s);
         } catch (NumberFormatException e) {
             return false;
         }

@@ -9,26 +9,26 @@ import static org.junit.Assert.*;
 
 public class PostfixParserTest {
     PostfixParser parser;
-    public static final double DELTA = 0.001;
+    public static final double DELTA = 0.1;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         parser = new PostfixParser(new ArrayList<String>());
     }
 
     @Test
-    public void isInteger_correctDigit_returnsTrue(){
-        assertTrue(parser.isInteger("-112"));
-        assertTrue(parser.isInteger("0"));
-        assertTrue(parser.isInteger("115"));
+    public void isNumber_correctDigit_returnsTrue(){
+        assertTrue(parser.isNumber("-112"));
+        assertTrue(parser.isNumber("0"));
+        assertTrue(parser.isNumber("115"));
+        assertTrue(parser.isNumber("112.5"));
     }
 
     @Test
-    public void isInteger_incorrectDigit_returnsFalse(){
-        assertFalse(parser.isInteger("-112.5"));
-        assertFalse(parser.isInteger("15z"));
-        assertFalse(parser.isInteger(""));
-        assertFalse(parser.isInteger(null));
+    public void isNumber_incorrectDigit_returnsFalse(){
+        assertFalse(parser.isNumber("15z"));
+        assertFalse(parser.isNumber(""));
+        //assertFalse(parser.isNumber(null));
     }
 
     @Test
@@ -40,7 +40,7 @@ public class PostfixParserTest {
         assertEquals(10, parser.parse(), DELTA);
     }
 
-    private void fillTokenList(ArrayList tokens) {
+    private void fillTokenList(ArrayList<String> tokens) {
         tokens.add("12");
         tokens.add("2");
         tokens.add("3");
@@ -49,4 +49,27 @@ public class PostfixParserTest {
         tokens.add("*");
         tokens.add("+");
     }
+
+    @Test
+    public void parse_correctInputWithMathFunction_correctResult() {
+        ArrayList expected = new ArrayList();
+        fillTokenListWithMathFunction(expected);
+        parser = new PostfixParser(expected);
+        double actual = parser.parse();
+        assertEquals(14.07, actual, DELTA);
+    }
+
+    private void fillTokenListWithMathFunction(ArrayList<String> tokens) {
+        tokens.add("5");
+        tokens.add("3");
+        tokens.add("*");
+        tokens.add("2");
+        tokens.add("7");
+        tokens.add("3");
+        tokens.add("/");
+        tokens.add("+");
+        tokens.add("sin");
+        tokens.add("+");
+    }
+
 }
