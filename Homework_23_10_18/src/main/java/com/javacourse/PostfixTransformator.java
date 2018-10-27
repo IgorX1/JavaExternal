@@ -29,6 +29,7 @@ public class PostfixTransformator {
                     gotOperator(s, 2);
                     break;
                 case "sin":
+                case "log":
                     gotOperator(s, 3);
                     break;
                 case "(":

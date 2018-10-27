@@ -43,7 +43,7 @@ public class Tokenizer {
     }
 
     static boolean isMathFunction(String s){
-        return s.equals("sin");
+        return s.equals("sin") || s.equals("log");
     }
 
    static boolean isOperator(char c){

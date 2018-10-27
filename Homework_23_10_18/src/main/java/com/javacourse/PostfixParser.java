@@ -20,8 +20,7 @@ public class PostfixParser {
                 if(isNumber(current))
                     stack.push(current);
                 else if(Tokenizer.isMathFunction(current)){
-                    leftOperand = Double.parseDouble(stack.pop());
-                    answer = Math.sin(leftOperand);
+                    answer = getMathFunctionValue(stack.pop(), current);
                     stack.push(Double.toString(answer));
                 }
                 else{
@@ -59,6 +58,14 @@ public class PostfixParser {
     void checkDividor(double d){
         final double EPS = 0.00000001;
         if(Math.abs(d)<EPS) throw new ArithmeticException();
+    }
+
+    double getMathFunctionValue(String argument, String operation){
+        if(operation.equals("sin"))
+            return Math.sin(Double.parseDouble(argument));
+        else if(operation.equals("log"))
+            return Math.log(Double.parseDouble(argument));
+        else throw new OperationNotSupportedException("This operation is not supported. Check allowed operations list for details");
     }
 
     boolean isNumber(String s){
