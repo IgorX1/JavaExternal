@@ -38,6 +38,7 @@ public class PostfixParser {
                             answer = leftOperand * rightOperand;
                             break;
                         case "/":
+                            checkDividor(rightOperand);
                             answer = leftOperand / rightOperand;
                             break;
                         default:
@@ -48,9 +49,16 @@ public class PostfixParser {
             }
         } catch (NumberFormatException | EmptyStackException exc) {
             throw new WrongReversePolishNotationFormat("Unacceptable RPN format");
+        } catch (ArithmeticException exc){
+            throw new ArithmeticException("Division on zero is unacceptable");
         }
         answer = Double.parseDouble(stack.pop());
         return answer;
+    }
+
+    void checkDividor(double d){
+        final double EPS = 0.00000001;
+        if(Math.abs(d)<EPS) throw new ArithmeticException();
     }
 
     boolean isNumber(String s){
