@@ -1,6 +1,6 @@
 package com.javacourse;
 
-public class BusinessClient extends Client implements BusinessAllowable{
+public class BusinessClient extends Client implements BusinessPlanAllowable {
 
     public BusinessClient(String name, Tariff tariff) {
         super(name, tariff);

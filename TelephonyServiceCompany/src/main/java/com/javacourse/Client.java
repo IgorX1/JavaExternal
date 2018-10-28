@@ -4,9 +4,9 @@ import java.util.Objects;
 
 class Client {
     protected String name;
-    protected Tariff tariff;
+    protected Tariffs tariff;
 
-    public Client(String name, Tariff tariff) {
+    public Client(String name, Tariffs tariff) {
         this.name = name;
         this.tariff = tariff;
     }
@@ -19,11 +19,11 @@ class Client {
         this.name = name;
     }
 
-    public Tariff getTariff() {
+    public Tariffs getTariff() {
         return tariff;
     }
 
-    public void setTariff(Tariff tariff) {
+    public void setTariff(Tariffs tariff) {
         this.tariff = tariff;
     }
 

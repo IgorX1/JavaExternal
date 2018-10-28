@@ -1,12 +1,11 @@
 package com.javacourse;
 
-import java.math.BigDecimal;
 import java.util.Objects;
 
 abstract class Tariff {
-    protected BigDecimal pricePerMonth;
+    protected double pricePerMonth;
 
-    public Tariff(BigDecimal pricePerMonth) {
+    public Tariff(Double pricePerMonth) {
         this.pricePerMonth = pricePerMonth;
     }
 
@@ -23,7 +22,7 @@ abstract class Tariff {
         if (this == o) return true;
         if (!(o instanceof Tariff)) return false;
         Tariff tariff = (Tariff) o;
-        return pricePerMonth.equals(tariff);
+        return pricePerMonth==tariff.pricePerMonth;
     }
 
     @Override
