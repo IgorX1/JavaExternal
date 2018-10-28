@@ -1,15 +1,14 @@
 package com.javacourse;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class TelephonyServiceController {
     private List<Tariff> tariffs;
     private List<Client> clients;
 
     public TelephonyServiceController() {
+        tariffs = new LinkedList<>();
+        clients = new LinkedList<>();
         fillBasicSetOfClients();
         fillBasicSetOfTariffs();
     }
@@ -30,11 +29,23 @@ public class TelephonyServiceController {
         ));
     }
 
+    public boolean addClient(Client c){
+        return clients.add(c);
+    }
+
+    public boolean clearClientList(){
+        if(clients.size()>0){
+            clients.clear();
+            return true;
+        }
+        return  false;
+    }
+
     int getTotalNumberOfClients(){
         return clients.size();
     }
 
-    List<Tariff> getSorsetTariffListByPrice(){
+    List<Tariff> getSortedTariffListByPrice(){
         List<Tariff> sortedList = new ArrayList<>(tariffs);
         Collections.sort(sortedList,
                 (x1, x2)-> (int)(x1.pricePerMonth-x2.pricePerMonth));
