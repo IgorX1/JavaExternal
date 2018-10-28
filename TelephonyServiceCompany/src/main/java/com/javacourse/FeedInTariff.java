@@ -1,9 +1,12 @@
 package com.javacourse;
 
-import java.math.BigDecimal;
+import static com.javacourse.TariffPriceList.*;
 
 public class FeedInTariff extends Tariff {
-    public FeedInTariff(double pricePerMonth) {
+
+    static final FeedInTariff INSTANCE = new FeedInTariff(FEEDIN_TARIFF_PRICE);
+
+    private FeedInTariff(double pricePerMonth) {
         super(pricePerMonth);
     }
 

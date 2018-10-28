@@ -1,10 +1,12 @@
 package com.javacourse;
 
-import java.math.BigDecimal;
+import static com.javacourse.TariffPriceList.*;
 
 public class BusinessTariff extends Tariff {
 
-    public BusinessTariff(double pricePerMonth) {
+    static final BusinessTariff INSTANCE = new BusinessTariff(BUSINESS_TARIFF_PRICE);
+
+    private BusinessTariff(double pricePerMonth) {
         super(pricePerMonth);
     }
 

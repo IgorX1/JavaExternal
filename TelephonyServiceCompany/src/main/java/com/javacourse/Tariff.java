@@ -5,7 +5,7 @@ import java.util.Objects;
 abstract class Tariff {
     protected double pricePerMonth;
 
-    public Tariff(Double pricePerMonth) {
+    Tariff(Double pricePerMonth) {
         this.pricePerMonth = pricePerMonth;
     }
 

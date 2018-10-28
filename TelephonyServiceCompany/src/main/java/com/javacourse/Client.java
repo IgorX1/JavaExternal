@@ -3,10 +3,10 @@ package com.javacourse;
 import java.util.Objects;
 
 class Client {
-    protected String name;
-    protected Tariffs tariff;
+    private String name;
+    private Tariff tariff;
 
-    public Client(String name, Tariffs tariff) {
+    public Client(String name, Tariff tariff) {
         this.name = name;
         this.tariff = tariff;
     }
@@ -19,11 +19,11 @@ class Client {
         this.name = name;
     }
 
-    public Tariffs getTariff() {
+    public Tariff getTariff() {
         return tariff;
     }
 
-    public void setTariff(Tariffs tariff) {
+    public void setTariff(Tariff tariff) {
         this.tariff = tariff;
     }
 
