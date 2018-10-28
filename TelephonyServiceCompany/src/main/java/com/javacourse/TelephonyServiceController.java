@@ -36,7 +36,24 @@ public class TelephonyServiceController {
 
     List<Tariff> getSorsetTariffListByPrice(){
         List<Tariff> sortedList = new ArrayList<>(tariffs);
-        Collections.sort(sortedList, (x1, x2)-> (int)(x1.pricePerMonth-x2.pricePerMonth));
+        Collections.sort(sortedList,
+                (x1, x2)-> (int)(x1.pricePerMonth-x2.pricePerMonth));
         return sortedList;
+    }
+
+    List<Tariff> getTariffsByPriceLimits(double minPrice, double maxPrice){
+        List<Tariff> result = new ArrayList<>();
+        tariffs.forEach(x->{
+            if(doesPriceCorrespondToPriceLimits(x.pricePerMonth, minPrice, maxPrice)){
+                result.add(x);
+            }
+        });
+        return result;
+    }
+
+    boolean doesPriceCorrespondToPriceLimits(double actual, double min, double max){
+        if(actual>=min && actual<=max)
+            return true;
+        else return false;
     }
 }
