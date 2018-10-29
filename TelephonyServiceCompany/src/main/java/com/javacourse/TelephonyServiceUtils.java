@@ -2,11 +2,11 @@ package com.javacourse;
 
 import java.util.*;
 
-public class TelephonyServiceController {
+public class TelephonyServiceUtils {
     private List<Tariff> tariffs;
     private List<Client> clients;
 
-    public TelephonyServiceController() {
+    public TelephonyServiceUtils() {
         tariffs = new LinkedList<>();
         clients = new LinkedList<>();
         fillBasicSetOfClients();
@@ -27,6 +27,10 @@ public class TelephonyServiceController {
              GeneralTariff.INSTANCE,
              FeedInTariff.INSTANCE
         ));
+    }
+
+    public List<Tariff> getTariffs() {
+        return tariffs;
     }
 
     public boolean addClient(Client c){

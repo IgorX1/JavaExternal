@@ -12,13 +12,13 @@ import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.*;
 
 @RunWith(JUnitParamsRunner.class)
-public class TelephonyServiceControllerTest {
+public class TelephonyServiceUtilsTest {
 
-    TelephonyServiceController tsc;
+    TelephonyServiceUtils tsc;
 
     @Before
     public void setUp() throws Exception {
-        tsc = new TelephonyServiceController();
+        tsc = new TelephonyServiceUtils();
     }
 
     @Test
@@ -48,26 +48,4 @@ public class TelephonyServiceControllerTest {
                 GeneralTariff.INSTANCE,
                 FeedInTariff.INSTANCE));
     }
-
-    /*@Parameters
-    @Ignore
-    public static Collection<Object[]> dataForDoesPriceCorrespondToPriceLimits() {
-        return Arrays.asList(new Object[][]{
-                {10, -5, 15, true},
-                {0, -10, 10, true},
-                {0, 0, 0, true},
-                {100, 101, 99, false}
-        });
-    }
-
-    @Test
-    @Ignore
-    @Parameters(method = "dataForDoesPriceCorrespondToPriceLimits")
-    public void doesPriceCorrespondToPriceLimits(double act, double min, double max, boolean isTrue) {
-         boolean actual = tsc.doesPriceCorrespondToPriceLimits(act, min, max);
-         boolean expected = isTrue;
-         assertThat(actual, equalTo(expected));
-    }*/
-
-
 }
