@@ -1,4 +1,8 @@
-package com.javacourse;
+package com.javacourse.serialization;
+
+import com.javacourse.Plane;
+import com.javacourse.Vehicle;
+import com.javacourse.serialization.VehicleSerializator;
 
 import java.io.*;
 

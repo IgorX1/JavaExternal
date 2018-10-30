@@ -1,11 +1,13 @@
-package com.javacourse;
+package com.javacourse.serialization;
+
+import com.javacourse.Vehicle;
 
 import java.io.*;
 import java.util.ArrayList;
 
 public class ModelSerialization {
 
-    ArrayList<Vehicle> deserializeModel(String fileName) throws IOException {
+    public ArrayList<Vehicle> deserializeModel(String fileName) throws IOException {
         File file = new File(fileName);
         ObjectInputStream ois = null;
         try {

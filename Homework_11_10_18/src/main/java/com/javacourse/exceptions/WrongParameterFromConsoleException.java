@@ -1,4 +1,4 @@
-package com.javacourse;
+package com.javacourse.exceptions;
 
 public class WrongParameterFromConsoleException extends RuntimeException {
 

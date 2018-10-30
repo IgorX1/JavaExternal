@@ -1,13 +1,12 @@
 package com.javacourse;
 
 import static org.junit.Assert.*;
+
+import com.javacourse.exceptions.WrongParameterFromConsoleException;
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.cglib.core.Local;
-
-import static org.mockito.Mockito.*;
 
 import java.util.*;
 

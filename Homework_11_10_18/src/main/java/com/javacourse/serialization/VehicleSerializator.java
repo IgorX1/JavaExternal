@@ -1,5 +1,7 @@
-package com.javacourse;
+package com.javacourse.serialization;
 
+import com.javacourse.Vehicle;
+import com.javacourse.VehicleController;
 import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
 

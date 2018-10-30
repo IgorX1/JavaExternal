@@ -2,6 +2,10 @@ package com.javacourse;
 
 import java.io.*;
 import java.util.*;
+
+import com.javacourse.exceptions.MenuItemNotExistingException;
+import com.javacourse.exceptions.WrongParameterFromConsoleException;
+import com.javacourse.serialization.ModelSerialization;
 import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
 import static com.javacourse.ConstantValues.*;
@@ -89,7 +93,7 @@ public class VehicleController {
                 int menuItem = getUserChoiceFromConsole();
                 view.printQueryResults(getResultOnUsersChoice(menuItem));
             } catch (WrongParameterFromConsoleException
-                    | MenuItemNotExistingExcpetion
+                    | MenuItemNotExistingException
                     | NumberFormatException exc) {
                 view.printError(resourceBundle.getString("data.inputError"));
                 logger.debug(exc.getMessage());
@@ -172,7 +176,7 @@ public class VehicleController {
                 checkAge(ageLimit);
                 return  VehicleFinder.getWithMinPriceAndMaxSpeedYoungerThanXYears(model.getVehicles(), ageLimit);
             default:
-                throw new MenuItemNotExistingExcpetion("Such menu item does not exist");
+                throw new MenuItemNotExistingException("Such menu item does not exist");
         }
     }
 

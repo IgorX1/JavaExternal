@@ -1,4 +1,8 @@
-package com.javacourse;
+package com.javacourse.serialization;
+
+import com.javacourse.AmphibiousCar;
+import com.javacourse.Vehicle;
+import com.javacourse.serialization.VehicleSerializator;
 
 import java.io.InvalidObjectException;
 
