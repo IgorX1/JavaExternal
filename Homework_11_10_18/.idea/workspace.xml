@@ -357,7 +357,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="JUnit.VehicleFinderTest">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.javacourse.App" />
       <module name="Homework_11_10_18" />
@@ -438,11 +438,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.App" />
         <item itemvalue="JUnit.VehicleFinderTest" />
         <item itemvalue="JUnit.VehicleFinderTest.isPlaneWithHeightMoreThanXYearAfterYReturnsExpectedResult" />
         <item itemvalue="JUnit.VehicleControllerTest" />
         <item itemvalue="JUnit.VehicleCollectionModelTest" />
+        <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
   </component>
