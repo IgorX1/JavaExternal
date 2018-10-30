@@ -6,25 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aedd7ac4-375a-4141-960b-356d7793d96c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data/vehicles.data" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javacourse/AmphibiousCarSerializator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javacourse/BatMobileSerializator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javacourse/CarSerializator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javacourse/ModelSerialization.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javacourse/PlaneSerializator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javacourse/ShipSerializator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javacourse/VehicleSerializator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/logfile.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/logfile.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/javacourse/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javacourse/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/javacourse/ConstantValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javacourse/ConstantValues.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/javacourse/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javacourse/Vehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/javacourse/VehicleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javacourse/VehicleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/javacourse/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/javacourse/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/javacourse/ConstantValues.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/javacourse/ConstantValues.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/javacourse/Vehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/javacourse/Vehicle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/javacourse/VehicleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/javacourse/VehicleController.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -90,7 +72,7 @@
           <entry key="class" value="1" />
           <entry key="data" value="6" />
           <entry key="html" value="1" />
-          <entry key="java" value="223" />
+          <entry key="java" value="227" />
           <entry key="log" value="17" />
           <entry key="properties" value="29" />
           <entry key="txt" value="6" />
@@ -101,7 +83,7 @@
         <counts>
           <entry key="CLASS" value="1" />
           <entry key="HTML" value="1" />
-          <entry key="JAVA" value="223" />
+          <entry key="JAVA" value="227" />
           <entry key="PLAIN_TEXT" value="30" />
           <entry key="Properties" value="29" />
           <entry key="XML" value="10" />
@@ -111,14 +93,14 @@
         <counts>
           <entry key="java" value="12648" />
           <entry key="properties" value="1210" />
-          <entry key="txt" value="804" />
+          <entry key="txt" value="944" />
           <entry key="xml" value="128" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="12648" />
-          <entry key="PLAIN_TEXT" value="804" />
+          <entry key="PLAIN_TEXT" value="944" />
           <entry key="Properties" value="1210" />
           <entry key="XML" value="128" />
         </counts>
@@ -127,12 +109,12 @@
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.vcs.git.usages">
         <counts>
-          <entry key="git.branch.checkout.local" value="10" />
+          <entry key="git.branch.checkout.local" value="11" />
           <entry key="git.branch.checkout.remote" value="2" />
           <entry key="git.branch.create.new" value="5" />
           <entry key="git.branch.delete.local" value="5" />
           <entry key="git.branch.delete.remote" value="2" />
-          <entry key="git.branch.merge" value="7" />
+          <entry key="git.branch.merge" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.boot.mvc.usages" />
@@ -140,27 +122,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/VehicleController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="74" column="79" selection-start-line="74" selection-start-column="79" selection-end-line="74" selection-end-column="79" />
+            <state relative-caret-position="305">
+              <caret line="73" column="13" lean-forward="true" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="method#fillVehiclesManually#0;class#VehicleController#0" />
-                <element signature="method#processUser#0;class#VehicleController#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/App.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -192,7 +160,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="master" />
+        <entry key="$PROJECT_DIR$/.." value="feature/vehicle-serializable" />
       </map>
     </option>
   </component>
@@ -279,16 +247,6 @@
             <path>
               <item name="Homework_11_10_18" type="b2602c69:ProjectViewProjectNode" />
               <item name="Homework_11_10_18" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Homework_11_10_18" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Homework_11_10_18" type="462c0819:PsiDirectoryNode" />
-              <item name="log" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Homework_11_10_18" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Homework_11_10_18" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -312,6 +270,34 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="javacourse" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Homework_11_10_18" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Homework_11_10_18" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Homework_11_10_18" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Homework_11_10_18" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Homework_11_10_18" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Homework_11_10_18" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Homework_11_10_18" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Homework_11_10_18" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="javacourse" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -322,7 +308,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540924576256" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540924895464" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="extract.method.default.visibility" value="private" />
@@ -469,7 +455,7 @@
       <workItem from="1540109046154" duration="1529000" />
       <workItem from="1540286408164" duration="5607000" />
       <workItem from="1540672364072" duration="706000" />
-      <workItem from="1540907467816" duration="7104000" />
+      <workItem from="1540907467816" duration="7422000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit with basic classes without functionality">
       <created>1539448119263</created>
@@ -632,7 +618,21 @@
       <option name="project" value="LOCAL" />
       <updated>1540907492280</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Implemented serialization and deserialization for adding vehicles of all kinds as well as for serializing/deserializing model on the whole">
+      <created>1540924674569</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1540924674569</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Implemented serialization and deserialization for adding vehicles of all kinds as well as for serializing/deserializing model on the whole">
+      <created>1540924789386</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1540924789386</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -668,7 +668,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63675000" />
+    <option name="totallyTimeSpent" value="63993000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -770,7 +770,8 @@
     <MESSAGE value="Refactored some controlling functions" />
     <MESSAGE value="Increased test coverage for contoller, labguage enum and some other classes" />
     <MESSAGE value="Add" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add" />
+    <MESSAGE value="Implemented serialization and deserialization for adding vehicles of all kinds as well as for serializing/deserializing model on the whole" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented serialization and deserialization for adding vehicles of all kinds as well as for serializing/deserializing model on the whole" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/util/ResourceBundle.java">
@@ -928,23 +929,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/javacourse/VehicleCollectionModelTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/javacourse/VehicleFinderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1300">
-          <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/io/Serializable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="457">
@@ -956,13 +940,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
           <caret line="741" column="16" selection-start-line="741" selection-start-column="16" selection-end-line="741" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/VehicleFinder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="16" column="63" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="63" />
         </state>
       </provider>
     </entry>
@@ -1081,24 +1058,43 @@
     <entry file="file://$PROJECT_DIR$/data/vehicles.data">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/VehicleController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="74" column="79" selection-start-line="74" selection-start-column="79" selection-end-line="74" selection-end-column="79" />
+        <state relative-caret-position="125">
+          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/VehicleFinder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="63" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/javacourse/VehicleCollectionModelTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/javacourse/VehicleFinderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1282">
+          <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#fillVehiclesManually#0;class#VehicleController#0" />
-            <element signature="method#processUser#0;class#VehicleController#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/App.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/VehicleController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        <state relative-caret-position="305">
+          <caret line="73" column="13" lean-forward="true" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#fillVehiclesManually#0;class#VehicleController#0" />
           </folding>
         </state>
       </provider>
