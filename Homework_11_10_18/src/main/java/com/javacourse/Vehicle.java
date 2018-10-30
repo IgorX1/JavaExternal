@@ -1,8 +1,9 @@
 package com.javacourse;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public abstract class Vehicle implements Cloneable{
+public abstract class Vehicle implements Cloneable, Serializable {
 
     protected int price;
     protected int speed;

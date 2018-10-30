@@ -1,5 +1,6 @@
 package com.javacourse;
 
+import java.io.*;
 import java.util.*;
 import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
@@ -28,13 +29,14 @@ public class VehicleController {
     public VehicleController(VehicleView view, VehicleCollectionModel model) {
         this.view = view;
         this.model = model;
-        fillVehicles();
+        deserializeModel();
+        //fillVehiclesManually();
         //Set configuration file for the log4j logger
-        DOMConfigurator.configure("log/log4j.xml");
+        DOMConfigurator.configure(LOG_CONFIG_PATH);
         sc = new Scanner(System.in);
     }
 
-    private void fillVehicles(){
+    private void fillVehiclesManually(){
         model.add(new Plane.PlaneBuilder(350, 2010, 1000)
                 .numberOfPassengers(800)
                 .height(12000)
@@ -64,6 +66,17 @@ public class VehicleController {
         model.add(new BatMobile(1200, 1985, 11111));
         model.add(new AmphibiousCar(110, 2018, 170000));
         model.add(new AmphibiousCar(250, 2018, 170000));
+    }
+
+    private void deserializeModel(){
+        ModelSerialization modelSerialization = new ModelSerialization();
+        ArrayList<Vehicle> vehicles = new ArrayList<>();
+        try {
+            vehicles = modelSerialization.deserializeModel(SERIALIZED_DATA_PATH);
+        } catch (IOException e) {
+            logger.debug(e.getMessage()+" Deserialization of model failed");
+        }
+        model.setVehicles(vehicles);
     }
 
     public void processUser(){
