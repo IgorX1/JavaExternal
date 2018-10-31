@@ -6,9 +6,19 @@ import java.util.List;
 
 public class Word {
     List<Symbol> symbols;
+    int length;
 
     public Word(List<Symbol> symbols) {
         this.symbols = symbols;
+        length = symbols.size();
+    }
+
+    public Symbol getLetter(int index){
+        return symbols.get(index);
+    }
+
+    public int getLength() {
+        return length;
     }
 
     @Override

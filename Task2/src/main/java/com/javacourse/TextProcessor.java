@@ -9,6 +9,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class TextProcessor {
 
@@ -22,7 +23,6 @@ public class TextProcessor {
     }
 
     public TextProcessor(){
-        /*words = new LinkedList<>();*/
         DOMConfigurator.configure(LOG_PATH);
     }
 
@@ -32,6 +32,7 @@ public class TextProcessor {
             words = new LinkedList<>();
             initWordList();
         }
+        ArrayList<Word> filteredQueryResult = filter();
     }
 
     boolean initWordList(){
@@ -53,6 +54,13 @@ public class TextProcessor {
             words.add(new Word(symbolList));
         }
         return true;
+    }
+
+    List<Word> filter(int len){
+        return words.stream()
+                .filter(x->isConsonant(x.getLetter(0).getSymbol()))
+                .filter(x->x.getLength()==len)
+                .collect(Collectors.toList());
     }
 
     String readTextFromFile(String filepath) throws FileNotFoundException {
@@ -77,5 +85,19 @@ public class TextProcessor {
             }
         }
         throw new FileNotFoundException("File not found");
+    }
+
+    boolean isLetter(char c){
+        return Character.isLetter(c);
+    }
+
+    boolean isVovel(char c){
+        return ("AEIOUY".indexOf(Character.toUpperCase(c))!=-1);
+    }
+
+    boolean isConsonant(char c){
+        if(!isLetter(c))
+            return  false;
+        return !isVovel(c);
     }
 }
