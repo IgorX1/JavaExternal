@@ -26,13 +26,13 @@ public class TextProcessor {
         DOMConfigurator.configure(LOG_PATH);
     }
 
-    public void processRequest(){
+    public void processRequest(int givenLength){
         //lazy initialization
         if(words==null){
             words = new LinkedList<>();
             initWordList();
         }
-        ArrayList<Word> filteredQueryResult = filter();
+        List<Word> filteredQueryResult = filter(givenLength);
     }
 
     boolean initWordList(){
