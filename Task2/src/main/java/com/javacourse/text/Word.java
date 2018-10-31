@@ -1,4 +1,6 @@
-package com.javacourse;
+package com.javacourse.text;
+
+import com.javacourse.text.Symbol;
 
 import java.util.List;
 

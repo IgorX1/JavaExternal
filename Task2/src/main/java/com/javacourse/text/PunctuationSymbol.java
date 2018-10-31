@@ -1,4 +1,4 @@
-package com.javacourse;
+package com.javacourse.text;
 
 public class PunctuationSymbol extends Symbol {
 
