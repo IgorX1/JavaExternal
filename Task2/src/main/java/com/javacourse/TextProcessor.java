@@ -26,13 +26,15 @@ public class TextProcessor {
         DOMConfigurator.configure(LOG_PATH);
     }
 
-    public void processRequest(int givenLength){
+    public List<Word> processRequest(int givenLength){
         //lazy initialization
         if(words==null){
             words = new LinkedList<>();
             initWordList();
         }
         List<Word> filteredQueryResult = filter(givenLength);
+        words.removeAll(filteredQueryResult);
+        return words;
     }
 
     boolean initWordList(){
@@ -92,7 +94,7 @@ public class TextProcessor {
     }
 
     boolean isVovel(char c){
-        return ("AEIOUY".indexOf(Character.toUpperCase(c))!=-1);
+        return ("AEIOUYАЕИУОІЯ".indexOf(Character.toUpperCase(c))!=-1);
     }
 
     boolean isConsonant(char c){
