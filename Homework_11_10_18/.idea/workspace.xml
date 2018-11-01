@@ -6,9 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aedd7ac4-375a-4141-960b-356d7793d96c" name="Default Changelist" comment="Managed to distribute classes to different packages according to their responsibilities, so that the project structure is much more obvious and readable now">
+      <change afterPath="$PROJECT_DIR$/../Task2/src/test/java/com/javacourse/TextProcessorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task2/src/main/java/com/javacourse/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Task2/src/main/java/com/javacourse/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task2/src/main/java/com/javacourse/TextProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Task2/src/main/java/com/javacourse/TextProcessor.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -484,7 +483,7 @@
       <workItem from="1540672364072" duration="706000" />
       <workItem from="1540907467816" duration="7737000" />
       <workItem from="1540975326622" duration="97000" />
-      <workItem from="1540988428579" duration="1091000" />
+      <workItem from="1540988428579" duration="1280000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit with basic classes without functionality">
       <created>1539448119263</created>
@@ -704,7 +703,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67285000" />
+    <option name="totallyTimeSpent" value="67474000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
