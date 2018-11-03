@@ -1,5 +1,9 @@
 package com.javacourse;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+import org.apache.log4j.xml.DOMConfigurator;
+
 import java.util.Objects;
 import java.util.Random;
 
@@ -9,8 +13,14 @@ public class Ship implements Runnable{
     private int id;
     private int totalCapacity;
     private int currentCapacity;
-    Harbor harbor;
-    Dock dock;
+    private final Harbor harbor;
+    private final Dock dock;
+    private static final Logger logger;
+
+    static {
+        logger = Logger.getLogger(Ship.class);
+        DOMConfigurator.configure("log/log4j.xml");
+    }
 
     private Ship(ShipBuilder builder) {
         this.id = builder.id;
@@ -30,6 +40,7 @@ public class Ship implements Runnable{
         public ShipBuilder(int id, Harbor harbor) {
             this.id = id;
             this.harbor = harbor;
+            this.dock = harbor.getDockToSwimTo();
         }
 
         public ShipBuilder totalCapacity(int totalCapacity){
@@ -50,44 +61,20 @@ public class Ship implements Runnable{
     @Override
     public void run() {
         System.out.printf("Ship #%d is willing to enter the harbor %s\n", id, harbor.getName());
-        swimToHarbor();
         synchronized (dock){
-            //DO A BUNCH OF STUFF
-
+            swimToHarbor();
 
             leaveHarbor();
         }
     }
 
-    public void swimToHarbor(){
-        getDock();
+    private void swimToHarbor(){
         try {
             Thread.sleep(new Random().nextInt(1000));
         } catch (InterruptedException e) {
-            //TODO:log it
+            logger.error(e.getMessage());
         }
         System.out.printf("Ship %s takes dock %s\n", id, dock.getId());
-    }
-
-    private void getDock() {
-        do{
-            try{
-                dock = harbor.getDock();
-                dock.setFree(false);
-            }catch (NoAvailableDocksException e){
-                //try {
-                    //System.out.printf("No free docks. Ship %s is waiting...\n", id);
-                    //wait();
-                /*} catch (InterruptedException e1) {
-                    System.err.printf(e1.getMessage());
-                    //TODO:log it
-                }*/
-            }
-        }while (!isDockSet());
-    }
-
-    private boolean isDockSet(){
-        return dock!=null;
     }
 
     private void leaveHarbor() {
@@ -95,12 +82,14 @@ public class Ship implements Runnable{
                 Thread.sleep(new Random().nextInt(1000));
                 System.out.printf("Ship %s left dock %s\n", id, dock.getId());
             } catch (InterruptedException e) {
-                //TODO:LOG IT
+                logger.error(e.getMessage());
             } finally {
-                dock.setFree(true);
                 System.out.printf("Dock %s is free\n", dock.getId());
-                //notify();
             }
+    }
+
+    private void serveCargo(){
+
     }
 
 

@@ -3,6 +3,7 @@ package com.javacourse;
 import javax.print.Doc;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 //Consumer class
 public class Harbor{
@@ -26,10 +27,9 @@ public class Harbor{
         return name;
     }
 
-    public synchronized Dock getDock() throws NoAvailableDocksException{
-        for(Dock d : docks)
-            if(d.isFree())
-                return d;
-        throw new NoAvailableDocksException("No free docks");
+    /*Supposing docks are predefined for the destination*/
+    //TODO: implement efficient dock allocation
+    public Dock getDockToSwimTo(){
+        return docks.get(new Random().nextInt(DOCK_NUMBER));
     }
 }

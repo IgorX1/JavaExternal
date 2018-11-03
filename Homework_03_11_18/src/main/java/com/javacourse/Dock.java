@@ -13,14 +13,6 @@ public class Dock {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public boolean isFree() {
-        return isFree;
-    }
-
     public void setFree(boolean free) {
         isFree = free;
     }
