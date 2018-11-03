@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9df0fc89-0b54-49dd-9e97-4a0b8079063c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Homework_03_11_18/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Homework_03_11_18/src/main/java/com/javacourse/Dock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Homework_03_11_18/src/main/java/com/javacourse/Harbor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework_03_11_18/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework_03_11_18/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework_03_11_18/src/main/java/com/javacourse/Dock.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework_03_11_18/src/main/java/com/javacourse/Dock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework_03_11_18/src/main/java/com/javacourse/Harbor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework_03_11_18/src/main/java/com/javacourse/Harbor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Homework_03_11_18/src/main/java/com/javacourse/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework_03_11_18/src/main/java/com/javacourse/Ship.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -50,7 +50,7 @@
     <session id="1473357166">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
@@ -347,7 +347,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541263614388" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541266090885" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="extract.method.default.visibility" value="private" />

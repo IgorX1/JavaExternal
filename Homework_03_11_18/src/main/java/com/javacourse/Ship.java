@@ -2,6 +2,7 @@ package com.javacourse;
 
 import java.util.Objects;
 
+//Producer class
 public class Ship implements Runnable{
 
     private int id;
@@ -39,8 +40,8 @@ public class Ship implements Runnable{
     }
 
     @Override
-    public void run() {//TODO:implement
-
+    public void run() {
+        System.out.printf("Ship #%d is going to enter the port", id);
     }
 
     @Override
