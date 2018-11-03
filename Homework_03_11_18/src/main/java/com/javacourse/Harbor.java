@@ -5,12 +5,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 //Consumer class
-public class Harbor implements Runnable {
-    private static final int DOCK_NUMBER = 4;
+public class Harbor{
+    private static final int DOCK_NUMBER = 2;
+    private String name;
     private List<Dock> docks = new ArrayList<>();
 
-    public Harbor(){
+    public Harbor(String name){
+        this.name = name;
         initializeDockList();
+        System.out.printf("Harbor %s is ready to serve ships\n", name);
     }
 
     private void initializeDockList(){
@@ -19,12 +22,14 @@ public class Harbor implements Runnable {
         }
     }
 
-    public List<Dock> getDocks() {
-        return docks;
+    public String getName() {
+        return name;
     }
 
-    @Override
-    public void run() {
-
+    public synchronized Dock getDock() throws NoAvailableDocksException{
+        for(Dock d : docks)
+            if(d.isFree())
+                return d;
+        throw new NoAvailableDocksException("No free docks");
     }
 }

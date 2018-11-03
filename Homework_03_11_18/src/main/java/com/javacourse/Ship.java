@@ -1,6 +1,7 @@
 package com.javacourse;
 
 import java.util.Objects;
+import java.util.Random;
 
 //Producer class
 public class Ship implements Runnable{
@@ -8,20 +9,27 @@ public class Ship implements Runnable{
     private int id;
     private int totalCapacity;
     private int currentCapacity;
+    Harbor harbor;
+    Dock dock;
 
     private Ship(ShipBuilder builder) {
         this.id = builder.id;
         this.totalCapacity = builder.totalCapacity;
         this.currentCapacity = builder.currentCapacity;
+        this.harbor = builder.harbor;
+        this.dock = builder.dock;
     }
 
     public static class ShipBuilder{
         private int id;
         private int totalCapacity;
         private int currentCapacity;
+        private Harbor harbor;
+        private Dock dock;
 
-        public ShipBuilder(int id) {
+        public ShipBuilder(int id, Harbor harbor) {
             this.id = id;
+            this.harbor = harbor;
         }
 
         public ShipBuilder totalCapacity(int totalCapacity){
@@ -41,30 +49,44 @@ public class Ship implements Runnable{
 
     @Override
     public void run() {
-        System.out.printf("Ship #%d is going to enter the port", id);
+        System.out.printf("Ship #%d is willing to enter the harbor %s\n", id, harbor.getName());
+        swimToHarbor();
+        synchronized (dock){
+
+        }
     }
 
-    @Override
-    public String toString() {
-        final StringBuffer sb = new StringBuffer("Ship[");
-        sb.append("id=").append(id);
-        sb.append(", currentCapacity=").append(currentCapacity);
-        sb.append(']');
-        return sb.toString();
+    public void swimToHarbor(){
+        getDock();
+        try {
+            Thread.sleep(new Random(100).nextInt(1000));
+        } catch (InterruptedException e) {
+            //TODO:log it
+        }
+        System.out.printf("Ship %s takes dock %s\n", id, dock.getId());
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Ship)) return false;
-        Ship ship = (Ship) o;
-        return id == ship.id &&
-                totalCapacity == ship.totalCapacity &&
-                currentCapacity == ship.currentCapacity;
+    private synchronized void getDock() {
+        do{
+            try{
+                dock = harbor.getDock();
+                dock.setFree(false);
+            }catch (NoAvailableDocksException e){
+                try {
+                    System.out.printf("No free docks. Ship %s is waiting...\n", id);
+                    wait();
+                } catch (InterruptedException e1) {
+                    System.err.printf(e1.getMessage());
+                    //TODO:log it
+                }
+            }
+
+        }while (!isDockSet());
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, totalCapacity, currentCapacity);
+    private boolean isDockSet(){
+        return dock!=null;
     }
+
+
 }
