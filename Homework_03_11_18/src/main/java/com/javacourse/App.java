@@ -32,5 +32,16 @@ public class App
         ship3.start();
         ship4.start();
         ship5.start();
+
+        try {
+            ship1.join();
+            ship2.join();
+            ship3.join();
+            ship4.join();
+            ship5.join();
+        } catch (InterruptedException e) {
+            //TODO log it
+        }
+        System.out.printf("finish");
     }
 }

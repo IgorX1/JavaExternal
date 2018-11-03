@@ -52,40 +52,55 @@ public class Ship implements Runnable{
         System.out.printf("Ship #%d is willing to enter the harbor %s\n", id, harbor.getName());
         swimToHarbor();
         synchronized (dock){
+            //DO A BUNCH OF STUFF
 
+
+            leaveHarbor();
         }
     }
 
     public void swimToHarbor(){
         getDock();
         try {
-            Thread.sleep(new Random(100).nextInt(1000));
+            Thread.sleep(new Random().nextInt(1000));
         } catch (InterruptedException e) {
             //TODO:log it
         }
         System.out.printf("Ship %s takes dock %s\n", id, dock.getId());
     }
 
-    private synchronized void getDock() {
+    private void getDock() {
         do{
             try{
                 dock = harbor.getDock();
                 dock.setFree(false);
             }catch (NoAvailableDocksException e){
-                try {
-                    System.out.printf("No free docks. Ship %s is waiting...\n", id);
-                    wait();
-                } catch (InterruptedException e1) {
+                //try {
+                    //System.out.printf("No free docks. Ship %s is waiting...\n", id);
+                    //wait();
+                /*} catch (InterruptedException e1) {
                     System.err.printf(e1.getMessage());
                     //TODO:log it
-                }
+                }*/
             }
-
         }while (!isDockSet());
     }
 
     private boolean isDockSet(){
         return dock!=null;
+    }
+
+    private void leaveHarbor() {
+            try {
+                Thread.sleep(new Random().nextInt(1000));
+                System.out.printf("Ship %s left dock %s\n", id, dock.getId());
+            } catch (InterruptedException e) {
+                //TODO:LOG IT
+            } finally {
+                dock.setFree(true);
+                System.out.printf("Dock %s is free\n", dock.getId());
+                //notify();
+            }
     }
 
 
