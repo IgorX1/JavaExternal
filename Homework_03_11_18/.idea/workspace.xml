@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66720722-e1fa-43cb-8e91-b0438c88fd29" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javacourse/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javacourse/Ship.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Homework_04_11_18/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework_04_11_18/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Homework_04_11_18/src/main/java/com/javacourse/Harbor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework_04_11_18/src/main/java/com/javacourse/Harbor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Homework_04_11_18/src/main/java/com/javacourse/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework_04_11_18/src/main/java/com/javacourse/Ship.java" afterDir="false" />
@@ -33,27 +35,27 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="java" value="15" />
-          <entry key="log" value="2" />
+          <entry key="log" value="3" />
           <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JAVA" value="15" />
-          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="PLAIN_TEXT" value="3" />
           <entry key="XML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="3143" />
+          <entry key="java" value="3145" />
           <entry key="txt" value="439" />
           <entry key="xml" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3143" />
+          <entry key="JAVA" value="3145" />
           <entry key="PLAIN_TEXT" value="439" />
           <entry key="XML" value="13" />
         </counts>
@@ -89,8 +91,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/Ship.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="93" column="9" lean-forward="true" selection-start-line="88" selection-start-column="8" selection-end-line="93" selection-end-column="9" />
+            <state relative-caret-position="131">
+              <caret line="104" column="27" lean-forward="true" selection-start-line="104" selection-start-column="27" selection-end-line="104" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -157,8 +159,8 @@
         <option value="$PROJECT_DIR$/log/log4j.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/javacourse/Dock.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javacourse/App.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/Ship.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javacourse/Harbor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/Ship.java" />
       </list>
     </option>
   </component>
@@ -231,7 +233,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541362557072" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541363655588" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/TestProj" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -380,7 +382,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21849000" />
+    <option name="totallyTimeSpent" value="22987000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1400" height="776" extended-state="1" />
@@ -446,9 +448,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/log/logfile.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/log/log4j.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
@@ -505,10 +504,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/log/logfile.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/Ship.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="93" column="9" lean-forward="true" selection-start-line="88" selection-start-column="8" selection-end-line="93" selection-end-column="9" />
+        <state relative-caret-position="131">
+          <caret line="104" column="27" lean-forward="true" selection-start-line="104" selection-start-column="27" selection-end-line="104" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

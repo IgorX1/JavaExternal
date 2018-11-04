@@ -3,6 +3,11 @@ package com.javacourse;
 import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
 
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
 /**
  * Client class
  */
@@ -11,6 +16,8 @@ public class Ship implements Runnable{
     private int totalCapacity;
     private int currentCapacity;
     private final Harbor harbor;
+    private Lock lock = new ReentrantLock();
+    private Condition isAvailable = lock.newCondition();
     private static final Logger logger;
     private static final int MAX_TIME_TO_WAIT = 1000;
 
@@ -85,11 +92,59 @@ public class Ship implements Runnable{
     }
 
     private void loadShip() {
-
+        lock.lock();
+        try {
+            boolean isLoadingSuccessful = true;
+            while (harbor.getCurrentCapacity()==0){
+                try {
+                    isAvailable.await(MAX_TIME_TO_WAIT, TimeUnit.MILLISECONDS);
+                    isLoadingSuccessful = false;
+                    System.out.printf("Ship %s can't wait anymore. It will swim home without loading...\n", id);
+                    break;
+                } catch (InterruptedException e) {
+                    logger.error(e.getMessage());
+                }
+            }
+            while(harbor.getCurrentCapacity()>0
+                    && this.currentCapacity<this.totalCapacity){
+                currentCapacity++;
+                harbor.currentCapacity--;
+            }
+            if(isLoadingSuccessful)
+                System.out.printf("Ship %s loaded cargo. Current ship capacity:%s\n", id, currentCapacity);
+            System.out.printf("Current harbor capacity: %s\n", harbor.currentCapacity);
+            isAvailable.signal();
+        } finally {
+            lock.unlock();
+        }
     }
 
     private void unloadShip() {
-
+        lock.lock();
+        try {
+            boolean isUnloadingSuccessful = true;
+            while(harbor.currentCapacity==harbor.getTotalCapacity()) {
+                try {
+                    isAvailable.await(MAX_TIME_TO_WAIT, TimeUnit.MILLISECONDS);
+                    isUnloadingSuccessful = false;
+                    System.out.printf("Ship %s can't wait anymore. It will swim home without unloading...\n", id);
+                    break;
+                } catch (InterruptedException e) {
+                    logger.error(e.getMessage());
+                }
+            }
+            while (harbor.getCurrentCapacity()<harbor.getTotalCapacity()
+                    && this.currentCapacity>0){
+                currentCapacity--;
+                harbor.currentCapacity++;
+            }
+            if(isUnloadingSuccessful)
+                System.out.printf("Ship %s unloaded cargo. Current ship capacity:%s\n", id, currentCapacity);
+            System.out.printf("Current harbor capacity: %s\n", harbor.currentCapacity);
+            isAvailable.signal();
+        } finally {
+            lock.unlock();
+        }
     }
 
 }

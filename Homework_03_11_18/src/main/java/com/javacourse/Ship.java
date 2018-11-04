@@ -3,6 +3,9 @@ package com.javacourse;
 import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
 import java.util.Random;
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class Ship implements Runnable{
 

@@ -27,10 +27,12 @@ public class Harbor {
     public Harbor(String name) {
         this.name = name;
         this.semaphore = new Semaphore(DOCK_NUMBER, true);
-        this.currentCapacity  = TOTAL_CAPACITY/2;
-        this.docks = new LinkedBlockingQueue<>();
+        this.currentCapacity  = TOTAL_CAPACITY/2 + 1;
+        this.docks = new LinkedBlockingQueue<>(2);
         initializeDockList();
         System.out.printf("Harbor %s is ready to serve ships\n", name);
+        System.out.printf("Current harbor capacity:%s\n", currentCapacity);
+        System.out.printf("Total harbor capacity:%s\n", TOTAL_CAPACITY);
     }
 
     private void initializeDockList() {
@@ -42,8 +44,7 @@ public class Harbor {
     public Dock getResource(int maxWaitMilliseconds) throws ResourceException {
         try {
             if(semaphore.tryAcquire(maxWaitMilliseconds, TimeUnit.MILLISECONDS)){
-                Dock res = docks.poll();
-                return res;
+                return docks.poll();
             }
         } catch (InterruptedException e) {
             logger.info(e.getMessage());
@@ -58,5 +59,13 @@ public class Harbor {
 
     public String getName() {
         return name;
+    }
+
+    public int getCurrentCapacity() {
+        return currentCapacity;
+    }
+
+    public static int getTotalCapacity() {
+        return TOTAL_CAPACITY;
     }
 }
