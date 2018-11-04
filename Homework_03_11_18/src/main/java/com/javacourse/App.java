@@ -1,7 +1,16 @@
 package com.javacourse;
 
-public class App 
+import org.apache.log4j.Logger;
+import org.apache.log4j.xml.DOMConfigurator;
+
+public class App
 {
+    private static final Logger logger;
+    static {
+        logger = Logger.getLogger(Ship.class);
+        DOMConfigurator.configure("log/log4j.xml");
+    }
+
     public static void main( String[] args )
     {
         Harbor harbor = new Harbor("Odessa");
@@ -40,8 +49,8 @@ public class App
             ship4.join();
             ship5.join();
         } catch (InterruptedException e) {
-            //TODO log it
+            logger.error(e.getMessage());
         }
-        System.out.printf("finish");
+        System.out.printf("Working day finished. Harbor closed, all ships swam home.");
     }
 }

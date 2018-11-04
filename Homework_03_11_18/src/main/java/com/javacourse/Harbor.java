@@ -1,17 +1,15 @@
 package com.javacourse;
 
-import javax.print.Doc;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-//Consumer class
 public class Harbor{
     private static final int DOCK_NUMBER = 2;
     private static final int TOTAL_CAPACITY = 15;
+    int currentCapacity = TOTAL_CAPACITY/2;//supposing harbor was not completely empty
     private String name;
     private List<Dock> docks = new ArrayList<>();
-    int currentCapacity = TOTAL_CAPACITY/2;//supposing harbor was not completely empty
 
     public Harbor(String name){
         this.name = name;
@@ -39,7 +37,6 @@ public class Harbor{
     }
 
     /*Supposing docks are predefined for the destination*/
-    //TODO: implement efficient dock allocation
     public Dock getDockToSwimTo(){
         return docks.get(new Random().nextInt(DOCK_NUMBER));
     }

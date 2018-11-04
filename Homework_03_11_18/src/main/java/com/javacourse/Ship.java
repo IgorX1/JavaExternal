@@ -1,13 +1,9 @@
 package com.javacourse;
 
-import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
-
-import java.util.Objects;
 import java.util.Random;
 
-//Producer class
 public class Ship implements Runnable{
 
     private int id;
