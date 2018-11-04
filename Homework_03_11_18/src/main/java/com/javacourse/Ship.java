@@ -59,13 +59,13 @@ public class Ship implements Runnable{
     public void run() {
         System.out.printf("Ship #%d is willing to enter the harbor %s\n", id, harbor.getName());
         synchronized (dock){
-            swimToHarbor();
+            swimToDock();
             serveCargo();
-            leaveHarbor();
+            leaveDock();
         }
     }
 
-    private void swimToHarbor(){
+    private void swimToDock(){
         try {
             Thread.sleep(new Random().nextInt(1000));
         } catch (InterruptedException e) {
@@ -74,7 +74,7 @@ public class Ship implements Runnable{
         System.out.printf("Ship %s takes dock %s\n", id, dock.getId());
     }
 
-    private void leaveHarbor() {
+    private void leaveDock() {
             try {
                 Thread.sleep(new Random().nextInt(1000));
                 System.out.printf("Ship %s left dock %s\n", id, dock.getId());
