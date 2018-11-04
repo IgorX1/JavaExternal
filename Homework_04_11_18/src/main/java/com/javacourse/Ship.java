@@ -61,8 +61,7 @@ public class Ship implements Runnable{
         Dock dockToSwim = null;
         try {
             dockToSwim = harbor.getResource(MAX_TIME_TO_WAIT);
-            int dockId = dockToSwim.getId();
-            System.out.printf("Ship %s takes dock %s\n", id, dockId);
+            System.out.printf("Ship %s takes dock %s\n", id, dockToSwim.getId());
             serveCargo();
         } catch (ResourceException e) {
             logger.info(e.getMessage());
