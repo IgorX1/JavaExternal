@@ -63,7 +63,7 @@ public class Ship implements Runnable{
         System.out.printf("Ship #%d is willing to enter the harbor %s\n", id, harbor.getName());
         synchronized (dock){
             swimToHarbor();
-
+            serveCargo();
             leaveHarbor();
         }
     }
