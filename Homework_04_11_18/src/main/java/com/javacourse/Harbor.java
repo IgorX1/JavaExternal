@@ -44,7 +44,8 @@ public class Harbor {
     public Dock getResource(int maxWaitMilliseconds) throws ResourceException {
         try {
             if(semaphore.tryAcquire(maxWaitMilliseconds, TimeUnit.MILLISECONDS)){
-               return docks.poll();
+                Dock res = docks.poll();
+                return res;
             }
         } catch (InterruptedException e) {
             logger.info(e.getMessage());

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bd06436f-c6c2-491b-b7ea-9991f5dfd2e4" name="Default Changelist" comment="Added some basic code constructions for implementing ship-harbor multithreading communication via Semaphore object">
+    <list default="true" id="bd06436f-c6c2-491b-b7ea-9991f5dfd2e4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../Homework_03_11_18/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework_03_11_18/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javacourse/Harbor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javacourse/Harbor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/javacourse/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javacourse/Ship.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -31,26 +32,28 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="694" />
-          <entry key="txt" value="118" />
+          <entry key="java" value="908" />
+          <entry key="txt" value="149" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="694" />
-          <entry key="PLAIN_TEXT" value="118" />
+          <entry key="JAVA" value="908" />
+          <entry key="PLAIN_TEXT" value="149" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="java" value="5" />
+          <entry key="log" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JAVA" value="5" />
+          <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.boot.mvc.usages" />
@@ -64,8 +67,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+            <state relative-caret-position="175">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -73,11 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/Harbor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="46" column="30" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="30" />
+            <state relative-caret-position="325">
+              <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1712#1713#0" expanded="true" />
@@ -87,11 +90,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/Ship.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="63" selection-start-line="63" selection-end-line="63" />
+            <state relative-caret-position="150">
+              <caret line="62" column="62" selection-start-line="62" selection-start-column="62" selection-end-line="62" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1202#1203#0" expanded="true" />
@@ -104,12 +107,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/Dock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+            <state relative-caret-position="150">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="e#102#103#0" expanded="true" />
                 <element signature="e#130#131#0" expanded="true" />
-                <element signature="e#156#157#0" expanded="true" />
                 <element signature="e#181#182#0" expanded="true" />
               </folding>
             </state>
@@ -133,9 +135,9 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/javacourse/ResourceException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/Harbor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javacourse/Dock.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javacourse/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/Harbor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javacourse/Ship.java" />
       </list>
     </option>
@@ -179,6 +181,11 @@
             <path>
               <item name="Homework_04_11_18" type="b2602c69:ProjectViewProjectNode" />
               <item name="Homework_04_11_18" type="462c0819:PsiDirectoryNode" />
+              <item name="log" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Homework_04_11_18" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Homework_04_11_18" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -211,7 +218,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541355631314" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541358011798" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -262,7 +269,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1541350185890</updated>
-      <workItem from="1541350189355" duration="3320000" />
+      <workItem from="1541350189355" duration="5905000" />
     </task>
     <task id="LOCAL-00001" summary="Added some basic code constructions for implementing ship-harbor multithreading communication via Semaphore object">
       <created>1541352979669</created>
@@ -271,11 +278,18 @@
       <option name="project" value="LOCAL" />
       <updated>1541352979669</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Improved allocation performance">
+      <created>1541356186423</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1541356186423</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3320000" />
+    <option name="totallyTimeSpent" value="5905000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -297,7 +311,7 @@
       <window_info anchor="bottom" id="Messages" weight="0.32907802" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32907802" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32907802" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -321,19 +335,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added some basic code constructions for implementing ship-harbor multithreading communication via Semaphore object" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some basic code constructions for implementing ship-harbor multithreading communication via Semaphore object" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/javacourse/Ship.java</url>
-          <line>63</line>
-          <properties />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Improved allocation performance" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved allocation performance" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -358,49 +361,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/Dock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#102#103#0" expanded="true" />
+            <element signature="e#130#131#0" expanded="true" />
+            <element signature="e#181#182#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        <state relative-caret-position="175">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/Dock.java">
+    <entry file="file://$PROJECT_DIR$/log/logfile.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/Ship.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+        <state relative-caret-position="150">
+          <caret line="62" column="62" selection-start-line="62" selection-start-column="62" selection-end-line="62" selection-end-column="62" />
           <folding>
-            <element signature="e#102#103#0" expanded="true" />
-            <element signature="e#130#131#0" expanded="true" />
-            <element signature="e#156#157#0" expanded="true" />
-            <element signature="e#181#182#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1202#1203#0" expanded="true" />
+            <element signature="e#1247#1248#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/Harbor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="46" column="30" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="30" />
+        <state relative-caret-position="325">
+          <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1712#1713#0" expanded="true" />
             <element signature="e#1739#1740#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/Ship.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="63" selection-start-line="63" selection-end-line="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1202#1203#0" expanded="true" />
-            <element signature="e#1247#1248#0" expanded="true" />
           </folding>
         </state>
       </provider>
