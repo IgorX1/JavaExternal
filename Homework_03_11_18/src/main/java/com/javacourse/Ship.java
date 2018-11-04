@@ -89,7 +89,53 @@ public class Ship implements Runnable{
     }
 
     private void serveCargo(){
+        if(currentCapacity==0){
+            loadShip();
+        }else {
+            unloadShip();
+            loadShip();
+        }
+    }
 
+    private void unloadShip() {
+        synchronized (harbor){
+            if(harbor.currentCapacity==harbor.getTotalCapacity()) {
+                try {
+                    harbor.wait();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+            while (harbor.getCurrentCapacity()<harbor.getTotalCapacity()
+                    && this.currentCapacity>0){
+                currentCapacity--;
+                harbor.currentCapacity++;
+            }
+            System.out.printf("Ship %s unloaded cargo\n", id);
+            System.out.printf("Current harbor capacity: %s\n", harbor.currentCapacity);
+            harbor.notify();
+        }
+
+    }
+
+    private void loadShip() {
+        synchronized (harbor){//IS IT A GOOD IDEA ?!
+            if(harbor.getCurrentCapacity()==0){
+                try {
+                    harbor.wait();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+            while(harbor.getCurrentCapacity()>0
+                    && this.currentCapacity<this.totalCapacity){
+                currentCapacity++;
+                harbor.currentCapacity--;
+            }
+            System.out.printf("Ship %s loaded cargo\n", id);
+            System.out.printf("Current harbor capacity: %s\n", harbor.currentCapacity);
+            harbor.notify();
+        }
     }
 
 

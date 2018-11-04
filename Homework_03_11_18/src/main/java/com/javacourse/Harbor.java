@@ -8,8 +8,10 @@ import java.util.Random;
 //Consumer class
 public class Harbor{
     private static final int DOCK_NUMBER = 2;
+    private static final int TOTAL_CAPACITY = 15;
     private String name;
     private List<Dock> docks = new ArrayList<>();
+    int currentCapacity = TOTAL_CAPACITY/2;
 
     public Harbor(String name){
         this.name = name;
@@ -25,6 +27,15 @@ public class Harbor{
 
     public String getName() {
         return name;
+    }
+
+    public int getTotalCapacity() {
+        return TOTAL_CAPACITY;
+    }
+
+
+    public int getCurrentCapacity() {
+        return currentCapacity;
     }
 
     /*Supposing docks are predefined for the destination*/
