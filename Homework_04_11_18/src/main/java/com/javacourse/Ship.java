@@ -62,6 +62,7 @@ public class Ship implements Runnable{
         try {
             dockToSwim = harbor.getResource(MAX_TIME_TO_WAIT);
             System.out.printf("Ship %s takes dock %s\n", id, dockToSwim.getId());
+            serveCargo();
         } catch (ResourceException e) {
             logger.info(e.getMessage());
             System.out.printf("Ship %s can't wait anymore. This harbor is not hospitable...\n", id);
@@ -72,6 +73,23 @@ public class Ship implements Runnable{
                  harbor.releaseResource(dockToSwim);
              }
         }
+    }
+
+    private void serveCargo() {
+        if(currentCapacity==0){
+            loadShip();
+        }else {
+            unloadShip();
+            loadShip();
+        }
+    }
+
+    private void loadShip() {
+
+    }
+
+    private void unloadShip() {
+
     }
 
 }

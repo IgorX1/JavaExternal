@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66720722-e1fa-43cb-8e91-b0438c88fd29" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Homework_04_11_18/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Homework_04_11_18/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Homework_04_11_18/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Homework_04_11_18/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Homework_04_11_18/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Homework_04_11_18/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Homework_04_11_18/Homework_04_11_18.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Homework_04_11_18/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Homework_04_11_18/src/main/java/com/javacourse/Dock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Homework_04_11_18/src/main/java/com/javacourse/Harbor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Homework_04_11_18/src/main/java/com/javacourse/ResourceException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Homework_04_11_18/src/main/java/com/javacourse/Ship.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework_04_11_18/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework_04_11_18/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework_04_11_18/src/main/java/com/javacourse/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework_04_11_18/src/main/java/com/javacourse/Ship.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -87,8 +77,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1175">
-              <caret line="53" column="84" selection-start-line="53" selection-start-column="84" selection-end-line="53" selection-end-column="84" />
+            <state relative-caret-position="250">
+              <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -99,8 +89,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/Ship.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="83" column="16" selection-start-line="83" selection-start-column="16" selection-end-line="83" selection-end-column="69" />
+            <state relative-caret-position="250">
+              <caret line="93" column="9" lean-forward="true" selection-start-line="88" selection-start-column="8" selection-end-line="93" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -178,7 +168,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="-10" />
     <option name="width" value="1750" />
     <option name="height" value="970" />
@@ -241,7 +231,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541352898435" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541355220332" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/TestProj" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -390,7 +380,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21361000" />
+    <option name="totallyTimeSpent" value="21849000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1400" height="776" extended-state="1" />
@@ -507,8 +497,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1175">
-          <caret line="53" column="84" selection-start-line="53" selection-start-column="84" selection-end-line="53" selection-end-column="84" />
+        <state relative-caret-position="250">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -517,8 +507,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/Ship.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="83" column="16" selection-start-line="83" selection-start-column="16" selection-end-line="83" selection-end-column="69" />
+        <state relative-caret-position="250">
+          <caret line="93" column="9" lean-forward="true" selection-start-line="88" selection-start-column="8" selection-end-line="93" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
