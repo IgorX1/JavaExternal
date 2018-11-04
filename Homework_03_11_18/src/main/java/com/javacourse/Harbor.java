@@ -11,7 +11,7 @@ public class Harbor{
     private static final int TOTAL_CAPACITY = 15;
     private String name;
     private List<Dock> docks = new ArrayList<>();
-    int currentCapacity = TOTAL_CAPACITY/2;
+    int currentCapacity = TOTAL_CAPACITY/2;//supposing harbor was not completely empty
 
     public Harbor(String name){
         this.name = name;
