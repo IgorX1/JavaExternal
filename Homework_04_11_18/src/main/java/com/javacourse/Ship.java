@@ -8,9 +8,6 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-/**
- * Client class
- */
 public class Ship implements Runnable{
     private int id;
     private int totalCapacity;
