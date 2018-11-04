@@ -16,6 +16,7 @@ public class Ship implements Runnable{
     private final Harbor harbor;
     private final Dock dock;
     private static final Logger logger;
+    private static final int MAX_TIME_TO_WAIT = 1000;
 
     static {
         logger = Logger.getLogger(Ship.class);
@@ -101,9 +102,9 @@ public class Ship implements Runnable{
         synchronized (harbor){
             if(harbor.currentCapacity==harbor.getTotalCapacity()) {
                 try {
-                    harbor.wait();
+                    harbor.wait(MAX_TIME_TO_WAIT);
                 } catch (InterruptedException e) {
-                    e.printStackTrace();
+                    logger.error(e.getMessage());
                 }
             }
             while (harbor.getCurrentCapacity()<harbor.getTotalCapacity()
@@ -111,7 +112,7 @@ public class Ship implements Runnable{
                 currentCapacity--;
                 harbor.currentCapacity++;
             }
-            System.out.printf("Ship %s unloaded cargo\n", id);
+            System.out.printf("Ship %s unloaded cargo. Current ship capacity:%s\n", id, currentCapacity);
             System.out.printf("Current harbor capacity: %s\n", harbor.currentCapacity);
             harbor.notify();
         }
@@ -119,12 +120,12 @@ public class Ship implements Runnable{
     }
 
     private void loadShip() {
-        synchronized (harbor){//IS IT A GOOD IDEA ?!
-            if(harbor.getCurrentCapacity()==0){
+        synchronized (harbor){
+            if (harbor.getCurrentCapacity()==0){
                 try {
-                    harbor.wait();
+                    harbor.wait(MAX_TIME_TO_WAIT);
                 } catch (InterruptedException e) {
-                    e.printStackTrace();
+                    logger.error(e.getMessage());
                 }
             }
             while(harbor.getCurrentCapacity()>0
@@ -132,7 +133,7 @@ public class Ship implements Runnable{
                 currentCapacity++;
                 harbor.currentCapacity--;
             }
-            System.out.printf("Ship %s loaded cargo\n", id);
+            System.out.printf("Ship %s loaded cargo. Current ship capacity:%s\n", id, currentCapacity);
             System.out.printf("Current harbor capacity: %s\n", harbor.currentCapacity);
             harbor.notify();
         }

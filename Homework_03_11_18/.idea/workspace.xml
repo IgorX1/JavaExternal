@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="66720722-e1fa-43cb-8e91-b0438c88fd29" name="Default Changelist" comment="Works badly">
+    <list default="true" id="66720722-e1fa-43cb-8e91-b0438c88fd29" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/log4j.xml" beforeDir="false" afterPath="$PROJECT_DIR$/log/log4j.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/javacourse/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javacourse/Ship.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -31,33 +32,38 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="10" />
-          <entry key="log" value="1" />
+          <entry key="java" value="14" />
+          <entry key="log" value="2" />
+          <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="10" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="JAVA" value="14" />
+          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2277" />
-          <entry key="txt" value="167" />
-          <entry key="xml" value="1" />
+          <entry key="java" value="2862" />
+          <entry key="txt" value="192" />
+          <entry key="xml" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2277" />
-          <entry key="PLAIN_TEXT" value="167" />
-          <entry key="XML" value="1" />
+          <entry key="JAVA" value="2862" />
+          <entry key="PLAIN_TEXT" value="192" />
+          <entry key="XML" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
         <counts>
-          <entry key="git.branch.create.new" value="1" />
+          <entry key="git.branch.checkout.local" value="2" />
+          <entry key="git.branch.create.new" value="2" />
+          <entry key="git.branch.delete.local" value="1" />
+          <entry key="git.branch.merge" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -77,10 +83,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/log/log4j.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/Ship.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="65" column="25" selection-start-line="65" selection-start-column="25" selection-end-line="65" selection-end-column="25" />
+            <state relative-caret-position="416">
+              <caret line="114" column="103" selection-start-line="114" selection-start-column="103" selection-end-line="114" selection-end-column="103" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1501#1502#0" expanded="true" />
@@ -93,8 +108,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/Harbor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+            <state relative-caret-position="293">
+              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -124,7 +139,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="master" />
+        <entry key="$PROJECT_DIR$/.." value="feature/cargo" />
       </map>
     </option>
   </component>
@@ -137,6 +152,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/javacourse/Dock.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javacourse/Harbor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javacourse/Ship.java" />
+        <option value="$PROJECT_DIR$/log/log4j.xml" />
       </list>
     </option>
   </component>
@@ -170,6 +186,11 @@
             <path>
               <item name="Homework_03_11_18" type="b2602c69:ProjectViewProjectNode" />
               <item name="Homework_03_11_18" type="462c0819:PsiDirectoryNode" />
+              <item name="log" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Homework_03_11_18" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Homework_03_11_18" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -192,6 +213,17 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="javacourse" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Homework_03_11_18" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Homework_03_11_18" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Homework_03_11_18" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Homework_03_11_18" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -246,6 +278,7 @@
       <list>
         <item itemvalue="Application.App" />
         <item itemvalue="Application.App" />
+        <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
   </component>
@@ -260,7 +293,7 @@
       <option name="presentableId" value="Default" />
       <updated>1541262993593</updated>
       <workItem from="1541262996564" duration="11526000" />
-      <workItem from="1541319230787" duration="255000" />
+      <workItem from="1541319230787" duration="2950000" />
     </task>
     <task id="LOCAL-00001" summary="Added new prj">
       <created>1541263059110</created>
@@ -297,17 +330,38 @@
       <option name="project" value="LOCAL" />
       <updated>1541278724324</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="day2">
+      <created>1541319575757</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1541319575757</updated>
+    </task>
+    <task id="LOCAL-00007" summary="wow, it works somehow">
+      <created>1541321230669</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1541321230669</updated>
+    </task>
+    <task id="LOCAL-00008" summary="wow, it works somehow">
+      <created>1541321315321</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1541321315321</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11806000" />
+    <option name="totallyTimeSpent" value="14501000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25302014" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25302014" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -316,7 +370,7 @@
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32907802" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -351,7 +405,9 @@
     <MESSAGE value="Implemented some basic constructions of my classes" />
     <MESSAGE value="Tryin` to implement multithreading..." />
     <MESSAGE value="Works badly" />
-    <option name="LAST_COMMIT_MESSAGE" value="Works badly" />
+    <MESSAGE value="day2" />
+    <MESSAGE value="wow, it works somehow" />
+    <option name="LAST_COMMIT_MESSAGE" value="wow, it works somehow" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -379,8 +435,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/Dock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/Harbor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/log/logfile.log">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/Ship.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="114" column="103" selection-start-line="114" selection-start-column="103" selection-end-line="114" selection-end-column="103" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1501#1502#0" expanded="true" />
+            <element signature="e#1546#1547#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/App.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -389,32 +474,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/Harbor.java">
+    <entry file="file://$PROJECT_DIR$/log/log4j.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/Dock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/Ship.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="65" column="25" selection-start-line="65" selection-start-column="25" selection-end-line="65" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1501#1502#0" expanded="true" />
-            <element signature="e#1546#1547#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="250">
+          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
         </state>
       </provider>
     </entry>
