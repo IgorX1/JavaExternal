@@ -2,8 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66720722-e1fa-43cb-8e91-b0438c88fd29" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Homework_04_11_18/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework_04_11_18/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework_04_11_18/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework_04_11_18/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework_04_11_18/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework_04_11_18/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework_04_11_18/Homework_04_11_18.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework_04_11_18/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework_04_11_18/src/main/java/com/javacourse/Dock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework_04_11_18/src/main/java/com/javacourse/Harbor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework_04_11_18/src/main/java/com/javacourse/ResourceException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework_04_11_18/src/main/java/com/javacourse/Ship.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/javacourse/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javacourse/Ship.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,27 +44,27 @@
         <counts>
           <entry key="java" value="15" />
           <entry key="log" value="2" />
-          <entry key="xml" value="2" />
+          <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JAVA" value="15" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="XML" value="2" />
+          <entry key="XML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="3141" />
-          <entry key="txt" value="345" />
+          <entry key="java" value="3143" />
+          <entry key="txt" value="439" />
           <entry key="xml" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3141" />
-          <entry key="PLAIN_TEXT" value="345" />
+          <entry key="JAVA" value="3143" />
+          <entry key="PLAIN_TEXT" value="439" />
           <entry key="XML" value="13" />
         </counts>
       </usages-collector>
@@ -73,10 +84,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
+            <state relative-caret-position="1175">
               <caret line="53" column="84" selection-start-line="53" selection-start-column="84" selection-end-line="53" selection-end-column="84" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -85,11 +96,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/Ship.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2475">
-              <caret line="101" column="48" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="48" />
+            <state relative-caret-position="450">
+              <caret line="83" column="16" selection-start-line="83" selection-start-column="16" selection-end-line="83" selection-end-column="69" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -98,10 +109,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="229">
+              <caret line="31" column="17" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="31" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/Harbor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-75">
-              <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+            <state relative-caret-position="250">
+              <caret line="22" column="9" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="22" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -112,8 +132,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/Dock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+            <state relative-caret-position="225">
+              <caret line="11" column="5" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="11" selection-end-column="5" />
               <folding>
                 <element signature="e#90#91#0" expanded="true" />
                 <element signature="e#118#119#0" expanded="true" />
@@ -146,9 +166,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/javacourse/NoAvailableDocksException.java" />
         <option value="$PROJECT_DIR$/log/log4j.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/javacourse/Dock.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/Harbor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javacourse/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javacourse/Ship.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/Harbor.java" />
       </list>
     </option>
   </component>
@@ -158,7 +178,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-10" />
     <option name="width" value="1750" />
     <option name="height" value="970" />
@@ -221,7 +241,8 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541323663111" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541352898435" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/TestProj" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -358,17 +379,24 @@
       <option name="project" value="LOCAL" />
       <updated>1541323682920</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Some refactoring. Renamed some functions, o that their intentions are now much more obvious">
+      <created>1541324279665</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1541324279665</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16379000" />
+    <option name="totallyTimeSpent" value="21361000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-8" y="0" width="1400" height="776" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25302014" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28134328" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -377,7 +405,7 @@
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4113475" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.41057542" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -417,16 +445,10 @@
     <MESSAGE value="v1 implemeted.need debugging" />
     <MESSAGE value="Refactored a little bit in order to make my code look more robust" />
     <MESSAGE value="Refactored more. Got rid of useless class file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored more. Got rid of useless class file" />
+    <MESSAGE value="Some refactoring. Renamed some functions, o that their intentions are now much more obvious" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some refactoring. Renamed some functions, o that their intentions are now much more obvious" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
@@ -455,10 +477,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="31" column="17" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="31" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/Harbor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-75">
-          <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+        <state relative-caret-position="250">
+          <caret line="22" column="9" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="22" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -467,8 +496,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/Dock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+        <state relative-caret-position="225">
+          <caret line="11" column="5" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="11" selection-end-column="5" />
           <folding>
             <element signature="e#90#91#0" expanded="true" />
             <element signature="e#118#119#0" expanded="true" />
@@ -476,20 +505,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/Ship.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2475">
-          <caret line="101" column="48" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="48" />
+        <state relative-caret-position="1175">
+          <caret line="53" column="84" selection-start-line="53" selection-start-column="84" selection-end-line="53" selection-end-column="84" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/App.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/Ship.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="53" column="84" selection-start-line="53" selection-start-column="84" selection-end-line="53" selection-end-column="84" />
+        <state relative-caret-position="450">
+          <caret line="83" column="16" selection-start-line="83" selection-start-column="16" selection-end-line="83" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
