@@ -18,18 +18,10 @@ public class CalculationController {
         DOMConfigurator.configure("log/log4j.xml");
     }
 
-    public void processClient(BufferedReader in, PrintWriter out){
-        String expression;
-        try {
-            expression = readAllTextFromInputStream(in);
-        } catch (IOException e) {
-            logger.error(e.getMessage());
-            System.out.println("Can't get input from client");
-            return;
-        }
-        //get expression from stream
-
-
+    public String processClient(String expression){
+        String  result;
+        result = calculateExpression(expression);
+        return result;
     }
 
     String readAllTextFromInputStream(BufferedReader in) throws IOException {
@@ -56,4 +48,5 @@ public class CalculationController {
         }
         return result;
     }
+
 }

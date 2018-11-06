@@ -114,10 +114,16 @@ public class ClientController {
     }
 
     /**
-     * Will parse the resulting string and, in the long run, will show the plot
+     * Will parse the resulting string and, in the long run, will show the plot.
+     * In case server couldn't process the request, null is returned, so this method
+     * can cope with that as well.
      * @param result is an XML-file which is to be parsed in helper methods
      */
     void showResult(String result){
-
+        if(result!=null){
+            view.showMessage(result);
+        }else {
+            view.showMessage("Server could not process your request.");
+        }
     }
 }

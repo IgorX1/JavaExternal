@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aee71b42-b394-4a28-bb62-632d4253ae1d" name="Default Changelist" comment="">
+    <list default="true" id="aee71b42-b394-4a28-bb62-632d4253ae1d" name="Default Changelist" comment="Working on calculational logic on server">
       <change beforePath="$PROJECT_DIR$/../Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/main/java/com/javacourse/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/java/com/javacourse/ClientController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/javacourse/Calculations/CalculationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javacourse/Calculations/CalculationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/javacourse/SingleClientServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javacourse/SingleClientServer.java" afterDir="false" />
@@ -47,8 +48,8 @@
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="661" />
-          <entry key="PLAIN_TEXT" value="162" />
+          <entry key="JAVA" value="976" />
+          <entry key="PLAIN_TEXT" value="202" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
@@ -56,8 +57,8 @@
       <usages-collector id="statistics.spring.boot.run.usages" />
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="661" />
-          <entry key="txt" value="162" />
+          <entry key="java" value="976" />
+          <entry key="txt" value="202" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
@@ -68,7 +69,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-250">
+            <state relative-caret-position="-100">
               <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -77,23 +78,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/SingleClientServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="33" column="42" lean-forward="true" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
+            <state relative-caret-position="232">
+              <caret line="32" column="37" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1558#1559#0" expanded="true" />
+                <element signature="e#1591#1592#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/Calculations/CalculationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="54" column="41" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
+            <state relative-caret-position="525">
+              <caret line="46" column="41" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -125,8 +128,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/javacourse/Calculations/OperationNotSupportedException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javacourse/Calculations/PostfixTransformator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javacourse/Calculations/Tokenizer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/SingleClientServer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javacourse/Calculations/CalculationController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/SingleClientServer.java" />
       </list>
     </option>
   </component>
@@ -236,7 +239,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541527219438" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541528723521" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -287,7 +290,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1541509504532</updated>
-      <workItem from="1541509509197" duration="3968000" />
+      <workItem from="1541509509197" duration="5171000" />
     </task>
     <task id="LOCAL-00001" summary="Added basic classes to server project">
       <created>1541522854133</created>
@@ -310,11 +313,18 @@
       <option name="project" value="LOCAL" />
       <updated>1541526047039</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Working on calculational logic on server">
+      <created>1541527245773</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1541527245773</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3968000" />
+    <option name="totallyTimeSpent" value="5171000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -362,7 +372,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added basic classes to server project" />
     <MESSAGE value="Established client-server interaction without any business logic. Introduced new package to improve project structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Established client-server interaction without any business logic. Introduced new package to improve project structure" />
+    <MESSAGE value="Working on calculational logic on server" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working on calculational logic on server" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -444,18 +455,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-250">
+        <state relative-caret-position="-100">
           <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/SingleClientServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="33" column="42" lean-forward="true" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -464,8 +465,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/Calculations/CalculationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="54" column="41" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
+        <state relative-caret-position="525">
+          <caret line="46" column="41" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/SingleClientServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="32" column="37" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1558#1559#0" expanded="true" />
+            <element signature="e#1591#1592#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
