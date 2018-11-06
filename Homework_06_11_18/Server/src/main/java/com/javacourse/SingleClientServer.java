@@ -1,9 +1,15 @@
 package com.javacourse;
 
+import com.javacourse.Calculations.CalculationController;
+
 import java.io.*;
 import java.net.Socket;
 import static com.javacourse.App.logger;
 
+/**
+ * Independently processes a single clients.
+ * Implements multithreading functionality
+ */
 public class SingleClientServer extends Thread {
 
     private Socket socket;
@@ -24,6 +30,7 @@ public class SingleClientServer extends Thread {
     @Override
     public void run() {
         //super.run();
-
+        CalculationController controller = new CalculationController();
+        controller.processClient(in, out);
     }
 }
