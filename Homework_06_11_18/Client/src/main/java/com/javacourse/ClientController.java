@@ -1,6 +1,5 @@
 package com.javacourse;
 
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
 
@@ -37,7 +36,11 @@ public class ClientController {
             out = initOutputStream();
             in = initInputStream();
             do{
-                expression = getExpression();
+                try {
+                    expression = getExpressionOrExit();
+                } catch (Exception e) {
+                    return;
+                }
                 result = processExpressionOnServer(expression, out, in);
                 showResult(result);
             }while (true);
@@ -54,11 +57,22 @@ public class ClientController {
 
     }
 
-    String getExpression(){//TODO:  implement exiting from infinite loop by typing some phrase
-        view.showMessage("Enter the expression to calculate");
+    String getExpressionOrExit(){//TODO:  implement exiting from infinite loop by typing some phrase
+        view.showMessage("Enter the expression to calculate or type END");
         view.showMessage("Allowed operations:+ - / * sin lg ()");
-        String expr = scanner.nextLine();
+        String expr = getInputFromConsole();
+        if(expr.equalsIgnoreCase("END"))
+            throw new ProgramShouldBeTerminatedException();
         return expr;
+    }
+
+    private String getInputFromConsole(){
+        return scanner.nextLine();
+    }
+
+    private String getInputFromConsole(String msg){
+        view.showMessage(msg);
+        return scanner.nextLine();
     }
 
     void initSocket() throws IOException {

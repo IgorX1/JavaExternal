@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9df0fc89-0b54-49dd-9e97-4a0b8079063c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Homework_06_11_18/Client/src/main/java/com/javacourse/ProgramShouldBeTerminatedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework_06_11_18/Client/src/test/java/com/javacourse/ClientControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Homework_06_11_18/Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework_06_11_18/Client/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework_06_11_18/Client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework_06_11_18/Client/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Homework_06_11_18/Client/src/main/java/com/javacourse/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework_06_11_18/Client/src/main/java/com/javacourse/ClientController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Homework_06_11_18/Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework_06_11_18/Server/.idea/workspace.xml" afterDir="false" />
     </list>
