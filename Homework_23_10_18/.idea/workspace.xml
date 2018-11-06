@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9df0fc89-0b54-49dd-9e97-4a0b8079063c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Homework_06_11_18/Client/src/main/java/com/javacourse/ClientConsoleView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Homework_06_11_18/Client/src/main/java/com/javacourse/ClientController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Homework_06_11_18/Client/src/main/java/com/javacourse/ClientView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Homework_06_11_18/Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework_06_11_18/Client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Homework_06_11_18/Client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework_06_11_18/Client/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Homework_06_11_18/Client/src/main/java/com/javacourse/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework_06_11_18/Client/src/main/java/com/javacourse/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework_06_11_18/Client/src/main/java/com/javacourse/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework_06_11_18/Client/src/main/java/com/javacourse/ClientController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Homework_06_11_18/Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework_06_11_18/Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -477,7 +472,7 @@
       <workItem from="1540712993857" duration="443000" />
       <workItem from="1540815344738" duration="2641000" />
       <workItem from="1541262718353" duration="869000" />
-      <workItem from="1541509371742" duration="2630000" />
+      <workItem from="1541509371742" duration="2794000" />
     </task>
     <task id="LOCAL-00001" summary="4project: initial commit">
       <created>1540301679455</created>
@@ -592,7 +587,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35212000" />
+    <option name="totallyTimeSpent" value="35376000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
