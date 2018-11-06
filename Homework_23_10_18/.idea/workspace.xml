@@ -2,11 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9df0fc89-0b54-49dd-9e97-4a0b8079063c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Homework_06_11_18/Client/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework_06_11_18/Client/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework_06_11_18/Client/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework_06_11_18/Client/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework_06_11_18/Client/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework_06_11_18/Client/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework_06_11_18/Client/Client.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework_06_11_18/Client/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework_06_11_18/Server/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework_06_11_18/Server/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework_06_11_18/Server/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework_06_11_18/Server/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework_06_11_18/Server/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework_06_11_18/Server/Server.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework_06_11_18/Server/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Homework_03_11_18/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework_03_11_18/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Homework_03_11_18/src/main/java/com/javacourse/Dock.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework_03_11_18/src/main/java/com/javacourse/Dock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Homework_03_11_18/src/main/java/com/javacourse/Harbor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework_03_11_18/src/main/java/com/javacourse/Harbor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Homework_03_11_18/src/main/java/com/javacourse/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework_03_11_18/src/main/java/com/javacourse/Ship.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework_04_11_18/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework_04_11_18/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -55,8 +67,9 @@
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -191,7 +204,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/javacourse/TokenizerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
+            <state relative-caret-position="100">
               <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -212,7 +225,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
+            <state relative-caret-position="607">
               <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
             </state>
           </provider>
@@ -281,8 +294,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -341,7 +353,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -375,7 +388,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.com.javacourse in Homework_23_10_18">
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.javacourse.App" />
       <module name="Homework_23_10_18" />
@@ -456,8 +469,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.com.javacourse in Homework_23_10_18" />
         <item itemvalue="Application.App" />
+        <item itemvalue="JUnit.com.javacourse in Homework_23_10_18" />
         <item itemvalue="JUnit.TokenizerTest" />
         <item itemvalue="JUnit.PostfixTransformatorTest" />
         <item itemvalue="JUnit.PostfixParserTest.parse_correctInput_correctResult" />
@@ -482,6 +495,7 @@
       <workItem from="1540712993857" duration="443000" />
       <workItem from="1540815344738" duration="2641000" />
       <workItem from="1541262718353" duration="869000" />
+      <workItem from="1541509371742" duration="397000" />
     </task>
     <task id="LOCAL-00001" summary="4project: initial commit">
       <created>1540301679455</created>
@@ -596,13 +610,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32582000" />
+    <option name="totallyTimeSpent" value="32979000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28456375" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2885906" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -875,7 +889,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/javacourse/TokenizerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
+        <state relative-caret-position="100">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -892,7 +906,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
+        <state relative-caret-position="607">
           <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
         </state>
       </provider>
