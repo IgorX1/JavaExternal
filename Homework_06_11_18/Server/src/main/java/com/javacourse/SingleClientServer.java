@@ -38,7 +38,7 @@ public class SingleClientServer extends Thread {
                 result = controller.processClient(request);
             } catch (IOException e) {
                 logger.error(e.getMessage());
-                System.out.println("Can't get input from client");
+                System.out.println("Client either disconnected or some problems with network occurred");
                 return;
             }
             sendResponseToClient(result);
