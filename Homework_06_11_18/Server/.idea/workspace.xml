@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aee71b42-b394-4a28-bb62-632d4253ae1d" name="Default Changelist" comment="Working on calculational logic on server">
+    <list default="true" id="aee71b42-b394-4a28-bb62-632d4253ae1d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Client/src/main/java/com/javacourse/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/java/com/javacourse/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/target/classes/com/javacourse/ClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/target/classes/com/javacourse/ClientController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/javacourse/Calculations/CalculationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javacourse/Calculations/CalculationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/javacourse/SingleClientServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javacourse/SingleClientServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/javacourse/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/javacourse/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/javacourse/CalculationController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/javacourse/MyStack$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/javacourse/MyStack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/javacourse/OperationNotSupportedException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/javacourse/PostfixParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/javacourse/PostfixTransformator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/javacourse/SingleClientServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/javacourse/SingleClientServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/javacourse/TokenNotSupportedException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/javacourse/Tokenizer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/javacourse/WrongReversePolishNotationFormat.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Homework_23_10_18/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework_23_10_18/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -34,22 +45,24 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="1" value="1" />
+          <entry key="2" value="1" />
           <entry key="java" value="12" />
-          <entry key="log" value="1" />
+          <entry key="log" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JAVA" value="12" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="PLAIN_TEXT" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="976" />
-          <entry key="PLAIN_TEXT" value="202" />
+          <entry key="JAVA" value="1046" />
+          <entry key="PLAIN_TEXT" value="305" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
@@ -57,8 +70,8 @@
       <usages-collector id="statistics.spring.boot.run.usages" />
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="976" />
-          <entry key="txt" value="202" />
+          <entry key="java" value="1046" />
+          <entry key="txt" value="305" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
@@ -69,8 +82,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-100">
-              <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+            <state relative-caret-position="575">
+              <caret line="33" column="29" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -81,8 +94,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/SingleClientServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="32" column="37" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
+            <state relative-caret-position="257">
+              <caret line="38" column="40" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1558#1559#0" expanded="true" />
@@ -95,8 +108,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/Calculations/CalculationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="46" column="41" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
+            <state relative-caret-position="200">
+              <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -239,7 +252,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541528919005" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541530547484" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -290,7 +303,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1541509504532</updated>
-      <workItem from="1541509509197" duration="5171000" />
+      <workItem from="1541509509197" duration="6852000" />
     </task>
     <task id="LOCAL-00001" summary="Added basic classes to server project">
       <created>1541522854133</created>
@@ -320,11 +333,18 @@
       <option name="project" value="LOCAL" />
       <updated>1541527245773</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Implemented alpha version of server without any plotting and xml. Only calculator via networking">
+      <created>1541528971120</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1541528971120</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5171000" />
+    <option name="totallyTimeSpent" value="6852000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -346,7 +366,7 @@
       <window_info anchor="bottom" id="Messages" weight="0.32907802" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32907802" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -373,7 +393,26 @@
     <MESSAGE value="Added basic classes to server project" />
     <MESSAGE value="Established client-server interaction without any business logic. Introduced new package to improve project structure" />
     <MESSAGE value="Working on calculational logic on server" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working on calculational logic on server" />
+    <MESSAGE value="Implemented alpha version of server without any plotting and xml. Only calculator via networking" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented alpha version of server without any plotting and xml. Only calculator via networking" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/javacourse/Calculations/CalculationController.java</url>
+          <line>22</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/javacourse/SingleClientServer.java</url>
+          <line>34</line>
+          <properties />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -400,9 +439,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log/logfile.log">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/Calculations/OperationNotSupportedException.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -453,27 +489,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/log/logfile.log.1">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/logfile.log.2">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/Calculations/CalculationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-100">
-          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        <state relative-caret-position="575">
+          <caret line="33" column="29" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/Calculations/CalculationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="46" column="41" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/log/logfile.log">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/SingleClientServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="32" column="37" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
+        <state relative-caret-position="257">
+          <caret line="38" column="40" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1558#1559#0" expanded="true" />

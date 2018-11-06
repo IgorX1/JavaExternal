@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1fa3b7d9-77c5-4213-b300-79df1edd2d79" name="Default Changelist" comment="Improved getExpression method. Added test class and some TODO comments">
+    <list default="true" id="1fa3b7d9-77c5-4213-b300-79df1edd2d79" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/javacourse/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javacourse/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/javacourse/ClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/javacourse/ClientController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/javacourse/Calculations/CalculationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/javacourse/Calculations/CalculationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/javacourse/SingleClientServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/javacourse/SingleClientServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/javacourse/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/javacourse/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/javacourse/CalculationController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/javacourse/MyStack$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/javacourse/MyStack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/javacourse/OperationNotSupportedException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/javacourse/PostfixParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/javacourse/PostfixTransformator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/javacourse/SingleClientServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/javacourse/SingleClientServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/javacourse/TokenNotSupportedException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/javacourse/Tokenizer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/javacourse/WrongReversePolishNotationFormat.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Homework_23_10_18/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework_23_10_18/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -35,26 +46,28 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="java" value="7" />
+          <entry key="log" value="2" />
           <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JAVA" value="7" />
+          <entry key="PLAIN_TEXT" value="2" />
           <entry key="XML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1681" />
-          <entry key="txt" value="238" />
+          <entry key="java" value="1722" />
+          <entry key="txt" value="331" />
           <entry key="xml" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1681" />
-          <entry key="PLAIN_TEXT" value="238" />
+          <entry key="JAVA" value="1722" />
+          <entry key="PLAIN_TEXT" value="331" />
           <entry key="XML" value="6" />
         </counts>
       </usages-collector>
@@ -78,8 +91,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/ClientController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="543">
-              <caret line="125" column="68" selection-start-line="125" selection-start-column="68" selection-end-line="125" selection-end-column="68" />
+            <state relative-caret-position="191">
+              <caret line="103" column="53" selection-start-line="103" selection-start-column="53" selection-end-line="103" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#129#130#0" expanded="true" />
@@ -170,6 +183,11 @@
             <path>
               <item name="CalculatorClient" type="b2602c69:ProjectViewProjectNode" />
               <item name="Client" type="462c0819:PsiDirectoryNode" />
+              <item name="log" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CalculatorClient" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -223,7 +241,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541528918965" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541530552982" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -282,7 +300,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1541509441572</updated>
-      <workItem from="1541509445310" duration="7913000" />
+      <workItem from="1541509445310" duration="9599000" />
     </task>
     <task id="LOCAL-00001" summary="Initialized client-sever project">
       <created>1541509989854</created>
@@ -312,15 +330,21 @@
       <option name="project" value="LOCAL" />
       <updated>1541515856362</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added &quot;stub&quot; serverOutput method so that the alpha version of application can be tested">
+      <created>1541528908641</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1541528908641</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7913000" />
+    <option name="totallyTimeSpent" value="9599000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Designer" />
       <window_info id="Image Layers" />
@@ -338,7 +362,7 @@
       <window_info anchor="bottom" id="Messages" weight="0.19432624" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32907802" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -365,7 +389,8 @@
     <MESSAGE value="Added some sceletal functionality to client application" />
     <MESSAGE value="Implemented client without plot visualization and withod any testing" />
     <MESSAGE value="Improved getExpression method. Added test class and some TODO comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved getExpression method. Added test class and some TODO comments" />
+    <MESSAGE value="Added &quot;stub&quot; serverOutput method so that the alpha version of application can be tested" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added &quot;stub&quot; serverOutput method so that the alpha version of application can be tested" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/ClientView.java">
@@ -399,6 +424,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="42" column="17" lean-forward="true" selection-start-line="32" selection-start-column="4" selection-end-line="42" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/App.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -413,17 +445,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="42" column="17" lean-forward="true" selection-start-line="32" selection-start-column="4" selection-end-line="42" selection-end-column="17" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/log/logfile.log">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/ClientController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="125" column="68" selection-start-line="125" selection-start-column="68" selection-end-line="125" selection-end-column="68" />
+        <state relative-caret-position="191">
+          <caret line="103" column="53" selection-start-line="103" selection-start-column="53" selection-end-line="103" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#129#130#0" expanded="true" />

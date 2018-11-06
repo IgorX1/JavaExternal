@@ -29,25 +29,32 @@ public class SingleClientServer extends Thread {
 
     @Override
     public void run() {
-        CalculationController controller = new CalculationController();
-        String request, result = null;
-        try {
-            request = readAllTextFromInputStream(in);
-            result = controller.processClient(request);
-        } catch (IOException e) {
-            logger.error(e.getMessage());
-            System.out.println("Can't get input from client");
+        while (true) {
+            logger.info("New thread is running");
+            CalculationController controller = new CalculationController();
+            String request, result = null;
+            try {
+                logger.info("New calc");
+                request = readAllTextFromInputStream(in);
+                System.out.printf("New request "+request);
+                logger.info("New request:"+request);
+                result = controller.processClient(request);
+            } catch (IOException e) {
+                logger.error(e.getMessage());
+                System.out.println("Can't get input from client");
+            }
+            sendResponseToClient(result);
         }
-        sendResponseToClient(result);
     }
 
     String readAllTextFromInputStream(BufferedReader in) throws IOException {
-        StringBuilder sb = new StringBuilder();
+        /*StringBuilder sb = new StringBuilder();
         String line;
         while((line = in.readLine())!=null){
             sb.append(line);
         }
-        return sb.toString();
+        return sb.toString();*/
+        return in.readLine();
     }
 
     void sendResponseToClient(String result){

@@ -101,16 +101,18 @@ public class ClientController {
 
     String processExpressionOnServer(String expression, PrintWriter out, BufferedReader in) throws IOException {
         out.print(expression);
+        logger.info("Put "+expression+" to the server");
         return readFileFromServer(in);
     }
 
     String readFileFromServer(BufferedReader in) throws IOException {
-        StringBuilder sb = new StringBuilder();
+        /*StringBuilder sb = new StringBuilder();
         String line;
         while((line = in.readLine())!=null){
             sb.append(line);
         }
-        return sb.toString();
+        return sb.toString();*/
+        return in.readLine();
     }
 
     /**
