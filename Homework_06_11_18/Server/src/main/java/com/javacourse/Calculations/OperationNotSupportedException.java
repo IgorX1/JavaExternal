@@ -1,4 +1,4 @@
-package com.javacourse;
+package com.javacourse.Calculations;
 
 public class OperationNotSupportedException extends RuntimeException {
 

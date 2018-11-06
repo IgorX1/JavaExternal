@@ -1,4 +1,4 @@
-package com.javacourse;
+package com.javacourse.Calculations;
 
 public class WrongReversePolishNotationFormat extends RuntimeException {
 
