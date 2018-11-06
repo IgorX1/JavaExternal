@@ -24,17 +24,8 @@ public class CalculationController {
         return result;
     }
 
-    String readAllTextFromInputStream(BufferedReader in) throws IOException {
-        StringBuilder sb = new StringBuilder();
-        String line;
-        while((line = in.readLine())!=null){
-            sb.append(line);
-        }
-        return sb.toString();
-    }
-
     String calculateExpression(String expression){
-        String result = null;
+        String result = "";
         try {
             PostfixTransformator postfixTransformator = new PostfixTransformator(expression);
             PostfixParser postfixParser = new PostfixParser(postfixTransformator.transform());

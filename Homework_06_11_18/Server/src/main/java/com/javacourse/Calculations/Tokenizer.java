@@ -5,6 +5,8 @@ import java.util.ArrayList;
 public class Tokenizer {
     static ArrayList<String> tokenize(String input) {
         ArrayList<String> tokens = new ArrayList<>();
+        if(input==null)
+            return tokens;
         final char EMPTY = ' ';
         StringBuilder currentToken = new StringBuilder();
         for(int i=0;i<input.length(); ++i){

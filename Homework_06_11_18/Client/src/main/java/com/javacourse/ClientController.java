@@ -44,13 +44,13 @@ public class ClientController {
                 result = processExpressionOnServer(expression, out, in);
                 showResult(result);
             }while (true);
-        } catch (IOException e) {
+        } catch (IOException | NullPointerException e) {
             view.showMessage("Unable to establish the connection.");
             return;
         }finally {
             try {
                 socket.close();
-            } catch (IOException e) {
+            } catch (IOException | NullPointerException e) {
                 logger.error(e.getMessage());
             }
         }
@@ -100,19 +100,15 @@ public class ClientController {
     }
 
     String processExpressionOnServer(String expression, PrintWriter out, BufferedReader in) throws IOException {
-        out.print(expression);
+        out.println(expression);
         logger.info("Put "+expression+" to the server");
         return readFileFromServer(in);
     }
 
     String readFileFromServer(BufferedReader in) throws IOException {
-        /*StringBuilder sb = new StringBuilder();
-        String line;
-        while((line = in.readLine())!=null){
-            sb.append(line);
-        }
-        return sb.toString();*/
-        return in.readLine();
+        String res = in.readLine();
+        logger.debug(res);
+        return res;
     }
 
     /**
@@ -122,7 +118,7 @@ public class ClientController {
      * @param result is an XML-file which is to be parsed in helper methods
      */
     void showResult(String result){
-        if(result!=null){
+        if(!result.equals("")){
             view.showMessage(result);
         }else {
             view.showMessage("Server could not process your request.");
