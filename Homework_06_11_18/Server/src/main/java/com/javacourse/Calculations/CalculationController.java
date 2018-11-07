@@ -34,7 +34,6 @@ public class CalculationController {
     }
 
     Document getXmlWithResult(String expression){
-        String  result = calculateExpression(expression);
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
         DocumentBuilder db = null;
         try {
@@ -44,20 +43,31 @@ public class CalculationController {
         }
         Document doc = db.newDocument();
 
+        Element errors = doc.createElement("errors");
+        String  result = null;
+        try {
+            result = calculateExpression(expression);
+        } catch (UnsuccessfulExpressionProcessingException e) {
+            Element error = doc.createElement("error");
+            errors.appendChild(error);
+        }
         Element root = doc.createElement("result");
         root.setAttribute("value", result);
         doc.appendChild(root);
+        root.appendChild(errors);
 
         Element points = doc.createElement("points");
         root.appendChild(points);
 
-        //TODO calculate y iteratively for different x values
-
         for(int i=LOWER_BOUND_FOR_PLOT; i<=HIGHER_BOUND_FOR_PLOT; ++i){
             Element point = doc.createElement("point");
             point.setAttribute("x", Integer.toString(i));
-            point.setAttribute("y",
-                    calculateExpression(substituteNumberInsteadOfVaraible(expr, i)));
+            try {
+                point.setAttribute("y",
+                        calculateExpression(substituteNumberInsteadOfVaraible(expr, i)));
+            } catch (UnsuccessfulExpressionProcessingException e) {
+                logger.error("Unable to process parametrized expression");
+            }
             points.appendChild(point);
         }
 
@@ -70,7 +80,7 @@ public class CalculationController {
         return doc;
     }
 
-    String calculateExpression(String expression){
+    String calculateExpression(String expression) throws UnsuccessfulExpressionProcessingException{
         String result = "";
         try {
             PostfixTransformator postfixTransformator = new PostfixTransformator(expression);
@@ -82,6 +92,7 @@ public class CalculationController {
                 | TokenNotSupportedException
                 | EmptyStackException e) {
             logger.error(e.getMessage());
+            throw new UnsuccessfulExpressionProcessingException("Could not process your expression");
         }
         return result;
     }

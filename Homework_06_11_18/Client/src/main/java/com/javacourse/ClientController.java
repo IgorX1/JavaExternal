@@ -74,7 +74,6 @@ public class ClientController {
                 logger.error(e.getMessage());
             }
         }
-
     }
 
     String getExpressionOrExit(){
@@ -126,13 +125,29 @@ public class ClientController {
 
     /**
      * Will parse the resulting string and, in the long run, will show the plot.
-     * In case server couldn't process the request, null is returned, so this method
-     * can cope with that as well.
      * @param result is an XML-file which is to be parsed in helper methods
      */
     void showResult(Document result){
-        List<Point> points = getPlottingPoints(result);
-        showPlotByPoints(points);
+        try {
+            checkIfTheExpressionWasProcessed(result);
+            List<Point> points = getPlottingPoints(result);
+            showResultingValue(result);
+            showPlotByPoints(points);
+        } catch (ServerCouldNotProcessYourRequestException e) {
+            logger.info(e.getMessage());
+            view.showMessage("Server could not process your request");
+        }
+    }
+
+    private void checkIfTheExpressionWasProcessed(Document xmlDoc) {
+        Element error = (Element) xmlDoc.getElementsByTagName("errors").item(0);
+        if(error.hasChildNodes())
+            throw new ServerCouldNotProcessYourRequestException("Requested expression could't be parsed");
+    }
+
+    void showResultingValue(Document xmlDoc){
+        Element pointsElem = (Element) xmlDoc.getElementsByTagName("result").item(0);
+        view.showMessage(pointsElem.getAttribute("value"));
     }
 
     List<Point> getPlottingPoints(Document xmlDoc){

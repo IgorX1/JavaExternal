@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fa3b7d9-77c5-4213-b300-79df1edd2d79" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/target/classes/com/javacourse/ClientConsoleView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/javacourse/ClientConsoleView.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/javacourse/ServerCouldNotProcessYourRequestException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Server/src/main/java/com/javacourse/Calculations/UnsuccessfulExpressionProcessingException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javacourse/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javacourse/ClientController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/javacourse/ClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/javacourse/ClientController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/javacourse/Calculations/CalculationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/javacourse/Calculations/CalculationController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -33,29 +38,29 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="11" />
+          <entry key="java" value="12" />
           <entry key="log" value="4" />
           <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="11" />
+          <entry key="JAVA" value="12" />
           <entry key="PLAIN_TEXT" value="4" />
           <entry key="XML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2816" />
-          <entry key="txt" value="450" />
+          <entry key="java" value="3132" />
+          <entry key="txt" value="488" />
           <entry key="xml" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2816" />
-          <entry key="PLAIN_TEXT" value="450" />
+          <entry key="JAVA" value="3132" />
+          <entry key="PLAIN_TEXT" value="488" />
           <entry key="XML" value="6" />
         </counts>
       </usages-collector>
@@ -84,8 +89,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/ClientController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-239">
-              <caret line="135" column="5" selection-start-line="135" selection-start-column="5" selection-end-line="135" selection-end-column="5" />
+            <state relative-caret-position="166">
+              <caret line="131" column="45" selection-start-line="131" selection-start-column="45" selection-end-line="131" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1330#1331#0" expanded="true" />
@@ -144,6 +149,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/javacourse/ClientView.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javacourse/ClientConsoleView.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javacourse/Point.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/ServerCouldNotProcessYourRequestException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javacourse/ClientController.java" />
       </list>
     </option>
@@ -236,7 +242,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541624563100" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541627469349" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -356,11 +362,18 @@
       <option name="project" value="LOCAL" />
       <updated>1541624778184</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Charting for parametrized functions">
+      <created>1541626102337</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1541626102337</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19462000" />
+    <option name="totallyTimeSpent" value="21847000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -375,7 +388,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32907802" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32907802" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -414,7 +427,8 @@
     <MESSAGE value="Ready to implement plotting feature" />
     <MESSAGE value="Have come up with the structure of plotting logic" />
     <MESSAGE value="Got rid of unnecessary code blocks" />
-    <option name="LAST_COMMIT_MESSAGE" value="Got rid of unnecessary code blocks" />
+    <MESSAGE value="Charting for parametrized functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Charting for parametrized functions" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/ProgramShouldBeTerminatedException.java">
@@ -475,10 +489,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/ServerCouldNotProcessYourRequestException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="56" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
+          <folding>
+            <element signature="e#241#242#0" expanded="true" />
+            <element signature="e#271#272#0" expanded="true" />
+            <element signature="e#344#345#0" expanded="true" />
+            <element signature="e#372#373#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/ClientController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-239">
-          <caret line="135" column="5" selection-start-line="135" selection-start-column="5" selection-end-line="135" selection-end-column="5" />
+        <state relative-caret-position="166">
+          <caret line="131" column="45" selection-start-line="131" selection-start-column="45" selection-end-line="131" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1330#1331#0" expanded="true" />
