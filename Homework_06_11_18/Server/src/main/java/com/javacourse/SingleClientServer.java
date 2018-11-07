@@ -1,6 +1,7 @@
 package com.javacourse;
 
 import com.javacourse.Calculations.CalculationController;
+import org.w3c.dom.Document;
 
 import java.io.*;
 import java.net.Socket;
@@ -14,15 +15,13 @@ public class SingleClientServer extends Thread {
 
     private Socket socket;
     private BufferedReader in;
-    private PrintWriter out;
-
+    private ObjectOutputStream out;
 
     public SingleClientServer(Socket socket) throws IOException {
         this.socket = socket;
         in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-        out = new PrintWriter(new BufferedWriter(new OutputStreamWriter(
-                socket.getOutputStream()
-        )), true);
+        out = new ObjectOutputStream(socket.getOutputStream());
+
         logger.info("New client connected");
         start();
     }
@@ -31,13 +30,15 @@ public class SingleClientServer extends Thread {
     public void run() {
         while (true) {
             CalculationController controller = new CalculationController();
-            String request, result = null;
+            String request;
+            Document result;
             try {
                 request = readAllTextFromInputStream(in);
                 result = controller.processClient(request);
             } catch (IOException e) {
                 logger.error(e.getMessage());
                 System.out.println("Client either disconnected or some problems with network occurred");
+                System.out.println("Server is still working...");
                 return;
             }
             sendResponseToClient(result);
@@ -48,7 +49,12 @@ public class SingleClientServer extends Thread {
         return in.readLine();
     }
 
-    void sendResponseToClient(String result){
-        out.println(result);
+    void sendResponseToClient(Document result){
+        try {
+            out.writeObject(result);
+        } catch (IOException e) {
+            logger.error("Could not respond user due to IO problems");
+            System.out.println("Could not respond user due to IO problems");
+        }
     }
 }

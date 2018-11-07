@@ -25,12 +25,8 @@ public class CalculationController {
         DOMConfigurator.configure("log/log4j.xml");
     }
 
-    public String processClient(String expression){
-        String  result;
-
-        //TODO: change signature to return Documnet
-
-        result = calculateExpression(expression);// TODO: getXmlWithResult replace
+    public Document processClient(String expression){
+        Document result = getXmlWithResult(expression);
         return result;
     }
 
@@ -46,10 +42,20 @@ public class CalculationController {
         Document doc = db.newDocument();
 
         Element root = doc.createElement("result");
+        root.setAttribute("value", result);
         doc.appendChild(root);
 
         Element points = doc.createElement("points");
         root.appendChild(points);
+
+        //TODO calculate y iteratively for different x values
+
+        for(int i=LOWER_BOUND_FOR_PLOT; i<=HIGHER_BOUND_FOR_PLOT; ++i){
+            Element point = doc.createElement("point");
+            point.setAttribute("x", Integer.toString(i));
+            point.setAttribute("y", result);
+            points.appendChild(point);
+        }
 
         Element boundaries = doc.createElement("boundaries");
         boundaries.setAttribute("low",  Integer.toString(LOWER_BOUND_FOR_PLOT));

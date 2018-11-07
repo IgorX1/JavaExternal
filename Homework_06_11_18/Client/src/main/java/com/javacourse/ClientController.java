@@ -47,9 +47,10 @@ public class ClientController {
 
     public void processUser(){
         view.showMessage("Welcome to RPN calculator!");
-        String expression, result;
+        String expression;
+        Document result;
         PrintWriter out;
-        BufferedReader in;
+        ObjectInputStream in;
         try {
             initSocket();
             out = initOutputStream();
@@ -63,7 +64,7 @@ public class ClientController {
                 result = processExpressionOnServer(expression, out, in);
                 showResult(result);
             }while (true);
-        } catch (IOException | NullPointerException e) {
+        } catch (IOException | NullPointerException | ClassNotFoundException e) {
             view.showMessage("Unable to establish the connection.");
             return;
         }finally {
@@ -106,21 +107,19 @@ public class ClientController {
         return out;
     }
 
-    BufferedReader initInputStream() throws IOException {
-        BufferedReader in = new BufferedReader(new InputStreamReader(
-                socket.getInputStream()
-        ));
+    ObjectInputStream initInputStream() throws IOException {
+        ObjectInputStream in = new ObjectInputStream(socket.getInputStream());
         return in;
     }
 
-    String processExpressionOnServer(String expression, PrintWriter out, BufferedReader in) throws IOException {
+    Document processExpressionOnServer(String expression, PrintWriter out, ObjectInputStream in) throws IOException, ClassNotFoundException {
         out.println(expression);
         logger.info("Put "+expression+" to the server");
         return readFileFromServer(in);
     }
 
-    String readFileFromServer(BufferedReader in) throws IOException {
-        String res = in.readLine();
+    Document readFileFromServer(ObjectInputStream in) throws IOException, ClassNotFoundException {
+        Document res = (Document) in.readObject();
         logger.debug(res);
         return res;
     }
@@ -131,9 +130,9 @@ public class ClientController {
      * can cope with that as well.
      * @param result is an XML-file which is to be parsed in helper methods
      */
-    void showResult(String result){
-        Document xmlDoc = createXmlFromString(result);
-        List<Point> points = getPlottingPoints(xmlDoc);
+    void showResult(Document result){
+        //Document xmlDoc = createXmlFromString(result);
+        List<Point> points = getPlottingPoints(result);/*xmlDoc -- param*/
         showPlotByPoints(points);
 
         /*if(!result.equals("")){
