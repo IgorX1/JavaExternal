@@ -70,11 +70,6 @@ public class ClientController {
         return scanner.nextLine();
     }
 
-    private String getInputFromConsole(String msg){
-        view.showMessage(msg);
-        return scanner.nextLine();
-    }
-
     void initSocket() throws IOException {
         try {
             InetAddress address = InetAddress.getByName(null);
