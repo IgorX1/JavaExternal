@@ -1,19 +1,19 @@
 package com.javacourse;
 
 public class Point {
-    private double x;
-    private double y;
+    private String x;
+    private String y;
 
-    public Point(double x, double y) {
+    public Point(String x, String y) {
         this.x = x;
         this.y = y;
     }
 
-    public double getX() {
+    public String getX() {
         return x;
     }
 
-    public double getY() {
+    public String getY() {
         return y;
     }
 }

@@ -21,6 +21,8 @@ public class ClientConsoleView implements ClientView {
 
     //Move these methods to controller
 
+    //TODO: get rid of these functions, as they were moved to controller
+
     private Document createXmlFromString() {
         return null;
     }
