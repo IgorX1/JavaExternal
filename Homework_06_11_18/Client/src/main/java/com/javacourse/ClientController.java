@@ -131,34 +131,8 @@ public class ClientController {
      * @param result is an XML-file which is to be parsed in helper methods
      */
     void showResult(Document result){
-        //Document xmlDoc = createXmlFromString(result);
-        List<Point> points = getPlottingPoints(result);/*xmlDoc -- param*/
+        List<Point> points = getPlottingPoints(result);
         showPlotByPoints(points);
-
-        /*if(!result.equals("")){
-            view.showMessage(result);
-        }else {
-            //place result parsing logic here
-            view.showMessage("Server could not process your request.");
-        }*/
-    }
-
-    private Document createXmlFromString(String xml) {
-        DocumentBuilderFactory dbf = null;
-        DocumentBuilder dBuilder = null;
-        try {
-            dbf = DocumentBuilderFactory.newInstance();
-            dBuilder = dbf.newDocumentBuilder();
-        } catch (ParserConfigurationException e) {
-            logger.error(e.getMessage());
-        }
-        Document xmlDoc = null;
-        try {
-            xmlDoc = dBuilder.parse(new InputSource(new StringReader(xml)));
-        } catch (SAXException | IOException e) {
-            logger.error(e.getMessage());
-        }
-        return xmlDoc;
     }
 
     List<Point> getPlottingPoints(Document xmlDoc){
