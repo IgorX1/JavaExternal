@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aee71b42-b394-4a28-bb62-632d4253ae1d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Client/src/main/java/com/javacourse/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/java/com/javacourse/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/target/classes/com/javacourse/ClientConsoleView.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/target/classes/com/javacourse/ClientConsoleView.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Client/target/classes/com/javacourse/ClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/target/classes/com/javacourse/ClientController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/javacourse/Calculations/CalculationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/javacourse/Calculations/CalculationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/javacourse/SingleClientServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/javacourse/SingleClientServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javacourse/Calculations/CalculationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javacourse/Calculations/CalculationController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -39,28 +37,28 @@
         <counts>
           <entry key="1" value="2" />
           <entry key="2" value="1" />
-          <entry key="java" value="15" />
+          <entry key="java" value="16" />
           <entry key="log" value="14" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="15" />
+          <entry key="JAVA" value="16" />
           <entry key="PLAIN_TEXT" value="17" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
         <counts>
-          <entry key="git.branch.create.new" value="2" />
+          <entry key="git.branch.create.new" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2335" />
-          <entry key="PLAIN_TEXT" value="372" />
+          <entry key="JAVA" value="2638" />
+          <entry key="PLAIN_TEXT" value="394" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
@@ -68,8 +66,8 @@
       <usages-collector id="statistics.spring.boot.run.usages" />
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2335" />
-          <entry key="txt" value="372" />
+          <entry key="java" value="2638" />
+          <entry key="txt" value="394" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
@@ -80,7 +78,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
+            <state relative-caret-position="450">
               <caret line="33" column="29" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -89,11 +87,28 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/SingleClientServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="2" column="57" selection-start-line="2" selection-start-column="57" selection-end-line="2" selection-end-column="57" />
+            <state relative-caret-position="-384">
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/Calculations/CalculationController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="26" column="29" lean-forward="true" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1039#1040#0" expanded="true" />
+                <element signature="e#1081#1082#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -116,7 +131,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/../.." value="feature/points-xml" />
+        <entry key="$PROJECT_DIR$/../.." value="master" />
       </map>
     </option>
   </component>
@@ -130,8 +145,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/javacourse/Calculations/PostfixTransformator.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/javacourse/Calculations/Tokenizer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/Calculations/CalculationController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javacourse/SingleClientServer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/Calculations/CalculationController.java" />
       </list>
     </option>
   </component>
@@ -353,17 +368,24 @@
       <option name="project" value="LOCAL" />
       <updated>1541616808818</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Staged new class files">
+      <created>1541624844453</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1541624844453</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17316000" />
+    <option name="totallyTimeSpent" value="18543000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21006711" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21006711" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -372,7 +394,7 @@
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32907802" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -410,7 +432,8 @@
     <MESSAGE value="debug" />
     <MESSAGE value="Improved error message" />
     <MESSAGE value="Working on xml support implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working on xml support implementation" />
+    <MESSAGE value="Staged new class files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Staged new class files" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/lang/Runnable.java">
@@ -481,30 +504,10 @@
     <entry file="file://$PROJECT_DIR$/log/logfile.log">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="33" column="29" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/Calculations/Tokenizer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
           <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/Calculations/CalculationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -515,10 +518,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="33" column="29" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/SingleClientServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="2" column="57" selection-start-line="2" selection-start-column="57" selection-end-line="2" selection-end-column="57" />
+        <state relative-caret-position="-384">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/Calculations/CalculationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="26" column="29" lean-forward="true" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1039#1040#0" expanded="true" />
+            <element signature="e#1081#1082#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

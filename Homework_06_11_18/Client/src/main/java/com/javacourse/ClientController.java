@@ -77,9 +77,9 @@ public class ClientController {
 
     }
 
-    String getExpressionOrExit(){//TODO:  implement exiting from infinite loop by typing some phrase
+    String getExpressionOrExit(){
         view.showMessage("Enter the expression to calculate or type END");
-        view.showMessage("Allowed operations:+ - / * sin lg ()");
+        view.showMessage("Allowed operations:+ - / * sin lg (). x-function argument");
         String expr = getInputFromConsole();
         if(expr.equalsIgnoreCase("END"))
             throw new ProgramShouldBeTerminatedException();
