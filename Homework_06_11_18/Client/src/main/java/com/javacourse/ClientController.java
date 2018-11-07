@@ -116,6 +116,7 @@ public class ClientController {
         if(!result.equals("")){
             view.showMessage(result);
         }else {
+            //place xml parsing logic here
             view.showMessage("Server could not process your request.");
         }
     }
