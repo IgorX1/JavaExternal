@@ -2,17 +2,9 @@ package com.javacourse;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
-import org.jfree.chart.ChartFactory;
-import org.jfree.chart.ChartPanel;
-import org.jfree.chart.JFreeChart;
-import org.jfree.chart.plot.PlotOrientation;
-import org.jfree.data.xy.XYDataset;
-import org.jfree.data.xy.XYSeries;
-import org.jfree.data.xy.XYSeriesCollection;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
-import javax.swing.*;
 import java.io.*;
 import java.net.InetAddress;
 import java.net.Socket;
@@ -166,7 +158,6 @@ public class ClientController {
      * @param points
      * @throws NumberFormatException thrown in case when the expression was processed unsuccessfully
      */
-    private void showPlotByPoints(List<Point> points) throws NumberFormatException {
-        PlotVisualizer.showPlotByPoints(points);
+    private void showPlotByPoints(List<Point> points) throws NumberFormatException { PlotVisualizer.showPlotByPoints(points);
     }
 }
