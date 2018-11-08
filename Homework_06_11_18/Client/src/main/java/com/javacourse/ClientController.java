@@ -121,14 +121,20 @@ public class ClientController {
      * @param result is an XML-file which is to be parsed in helper methods
      */
     void showResult(Document result){
-        //if (isTheExpressionProcessed(result)) {
-            List<Point> points = getPlottingPoints(result);
+        List<Point> points = getPlottingPoints(result);
+        try {
             showResultingValue(result);
-            showPlotByPoints(points);
-        /*} else {
+        } catch (NumberFormatException e) {
             logger.info("Server could not process your request");
             view.showMessage("Server could not process your request");
-        }*/
+        }
+
+        try {
+            showPlotByPoints(points);
+        } catch (NumberFormatException e) {
+            logger.info("Server could not process your request");
+            view.showMessage("Server could not process your request");
+        }
     }
 
     private boolean isTheExpressionProcessed(Document xmlDoc) {
@@ -138,7 +144,7 @@ public class ClientController {
         return true;
     }
 
-    void showResultingValue(Document xmlDoc){
+    void showResultingValue(Document xmlDoc) throws NumberFormatException{
         Element pointsElem = (Element) xmlDoc.getElementsByTagName("result").item(0);
         view.showMessage(pointsElem.getAttribute("value"));
     }
@@ -157,7 +163,7 @@ public class ClientController {
         return points;
     }
 
-    private void showPlotByPoints(List<Point> points) {
+    private void showPlotByPoints(List<Point> points) throws NumberFormatException {
         XYSeries series = new XYSeries("Resulting plot");
 
         for(Point p : points){

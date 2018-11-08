@@ -13,3 +13,10 @@
 2018-11-08 11:24:52 INFO  ClientController:109 - Put sin(x) to the server
 2018-11-08 12:44:44 INFO  ClientController:109 - Put sin(x) to the server
 2018-11-08 12:44:44 DEBUG ClientController:115 - [#document: null]
+2018-11-08 12:47:46 INFO  ClientController:109 - Put asd to the server
+2018-11-08 12:47:46 DEBUG ClientController:115 - [#document: null]
+2018-11-08 12:51:26 INFO  ClientController:109 - Put asd to the server
+2018-11-08 12:51:27 DEBUG ClientController:115 - [#document: null]
+2018-11-08 12:51:27 INFO  ClientController:136 - Server could not process your request
+2018-11-08 12:51:34 INFO  ClientController:109 - Put sin(x) to the server
+2018-11-08 12:51:34 DEBUG ClientController:115 - [#document: null]
