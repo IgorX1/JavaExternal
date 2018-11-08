@@ -11,7 +11,6 @@ import javax.xml.parsers.ParserConfigurationException;
 
 public class RespondXMLFormatter {
     private String expression;
-    private boolean isExpressionParametrized;
     private static final Logger logger;
     private static final int  LOWER_BOUND_FOR_PLOT = 0;
     private static final int HIGHER_BOUND_FOR_PLOT = 10;

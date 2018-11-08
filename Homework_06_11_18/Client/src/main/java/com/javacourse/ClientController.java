@@ -137,13 +137,11 @@ public class ClientController {
         }
     }
 
-    private boolean isTheExpressionProcessed(Document xmlDoc) {
-        Element error = (Element) xmlDoc.getElementsByTagName("errors").item(0);
-        if(error.hasChildNodes())
-            return false;
-        return true;
-    }
-
+    /**
+     *
+     * @param xmlDoc
+     * @throws NumberFormatException thrown in case when the expression was processed unsuccessfully
+     */
     void showResultingValue(Document xmlDoc) throws NumberFormatException{
         Element pointsElem = (Element) xmlDoc.getElementsByTagName("result").item(0);
         view.showMessage(pointsElem.getAttribute("value"));
@@ -163,22 +161,12 @@ public class ClientController {
         return points;
     }
 
+    /**
+     *
+     * @param points
+     * @throws NumberFormatException thrown in case when the expression was processed unsuccessfully
+     */
     private void showPlotByPoints(List<Point> points) throws NumberFormatException {
-        XYSeries series = new XYSeries("Resulting plot");
-
-        for(Point p : points){
-            series.add(Double.parseDouble(p.getX()), Double.parseDouble(p.getY()));
-        }
-
-        XYDataset xyDataset = new XYSeriesCollection(series);
-        JFreeChart chart = ChartFactory
-                .createXYLineChart("Resulting plot", "x", "y",
-                        xyDataset,
-                        PlotOrientation.VERTICAL,
-                        true, true, true);
-        JFrame frame = new JFrame("MinimalStaticChart");
-        frame.getContentPane().add(new ChartPanel(chart));
-        frame.setSize(400,300);
-        frame.setVisible(true);
+        PlotVisualizer.showPlotByPoints(points);
     }
 }
