@@ -1,0 +1,15 @@
+2018-11-08 11:05:06 INFO  ClientController:109 - Put 2+3 to the server
+2018-11-08 11:05:06 DEBUG ClientController:115 - [#document: null]
+2018-11-08 11:05:25 INFO  ClientController:109 - Put sin(x)+1 to the server
+2018-11-08 11:05:25 DEBUG ClientController:115 - [#document: null]
+2018-11-08 11:05:25 INFO  ClientController:130 - Requested expression could't be parsed
+2018-11-08 11:05:40 INFO  ClientController:109 - Put sin(x) to the server
+2018-11-08 11:05:40 DEBUG ClientController:115 - [#document: null]
+2018-11-08 11:05:40 INFO  ClientController:130 - Requested expression could't be parsed
+2018-11-08 11:07:46 INFO  ClientController:109 - Put sin(x) to the server
+2018-11-08 11:18:31 INFO  ClientController:109 - Put sin(x) to the server
+2018-11-08 11:18:31 DEBUG ClientController:115 - [#document: null]
+2018-11-08 11:18:31 INFO  ClientController:130 - Requested expression could't be parsed
+2018-11-08 11:24:52 INFO  ClientController:109 - Put sin(x) to the server
+2018-11-08 12:44:44 INFO  ClientController:109 - Put sin(x) to the server
+2018-11-08 12:44:44 DEBUG ClientController:115 - [#document: null]

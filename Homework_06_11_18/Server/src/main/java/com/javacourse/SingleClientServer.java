@@ -1,8 +1,6 @@
 package com.javacourse;
 
-import com.javacourse.Calculations.CalculationController;
 import org.w3c.dom.Document;
-
 import java.io.*;
 import java.net.Socket;
 import static com.javacourse.App.logger;
@@ -21,7 +19,6 @@ public class SingleClientServer extends Thread {
         this.socket = socket;
         in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         out = new ObjectOutputStream(socket.getOutputStream());
-
         logger.info("New client connected");
         start();
     }
@@ -29,27 +26,28 @@ public class SingleClientServer extends Thread {
     @Override
     public void run() {
         while (true) {
-            CalculationController controller = new CalculationController();
+            RespondXMLFormatter controller;
             String request;
-            Document result;
+            Document resultingXml;
             try {
-                request = readAllTextFromInputStream(in);
-                result = controller.processClient(request);
+                request = getRequestString(in);
+                controller = new RespondXMLFormatter(request);
+                resultingXml = controller.processClient();
             } catch (IOException e) {
                 logger.error(e.getMessage());
                 System.out.println("Client either disconnected or some problems with network occurred");
                 System.out.println("Server is still working...");
                 return;
             }
-            sendResponseToClient(result);
+            sendRespondingXmlToClient(resultingXml);
         }
     }
 
-    String readAllTextFromInputStream(BufferedReader in) throws IOException {
+    String getRequestString(BufferedReader in) throws IOException {
         return in.readLine();
     }
 
-    void sendResponseToClient(Document result){
+    void sendRespondingXmlToClient(Document result){
         try {
             out.writeObject(result);
         } catch (IOException e) {

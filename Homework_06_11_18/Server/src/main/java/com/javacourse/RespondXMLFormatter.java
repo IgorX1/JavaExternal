@@ -1,5 +1,6 @@
-package com.javacourse.Calculations;
+package com.javacourse;
 
+import com.javacourse.Calculations.*;
 import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
 import org.w3c.dom.Document;
@@ -7,33 +8,29 @@ import org.w3c.dom.Element;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import java.util.EmptyStackException;
 
-public class CalculationController {
-    private String expr;
-    private boolean isExprParametrized = false;
+public class RespondXMLFormatter {
+    private String expression;
+    private boolean isExpressionParametrized;
     private static final Logger logger;
     private static final int  LOWER_BOUND_FOR_PLOT = 0;
     private static final int HIGHER_BOUND_FOR_PLOT = 10;
-    private static final String expressionVariableName = "x";
 
     static {
-        logger = Logger.getLogger(CalculationController.class);
+        logger = Logger.getLogger(RespondXMLFormatter.class);
         DOMConfigurator.configure("log/log4j.xml");
     }
 
-    public Document processClient(String expression){
-        expr = expression;
-        isExprParametrized = isExprParametrized(expr);
-        Document result = getXmlWithResult(expression);
+    public RespondXMLFormatter(String expression) {
+        this.expression = expression;
+    }
+
+    public Document processClient(){
+        Document result = getXmlWithResult();
         return result;
     }
 
-    boolean isExprParametrized(String expression){
-        return expression.contains(expressionVariableName);
-    }
-
-    Document getXmlWithResult(String expression){
+    Document getXmlWithResult(){
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
         DocumentBuilder db = null;
         try {
@@ -45,8 +42,9 @@ public class CalculationController {
 
         Element errors = doc.createElement("errors");
         String  result = null;
+        ExpressionProcessor processor = new ExpressionProcessor(expression);
         try {
-            result = calculateExpression(expression);
+            result = processor.calculateExpression(expression);
         } catch (UnsuccessfulExpressionProcessingException e) {
             Element error = doc.createElement("error");
             errors.appendChild(error);
@@ -64,7 +62,7 @@ public class CalculationController {
             point.setAttribute("x", Integer.toString(i));
             try {
                 point.setAttribute("y",
-                        calculateExpression(substituteNumberInsteadOfVaraible(expr, i)));
+                        processor.calculateExpressionReplacingVariableWithNumber(expression, i));
             } catch (UnsuccessfulExpressionProcessingException e) {
                 logger.error("Unable to process parametrized expression");
             }
@@ -75,32 +73,6 @@ public class CalculationController {
         boundaries.setAttribute("low",  Integer.toString(LOWER_BOUND_FOR_PLOT));
         boundaries.setAttribute("high", Integer.toString(HIGHER_BOUND_FOR_PLOT));
         root.appendChild(boundaries);
-
-
         return doc;
     }
-
-    String calculateExpression(String expression) throws UnsuccessfulExpressionProcessingException{
-        String result = "";
-        try {
-            PostfixTransformator postfixTransformator = new PostfixTransformator(expression);
-            PostfixParser postfixParser = new PostfixParser(postfixTransformator.transform());
-            result = Double.toString(postfixParser.parse());
-        } catch (NumberFormatException
-                | ArithmeticException
-                | WrongReversePolishNotationFormat
-                | TokenNotSupportedException
-                | EmptyStackException e) {
-            logger.error(e.getMessage());
-            throw new UnsuccessfulExpressionProcessingException("Could not process your expression");
-        }
-        return result;
-    }
-
-    String substituteNumberInsteadOfVaraible(String expression, int number){
-        return isExprParametrized?
-                expression.replaceAll(expressionVariableName, Integer.toString(number)):
-                expr;
-    }
-
 }

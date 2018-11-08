@@ -1,0 +1,14 @@
+2018-11-08 11:05:02 INFO  RespondXMLFormatter:22 - New client connected
+2018-11-08 11:05:16 ERROR RespondXMLFormatter:37 - Connection reset
+2018-11-08 11:05:20 INFO  RespondXMLFormatter:22 - New client connected
+2018-11-08 11:05:25 ERROR RespondXMLFormatter:32 - x can't be a token
+2018-11-08 11:05:40 ERROR RespondXMLFormatter:32 - x can't be a token
+2018-11-08 11:07:43 INFO  RespondXMLFormatter:22 - New client connected
+2018-11-08 11:08:22 ERROR RespondXMLFormatter:32 - x can't be a token
+2018-11-08 11:18:24 INFO  RespondXMLFormatter:22 - New client connected
+2018-11-08 11:18:31 ERROR RespondXMLFormatter:32 - x can't be a token
+2018-11-08 11:24:48 INFO  RespondXMLFormatter:22 - New client connected
+2018-11-08 11:25:03 ERROR RespondXMLFormatter:32 - x can't be a token
+2018-11-08 12:44:39 INFO  RespondXMLFormatter:22 - New client connected
+2018-11-08 12:44:44 ERROR RespondXMLFormatter:32 - x can't be a token
+2018-11-08 12:44:58 ERROR RespondXMLFormatter:37 - Connection reset

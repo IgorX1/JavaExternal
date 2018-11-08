@@ -11,15 +11,8 @@ import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
-import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import org.xml.sax.InputSource;
-import org.xml.sax.SAXException;
-
 import javax.swing.*;
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
 import java.io.*;
 import java.net.InetAddress;
 import java.net.Socket;
@@ -128,21 +121,21 @@ public class ClientController {
      * @param result is an XML-file which is to be parsed in helper methods
      */
     void showResult(Document result){
-        try {
-            checkIfTheExpressionWasProcessed(result);
+        //if (isTheExpressionProcessed(result)) {
             List<Point> points = getPlottingPoints(result);
             showResultingValue(result);
             showPlotByPoints(points);
-        } catch (ServerCouldNotProcessYourRequestException e) {
-            logger.info(e.getMessage());
+        /*} else {
+            logger.info("Server could not process your request");
             view.showMessage("Server could not process your request");
-        }
+        }*/
     }
 
-    private void checkIfTheExpressionWasProcessed(Document xmlDoc) {
+    private boolean isTheExpressionProcessed(Document xmlDoc) {
         Element error = (Element) xmlDoc.getElementsByTagName("errors").item(0);
         if(error.hasChildNodes())
-            throw new ServerCouldNotProcessYourRequestException("Requested expression could't be parsed");
+            return false;
+        return true;
     }
 
     void showResultingValue(Document xmlDoc){

@@ -1,6 +1,5 @@
 package com.javacourse;
 
-import com.javacourse.Calculations.CalculationController;
 import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
 
@@ -11,10 +10,10 @@ import java.net.Socket;
 public class App
 {
     private static final int PORT_NUMBER = 8080;
-    static final Logger logger;
+    public static final Logger logger;
 
     static {
-        logger = Logger.getLogger(CalculationController.class);
+        logger = Logger.getLogger(RespondXMLFormatter.class);
         DOMConfigurator.configure("log/log4j.xml");
     }
 

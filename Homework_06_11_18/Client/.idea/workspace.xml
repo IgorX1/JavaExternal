@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fa3b7d9-77c5-4213-b300-79df1edd2d79" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Server/src/main/java/com/javacourse/Calculations/ExpressionProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/javacourse/ClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/javacourse/ClientController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javacourse/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javacourse/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/javacourse/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/javacourse/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/javacourse/Calculations/CalculationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/javacourse/RespondXMLFormatter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/javacourse/SingleClientServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/javacourse/SingleClientServer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -69,13 +76,36 @@
       <usages-collector id="statistics.spring.boot.mvc.usages" />
       <usages-collector id="statistics.spring.boot.run.usages" />
     </session>
+    <session id="1283431086">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.spring.boot.run.usages" />
+      <usages-collector id="statistics.spring.boot.mvc.usages" />
+      <usages-collector id="statistics.file.types.open" />
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="54" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="54" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
+            <state relative-caret-position="176">
               <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
             </state>
           </provider>
@@ -84,8 +114,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/ClientController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1607">
-              <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+            <state relative-caret-position="521">
+              <caret line="141" column="85" selection-start-line="141" selection-start-column="85" selection-end-line="141" selection-end-column="85" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2777#2778#0" expanded="true" />
@@ -98,7 +128,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/javacourse/ClientControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
+            <state relative-caret-position="154">
               <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
             </state>
           </provider>
@@ -107,7 +137,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/ClientConsoleView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
+            <state relative-caret-position="66">
               <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
@@ -153,6 +183,13 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
     <option name="width" value="1750" />
@@ -164,6 +201,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -174,11 +213,6 @@
             <path>
               <item name="CalculatorClient" type="b2602c69:ProjectViewProjectNode" />
               <item name="Client" type="462c0819:PsiDirectoryNode" />
-              <item name="log" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CalculatorClient" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -199,27 +233,6 @@
               <item name="Client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="javacourse" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CalculatorClient" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CalculatorClient" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CalculatorClient" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="javacourse" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -227,9 +240,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -238,6 +249,7 @@
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541627790525" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Server" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -267,7 +279,7 @@
   <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.javacourse.App" />
-      <module name="Client" />
+      <module name="CalculatorClient" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.javacourse.*" />
@@ -299,6 +311,7 @@
       <workItem from="1541509445310" duration="13577000" />
       <workItem from="1541574457676" duration="1669000" />
       <workItem from="1541612204272" duration="1953000" />
+      <workItem from="1541661164538" duration="3728000" />
     </task>
     <task id="LOCAL-00001" summary="Initialized client-sever project">
       <created>1541509989854</created>
@@ -367,13 +380,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21861000" />
+    <option name="totallyTimeSpent" value="25589000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17181209" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1738255" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -382,7 +395,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32907802" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -439,23 +452,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/log/logfile.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/javacourse/ClientControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/log/logfile.log" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/ClientView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -483,17 +480,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/javacourse/ClientControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/ClientConsoleView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
+        <state relative-caret-position="66">
           <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/ClientController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1607">
-          <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+        <state relative-caret-position="521">
+          <caret line="141" column="85" selection-start-line="141" selection-start-column="85" selection-end-line="141" selection-end-column="85" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2777#2778#0" expanded="true" />
