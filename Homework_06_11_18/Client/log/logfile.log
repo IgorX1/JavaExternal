@@ -24,3 +24,7 @@
 2018-11-08 13:15:22 DEBUG ClientController:115 - [#document: null]
 2018-11-08 13:19:01 INFO  ClientController:109 - Put sin(x) to the server
 2018-11-08 13:19:01 DEBUG ClientController:115 - [#document: null]
+2018-11-08 13:32:47 INFO  ClientController:100 - Put 2+3 to the server
+2018-11-08 13:32:47 DEBUG ClientController:106 - [#document: null]
+2018-11-08 13:32:54 INFO  ClientController:100 - Put sin(x) to the server
+2018-11-08 13:32:54 DEBUG ClientController:106 - [#document: null]

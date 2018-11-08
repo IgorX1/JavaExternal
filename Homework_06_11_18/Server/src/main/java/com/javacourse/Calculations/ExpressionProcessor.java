@@ -19,7 +19,7 @@ public class ExpressionProcessor {
     }
 
     public String calculateExpression(String expression) throws UnsuccessfulExpressionProcessingException{
-        String result = "";
+        String result;
         try {
             PostfixTransformator postfixTransformator = new PostfixTransformator(expression);
             PostfixParser postfixParser = new PostfixParser(postfixTransformator.transform());
@@ -37,10 +37,10 @@ public class ExpressionProcessor {
 
     public String calculateExpressionReplacingVariableWithNumber(String expression, int number)
             throws UnsuccessfulExpressionProcessingException{
-        return calculateExpression(substituteNumberInsteadOfVaraible(expression, number));
+        return calculateExpression(substituteNumberInsteadOfVariable(expression, number));
     }
 
-    String substituteNumberInsteadOfVaraible(String expression, int number){
+    String substituteNumberInsteadOfVariable(String expression, int number){
         return isExpressionParametrized ?
                 expression.replaceAll(expressionVariableName, Integer.toString(number)):
                 this.expression;
