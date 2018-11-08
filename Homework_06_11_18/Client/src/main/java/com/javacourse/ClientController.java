@@ -17,7 +17,6 @@ public class ClientController {
     private ClientView view;
     private Socket socket;
     private Scanner scanner = new Scanner(System.in);
-    private static final String IP_ADRESS = "127.0.0.1";
     private static final int PORT_NUMBER = 8080;
     private static final Logger logger;
 
@@ -61,15 +60,6 @@ public class ClientController {
         }
     }
 
-    String getExpressionOrExit(){
-        view.showMessage("Enter the expression to calculate or type END");
-        view.showMessage("Allowed operations:+ - / * sin lg (). x-function argument");
-        String expr = getInputFromConsole();
-        if(expr.equalsIgnoreCase("END"))
-            throw new ProgramShouldBeTerminatedException();
-        return expr;
-    }
-
     private String getInputFromConsole(){
         return scanner.nextLine();
     }
@@ -94,6 +84,15 @@ public class ClientController {
     ObjectInputStream initInputStream() throws IOException {
         ObjectInputStream in = new ObjectInputStream(socket.getInputStream());
         return in;
+    }
+
+    String getExpressionOrExit(){
+        view.showMessage("Enter the expression to calculate or type END");
+        view.showMessage("Allowed operations:+ - / * sin lg (). x-function argument");
+        String expr = getInputFromConsole();
+        if(expr.equalsIgnoreCase("END"))
+            throw new ProgramShouldBeTerminatedException();
+        return expr;
     }
 
     Document processExpressionOnServer(String expression, PrintWriter out, ObjectInputStream in) throws IOException, ClassNotFoundException {
