@@ -16,8 +16,8 @@ public class App
 
     public static void main( String[] args )
     {
-        DOMParser domParser = new DOMParser();
-        List<Page> res = domParser.getPageListFromXml("xml/pages.xml");
+        MyDOMParser myDomParser = new MyDOMParser();
+        List<Page> res = myDomParser.getPageListFromXml("xml/pages.xml");
         System.out.println(res);
     }
 }

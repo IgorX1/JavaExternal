@@ -20,15 +20,7 @@ import java.util.List;
 import static com.javacourse.Constants.*;
 import static com.javacourse.App.logger;
 
-public class DOMParser implements XMLParser{
-
-    private String id = defaultStringTagValue;
-    private String title = defaultStringTagValue;
-    private String type = defaultStringTagValue;
-    private boolean doNeedAuthorize = false;
-    private boolean isFree = false;
-    private boolean hasEmail = false;
-    private boolean isDownloadable = false;
+public class MyDOMParser extends XMLParser{
 
     @Override
     public List<Page> getPageListFromXml(String pathToXmlFile) {
