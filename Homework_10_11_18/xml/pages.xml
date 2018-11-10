@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+    <page id="ID-1">
+        <title>Home page</title>
+        <type>ads</type>
+        <authorize>false</authorize>
+        <chars name="free"/>
+    </page>
+    <page id="ID-2">
+        <title>World news</title>
+        <type>news</type>
+        <authorize>false</authorize>
+        <chars name="free"/>
+        <chars name="hasEmail"/>
+    </page>
+    <page id="ID-3">
+        <title>Mirror web page</title>
+        <type>mirror</type>
+        <authorize>true</authorize>
+        <chars name="hasEmail"/>
+        <chars name="downloadable"/>
+    </page>
+</site>
