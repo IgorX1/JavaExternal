@@ -1,9 +1,23 @@
 package com.javacourse;
 
-public class App 
+import org.apache.log4j.Logger;
+import org.apache.log4j.xml.DOMConfigurator;
+
+import java.util.List;
+
+public class App
 {
+    public static final Logger logger;
+
+    static {
+        logger = Logger.getLogger(App.class);
+        DOMConfigurator.configure("log/log4j.xml");
+    }
+
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        DOMParser domParser = new DOMParser();
+        List<Page> res = domParser.getPageCollectionFromXml("xml/pages.xml");
+        System.out.println(res);
     }
 }
