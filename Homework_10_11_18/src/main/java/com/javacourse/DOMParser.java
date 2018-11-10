@@ -21,75 +21,69 @@ import static com.javacourse.Constants.*;
 import static com.javacourse.App.logger;
 
 public class DOMParser implements XMLParser{
+
+    private String id = defaultStringTagValue;
+    private String title = defaultStringTagValue;
+    private String type = defaultStringTagValue;
+    private boolean doNeedAuthorize = false;
+    private boolean isFree = false;
+    private boolean hasEmail = false;
+    private boolean isDownloadable = false;
+
     @Override
-    public List<Page> getPageCollectionFromXml(String pathToXmlFile) {
+    public List<Page> getPageListFromXml(String pathToXmlFile) {
         List<Page> resultingPages = new ArrayList<>();
         try {
-            DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-            DocumentBuilder db = dbf.newDocumentBuilder();
-            db.setErrorHandler(new ConsoleErrorHandler());
-            SchemaFactory sf = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
-            Schema s = sf.newSchema(new File(schemaPath));
-            dbf.setValidating(false);
-            dbf.setSchema(s);
-            Document xmlDoc = db.parse(new File(pathToXmlFile));
-            xmlDoc.getDocumentElement().normalize();
-            NodeList pageList = xmlDoc.getElementsByTagName(Page.xmlNodeName);
-
-            String id;
-            String title = defaultStringTagValue;
-            String type = defaultStringTagValue;
-            boolean doNeedAuthorize = false;
-            boolean isFree = false;
-            boolean hasEmail = false;
-            boolean isDownloadable = false;
-
-            Page page;
-
+            NodeList pageList = getPageNodesFromFile(pathToXmlFile);
             for(int i=0; i<pageList.getLength(); ++i){
                 Node pageNode = pageList.item(i);
                 if(pageNode.getNodeType()==Node.ELEMENT_NODE){
                     Element tempPage = (Element) pageNode;
                     id = tempPage.getAttribute("id");
-                    NodeList pageAttributes = tempPage.getChildNodes();
+                    NodeList pageChildren = tempPage.getChildNodes();
 
-                    for (int a=0; a<pageAttributes.getLength(); ++a) {
-                        Element tempElem = (Element) tempPage.getChildNodes();
-                        switch (tempElem.getTagName()){
-                            case "title":
-                                title = tempElem.getTextContent();
-                                break;
-                            case "type":
-                                type = tempElem.getTextContent();
-                                break;
-                            case "authorize":
-                                doNeedAuthorize = Boolean.getBoolean(tempElem.getTextContent());
-                                break;
-                            case "chars":
-                                switch (tempElem.getAttribute("name")){
-                                    case "free":
-                                        isFree = true;
-                                        break;
-                                    case "hasEmail":
-                                        hasEmail = true;
-                                        break;
-                                    case "downloadable":
-                                        isDownloadable = true;
-                                        break;
-                                }
-                                break;
+                    for (int a=0; a<pageChildren.getLength(); ++a) {
+                        if (pageChildren.item(a).getNodeType()==Node.ELEMENT_NODE) {
+                            Element tempElem = (Element)pageChildren.item(a);
+                            switch (tempElem.getTagName()){
+                                case "title":
+                                    title = tempElem.getTextContent();
+                                    break;
+                                case "type":
+                                    type = tempElem.getTextContent();
+                                    break;
+                                case "authorize":
+                                    doNeedAuthorize = Boolean.parseBoolean(tempElem.getTextContent());
+                                    break;
+                                case "chars":
+                                    switch (tempElem.getAttribute("name")){
+                                        case "free":
+                                            isFree = true;
+                                            break;
+                                        case "hasEmail":
+                                            hasEmail = true;
+                                            break;
+                                        case "downloadable":
+                                            isDownloadable = true;
+                                            break;
+                                    }
+                                    break;
+                            }
+
                         }
-
-                        resultingPages.add(new Page.PageBuilder(id)
-                                .title(title)
-                                .type(type)
-                                .isDownloadable(isDownloadable)
-                                .doNeedAuthorize(doNeedAuthorize)
-                                .hasEmail(hasEmail)
-                                .isFree(isFree)
-                                .build()
-                        );
                     }
+
+                    resultingPages.add(new Page.PageBuilder(id)
+                            .title(title)
+                            .type(type)
+                            .isDownloadable(isDownloadable)
+                            .doNeedAuthorize(doNeedAuthorize)
+                            .hasEmail(hasEmail)
+                            .isFree(isFree)
+                            .build()
+                    );
+
+                    resumeDefaultContainerVariableValues();
 
                 }
             }
@@ -99,5 +93,29 @@ public class DOMParser implements XMLParser{
         }
 
         return resultingPages;
+    }
+
+    private NodeList getPageNodesFromFile(String pathToXmlFile) throws SAXException, ParserConfigurationException, IOException {
+        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+        DocumentBuilder db = dbf.newDocumentBuilder();
+        db.setErrorHandler(new ConsoleErrorHandler());
+        SchemaFactory sf = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+        Schema s = sf.newSchema(new File(schemaPath));
+        dbf.setValidating(false);
+        dbf.setSchema(s);
+        Document xmlDoc = db.parse(new File(pathToXmlFile));
+        xmlDoc.getDocumentElement().normalize();
+        return xmlDoc.getElementsByTagName(Page.xmlNodeName);
+    }
+
+
+    private void resumeDefaultContainerVariableValues(){
+        id = defaultStringTagValue;
+        title = defaultStringTagValue;
+        type = defaultStringTagValue;
+        doNeedAuthorize = false;
+        isFree = false;
+        hasEmail = false;
+        isDownloadable = false;
     }
 }
