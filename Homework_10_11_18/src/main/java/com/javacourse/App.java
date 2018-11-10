@@ -19,5 +19,10 @@ public class App
         MyDOMParser myDomParser = new MyDOMParser();
         List<Page> res = myDomParser.getPageListFromXml("xml/pages.xml");
         System.out.println(res);
+
+        MySAXParser mySaxParser = new MySAXParser();
+        List<Page> res2 = mySaxParser.getPageListFromXml("xml/pages.xml");
+        System.out.println(res);
+
     }
 }

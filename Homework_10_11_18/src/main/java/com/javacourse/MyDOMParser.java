@@ -20,11 +20,19 @@ import java.util.List;
 import static com.javacourse.Constants.*;
 import static com.javacourse.App.logger;
 
-public class MyDOMParser extends XMLParser{
+public class MyDOMParser implements XMLParser{
+
+    String id = defaultStringTagValue;
+    String title = defaultStringTagValue;
+    String type = defaultStringTagValue;
+    boolean doNeedAuthorize = false;
+    boolean isFree = false;
+    boolean hasEmail = false;
+    boolean isDownloadable = false;
 
     @Override
     public List<Page> getPageListFromXml(String pathToXmlFile) {
-        List<Page> resultingPages = new ArrayList<>();
+        List<Page> pageEntitiesList = new ArrayList<>();
         try {
             NodeList pageList = getPageNodesFromFile(pathToXmlFile);
             for(int i=0; i<pageList.getLength(); ++i){
@@ -65,7 +73,7 @@ public class MyDOMParser extends XMLParser{
                         }
                     }
 
-                    resultingPages.add(new Page.PageBuilder(id)
+                    pageEntitiesList.add(new Page.PageBuilder(id)
                             .title(title)
                             .type(type)
                             .isDownloadable(isDownloadable)
@@ -84,7 +92,7 @@ public class MyDOMParser extends XMLParser{
             logger.error(e.getMessage());
         }
 
-        return resultingPages;
+        return pageEntitiesList;
     }
 
     private NodeList getPageNodesFromFile(String pathToXmlFile) throws SAXException, ParserConfigurationException, IOException {
