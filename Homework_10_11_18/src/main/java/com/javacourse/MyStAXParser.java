@@ -1,5 +1,8 @@
 package com.javacourse;
 
+import org.xml.sax.SAXException;
+
+import javax.xml.XMLConstants;
 import javax.xml.namespace.QName;
 import javax.xml.stream.XMLEventReader;
 import javax.xml.stream.XMLInputFactory;
@@ -8,13 +11,21 @@ import javax.xml.stream.events.Attribute;
 import javax.xml.stream.events.EndElement;
 import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
+import javax.xml.transform.Source;
+import javax.xml.transform.stax.StAXSource;
+import javax.xml.validation.Schema;
+import javax.xml.validation.SchemaFactory;
+import javax.xml.validation.Validator;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import static com.javacourse.Constants.defaultStringTagValue;
 import static com.javacourse.App.logger;
+import static com.javacourse.Constants.schemaPath;
 
 public class MyStAXParser implements XMLParser {
     private List<Page> pageEntitiesList = new ArrayList<>();
@@ -31,6 +42,7 @@ public class MyStAXParser implements XMLParser {
     public List<Page> getPageListFromXml(String pathToXmlFile) {
         XMLInputFactory xmlInputFactory = XMLInputFactory.newInstance();
         try{
+            validateXmlDocument(pathToXmlFile);
             XMLEventReader xmlEventReader = xmlInputFactory.createXMLEventReader(new FileInputStream(pathToXmlFile));
             while(xmlEventReader.hasNext()){
                 XMLEvent currentEvent = xmlEventReader.nextEvent();
@@ -69,7 +81,7 @@ public class MyStAXParser implements XMLParser {
                     processEndElement(currentEvent.asEndElement());
                 }
             }
-        } catch (FileNotFoundException | XMLStreamException e) {
+        } catch (XMLStreamException | SAXException | IOException e) {
             logger.error(e.getMessage());
         }
         return pageEntitiesList;
@@ -100,5 +112,16 @@ public class MyStAXParser implements XMLParser {
         isFree = false;
         hasEmail = false;
         isDownloadable = false;
+    }
+
+    private void validateXmlDocument(String pathToXmlFile) throws SAXException, XMLStreamException, IOException {
+        XMLInputFactory xmlInputFactory = XMLInputFactory.newInstance();
+        XMLEventReader xmlEventReader = xmlInputFactory.createXMLEventReader(new FileInputStream(pathToXmlFile));
+        SchemaFactory schemaFactory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+        schemaFactory.setErrorHandler(new ConsoleErrorHandler());
+        Schema schema = schemaFactory.newSchema(new File(schemaPath));
+        Validator validator = schema.newValidator();
+        Source staxSrc = new StAXSource(xmlEventReader);
+        validator.validate(staxSrc);
     }
 }
