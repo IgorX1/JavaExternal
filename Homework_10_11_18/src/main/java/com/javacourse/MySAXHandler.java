@@ -1,9 +1,10 @@
 package com.javacourse;
 
-import org.xml.sax.helpers.DefaultHandler;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
+import org.xml.sax.helpers.DefaultHandler;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,28 +42,28 @@ public class MySAXHandler extends DefaultHandler {
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
         currentElem = qName;
-        if(qName.equals(Page.xmlNodeName))
+        if (qName.equals(Page.xmlNodeName))
             id = attributes.getValue("id");
-        else if(qName.equals("chars")){
+        else if (qName.equals("chars")) {
             String attrValue = attributes.getValue("name");
-            if(attrValue.equals("free"))
+            if (attrValue.equals("free"))
                 isFree = true;
-            if(attrValue.equals("downloadable"))
+            if (attrValue.equals("downloadable"))
                 isDownloadable = true;
-            if(attrValue.equals("hasEmail"))
+            if (attrValue.equals("hasEmail"))
                 hasEmail = true;
-        }else if(qName.equals("title"))
+        } else if (qName.equals("title"))
             isSetTitle = true;
-        else if(qName.equals("type"))
+        else if (qName.equals("type"))
             isSetType = true;
-        else if(qName.equals("authorize"))
+        else if (qName.equals("authorize"))
             isSetAuthorize = true;
     }
 
     @Override
     public void endElement(String uri, String localName, String qName) throws SAXException {
         currentElem = qName;
-        if(currentElem.equals(Page.xmlNodeName)){
+        if (currentElem.equals(Page.xmlNodeName)) {
             pageEntitiesList.add(new Page.PageBuilder(id)
                     .title(title)
                     .type(type)
@@ -77,7 +78,7 @@ public class MySAXHandler extends DefaultHandler {
         }
     }
 
-    private void resumeDefaultContainerVariableValues(){
+    private void resumeDefaultContainerVariableValues() {
         id = defaultStringTagValue;
         title = defaultStringTagValue;
         type = defaultStringTagValue;
@@ -89,21 +90,21 @@ public class MySAXHandler extends DefaultHandler {
 
     @Override
     public void characters(char[] ch, int start, int length) throws SAXException {
-        switch (currentElem){
+        switch (currentElem) {
             case "title":
-                if(isSetTitle){
+                if (isSetTitle) {
                     title = new String(ch, start, length);
                     isSetTitle = false;
                 }
                 break;
             case "type":
-                if(isSetType) {
+                if (isSetType) {
                     type = new String(ch, start, length);
                     isSetType = false;
                 }
                 break;
             case "authorize":
-                if(isSetAuthorize){
+                if (isSetAuthorize) {
                     doNeedAuthorize = Boolean.parseBoolean(new String(ch, start, length));
                     isSetAuthorize = false;
                 }

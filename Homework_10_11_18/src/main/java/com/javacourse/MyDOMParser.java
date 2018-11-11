@@ -20,7 +20,7 @@ import java.util.List;
 import static com.javacourse.Constants.*;
 import static com.javacourse.App.logger;
 
-public class MyDOMParser implements XMLParser{
+public class MyDOMParser implements XMLParser {
 
     private String id = defaultStringTagValue;
     private String title = defaultStringTagValue;
@@ -35,17 +35,17 @@ public class MyDOMParser implements XMLParser{
         List<Page> pageEntitiesList = new ArrayList<>();
         try {
             NodeList pageList = getPageNodesFromFile(pathToXmlFile);
-            for(int i=0; i<pageList.getLength(); ++i){
+            for (int i = 0; i < pageList.getLength(); ++i) {
                 Node pageNode = pageList.item(i);
-                if(pageNode.getNodeType()==Node.ELEMENT_NODE){
+                if (pageNode.getNodeType() == Node.ELEMENT_NODE) {
                     Element tempPage = (Element) pageNode;
                     id = tempPage.getAttribute("id");
                     NodeList pageChildren = tempPage.getChildNodes();
 
-                    for (int a=0; a<pageChildren.getLength(); ++a) {
-                        if (pageChildren.item(a).getNodeType()==Node.ELEMENT_NODE) {
-                            Element tempElem = (Element)pageChildren.item(a);
-                            switch (tempElem.getTagName()){
+                    for (int a = 0; a < pageChildren.getLength(); ++a) {
+                        if (pageChildren.item(a).getNodeType() == Node.ELEMENT_NODE) {
+                            Element tempElem = (Element) pageChildren.item(a);
+                            switch (tempElem.getTagName()) {
                                 case "title":
                                     title = tempElem.getTextContent();
                                     break;
@@ -56,7 +56,7 @@ public class MyDOMParser implements XMLParser{
                                     doNeedAuthorize = Boolean.parseBoolean(tempElem.getTextContent());
                                     break;
                                 case "chars":
-                                    switch (tempElem.getAttribute("name")){
+                                    switch (tempElem.getAttribute("name")) {
                                         case "free":
                                             isFree = true;
                                             break;
@@ -109,7 +109,7 @@ public class MyDOMParser implements XMLParser{
     }
 
 
-    private void resumeDefaultContainerVariableValues(){
+    private void resumeDefaultContainerVariableValues() {
         id = defaultStringTagValue;
         title = defaultStringTagValue;
         type = defaultStringTagValue;

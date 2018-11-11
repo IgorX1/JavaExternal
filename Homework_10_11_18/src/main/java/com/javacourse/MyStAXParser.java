@@ -41,43 +41,43 @@ public class MyStAXParser implements XMLParser {
     @Override
     public List<Page> getPageListFromXml(String pathToXmlFile) {
         XMLInputFactory xmlInputFactory = XMLInputFactory.newInstance();
-        try{
+        try {
             validateXmlDocument(pathToXmlFile);
             XMLEventReader xmlEventReader = xmlInputFactory.createXMLEventReader(new FileInputStream(pathToXmlFile));
-            while(xmlEventReader.hasNext()){
+            while (xmlEventReader.hasNext()) {
                 XMLEvent currentEvent = xmlEventReader.nextEvent();
-                if(currentEvent.isStartElement()){
+                if (currentEvent.isStartElement()) {
                     StartElement startElement = currentEvent.asStartElement();
                     currentElem = startElement.getName().getLocalPart();
-                    if(currentElem.equals(Page.xmlNodeName)){
+                    if (currentElem.equals(Page.xmlNodeName)) {
                         Attribute idAttr = startElement.getAttributeByName(new QName("id"));
-                        if(idAttr!=null){
+                        if (idAttr != null) {
                             id = idAttr.getValue();
                         }
-                    }else if(currentElem.equals("title")){
+                    } else if (currentElem.equals("title")) {
                         currentEvent = xmlEventReader.nextEvent();
                         title = currentEvent.asCharacters().getData();
-                    }else if(currentElem.equals("type")){
+                    } else if (currentElem.equals("type")) {
                         currentEvent = xmlEventReader.nextEvent();
                         type = currentEvent.asCharacters().getData();
-                    }else if(currentElem.equals("authorize")){
+                    } else if (currentElem.equals("authorize")) {
                         currentEvent = xmlEventReader.nextEvent();
                         doNeedAuthorize = Boolean.parseBoolean(currentEvent.asCharacters().getData());
-                    }else if(currentElem.equals("chars")){
+                    } else if (currentElem.equals("chars")) {
                         Attribute charsAttr = startElement.getAttributeByName(new QName("name"));
-                        if (charsAttr!=null) {
+                        if (charsAttr != null) {
                             String charsType = charsAttr.getValue();
-                            if(charsType.equals("free"))
+                            if (charsType.equals("free"))
                                 isFree = true;
-                            if(charsType.equals("downloadable"))
+                            if (charsType.equals("downloadable"))
                                 isDownloadable = true;
-                            if(charsType.equals("hasEmail"))
+                            if (charsType.equals("hasEmail"))
                                 hasEmail = true;
                         }
                     }
                 }
 
-                if(currentEvent.isEndElement()){
+                if (currentEvent.isEndElement()) {
                     processEndElement(currentEvent.asEndElement());
                 }
             }
@@ -87,9 +87,9 @@ public class MyStAXParser implements XMLParser {
         return pageEntitiesList;
     }
 
-    private void processEndElement(EndElement endElement){
+    private void processEndElement(EndElement endElement) {
         currentElem = endElement.getName().getLocalPart();
-        if(currentElem.equals(Page.xmlNodeName)){
+        if (currentElem.equals(Page.xmlNodeName)) {
             pageEntitiesList.add(new Page.PageBuilder(id)
                     .title(title)
                     .type(type)
@@ -104,7 +104,7 @@ public class MyStAXParser implements XMLParser {
         }
     }
 
-    private void resumeDefaultContainerVariableValues(){
+    private void resumeDefaultContainerVariableValues() {
         id = defaultStringTagValue;
         title = defaultStringTagValue;
         type = defaultStringTagValue;

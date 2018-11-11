@@ -5,8 +5,7 @@ import org.apache.log4j.xml.DOMConfigurator;
 
 import java.util.List;
 
-public class App
-{
+public class App {
     public static final Logger logger;
 
     static {
@@ -14,8 +13,7 @@ public class App
         DOMConfigurator.configure("log/log4j.xml");
     }
 
-    public static void main( String[] args )
-    {
+    public static void main(String[] args) {
         XMLParser xmlParser = new MyDOMParser();
         List<Page> res1 = xmlParser.getPageListFromXml("xml/pages.xml");
         System.out.println(res1);
