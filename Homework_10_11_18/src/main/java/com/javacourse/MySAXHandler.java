@@ -46,11 +46,12 @@ public class MySAXHandler extends DefaultHandler {
         if(qName.equals(Page.xmlNodeName))
             id = attributes.getValue("id");
         else if(qName.equals("chars")){
-            if(attributes.getIndex("free")!=-1)
+            String attrValue = attributes.getValue("name");
+            if(attrValue.equals("free"))
                 isFree = true;
-            if(attributes.getIndex("downloadable")!=-1)
+            if(attrValue.equals("downloadable"))
                 isDownloadable = true;
-            if(attributes.getIndex("hasEmail")!=-1)
+            if(attrValue.equals("hasEmail"))
                 hasEmail = true;
         }else if(qName.equals("title"))
             isSetTitle = true;
@@ -103,7 +104,7 @@ public class MySAXHandler extends DefaultHandler {
                     isSetType = false;
                 }
                 break;
-            case "authorise":
+            case "authorize":
                 if(isSetAuthorize){
                     doNeedAuthorize = Boolean.parseBoolean(new String(ch, start, length));
                     isSetAuthorize = false;
