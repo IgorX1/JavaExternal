@@ -22,13 +22,13 @@ import static com.javacourse.App.logger;
 
 public class MyDOMParser implements XMLParser{
 
-    String id = defaultStringTagValue;
-    String title = defaultStringTagValue;
-    String type = defaultStringTagValue;
-    boolean doNeedAuthorize = false;
-    boolean isFree = false;
-    boolean hasEmail = false;
-    boolean isDownloadable = false;
+    private String id = defaultStringTagValue;
+    private String title = defaultStringTagValue;
+    private String type = defaultStringTagValue;
+    private boolean doNeedAuthorize = false;
+    private boolean isFree = false;
+    private boolean hasEmail = false;
+    private boolean isDownloadable = false;
 
     @Override
     public List<Page> getPageListFromXml(String pathToXmlFile) {

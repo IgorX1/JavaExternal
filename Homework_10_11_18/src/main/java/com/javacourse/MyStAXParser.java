@@ -8,25 +8,24 @@ import javax.xml.stream.events.Attribute;
 import javax.xml.stream.events.EndElement;
 import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 
 import static com.javacourse.Constants.defaultStringTagValue;
+import static com.javacourse.App.logger;
 
 public class MyStAXParser implements XMLParser {
-    List<Page> pageEntitiesList = new ArrayList<>();
-    String id = defaultStringTagValue;
-    String title = defaultStringTagValue;
-    String type = defaultStringTagValue;
-    boolean doNeedAuthorize = false;
-    boolean isFree = false;
-    boolean hasEmail = false;
-    boolean isDownloadable = false;
-    String currentElem = defaultStringTagValue;
+    private List<Page> pageEntitiesList = new ArrayList<>();
+    private String id = defaultStringTagValue;
+    private String title = defaultStringTagValue;
+    private String type = defaultStringTagValue;
+    private boolean doNeedAuthorize = false;
+    private boolean isFree = false;
+    private boolean hasEmail = false;
+    private boolean isDownloadable = false;
+    private String currentElem = defaultStringTagValue;
 
     @Override
     public List<Page> getPageListFromXml(String pathToXmlFile) {
@@ -67,29 +66,30 @@ public class MyStAXParser implements XMLParser {
                 }
 
                 if(currentEvent.isEndElement()){
-                    EndElement endElement = currentEvent.asEndElement();
-                    currentElem = endElement.getName().getLocalPart();
-                    if(currentElem.equals(Page.xmlNodeName)){
-                        pageEntitiesList.add(new Page.PageBuilder(id)
-                                .title(title)
-                                .type(type)
-                                .isDownloadable(isDownloadable)
-                                .doNeedAuthorize(doNeedAuthorize)
-                                .hasEmail(hasEmail)
-                                .isFree(isFree)
-                                .build()
-                        );
-                        resumeDefaultContainerVariableValues();
-                        currentElem = defaultStringTagValue;
-                    }
+                    processEndElement(currentEvent.asEndElement());
                 }
             }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (XMLStreamException e) {
-            e.printStackTrace();
+        } catch (FileNotFoundException | XMLStreamException e) {
+            logger.error(e.getMessage());
         }
         return pageEntitiesList;
+    }
+
+    private void processEndElement(EndElement endElement){
+        currentElem = endElement.getName().getLocalPart();
+        if(currentElem.equals(Page.xmlNodeName)){
+            pageEntitiesList.add(new Page.PageBuilder(id)
+                    .title(title)
+                    .type(type)
+                    .isDownloadable(isDownloadable)
+                    .doNeedAuthorize(doNeedAuthorize)
+                    .hasEmail(hasEmail)
+                    .isFree(isFree)
+                    .build()
+            );
+            resumeDefaultContainerVariableValues();
+            currentElem = defaultStringTagValue;
+        }
     }
 
     private void resumeDefaultContainerVariableValues(){

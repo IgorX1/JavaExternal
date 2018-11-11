@@ -12,19 +12,17 @@ import static com.javacourse.Constants.defaultStringTagValue;
 public class MySAXHandler extends DefaultHandler {
     List<Page> pageEntitiesList = new ArrayList<>();
 
-    String id = defaultStringTagValue;
-    String title = defaultStringTagValue;
-    String type = defaultStringTagValue;
-    boolean doNeedAuthorize = false;
-    boolean isFree = false;
-    boolean hasEmail = false;
-    boolean isDownloadable = false;
-
-    boolean isSetAuthorize = false;
-    boolean isSetTitle = false;
-    boolean isSetType = false;
-
-    String currentElem = defaultStringTagValue;
+    private String id = defaultStringTagValue;
+    private String title = defaultStringTagValue;
+    private String type = defaultStringTagValue;
+    private String currentElem = defaultStringTagValue;
+    private boolean doNeedAuthorize = false;
+    private boolean isFree = false;
+    private boolean hasEmail = false;
+    private boolean isDownloadable = false;
+    private boolean isSetAuthorize = false;
+    private boolean isSetTitle = false;
+    private boolean isSetType = false;
 
     public List<Page> getPageEntitiesList() {
         return pageEntitiesList;
