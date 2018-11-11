@@ -16,13 +16,17 @@ public class App
 
     public static void main( String[] args )
     {
-        MyDOMParser myDomParser = new MyDOMParser();
-        List<Page> res = myDomParser.getPageListFromXml("xml/pages.xml");
-        System.out.println(res);
+        XMLParser xmlParser = new MyDOMParser();
+        List<Page> res1 = xmlParser.getPageListFromXml("xml/pages.xml");
+        System.out.println(res1);
 
-        MySAXParser mySaxParser = new MySAXParser();
-        List<Page> res2 = mySaxParser.getPageListFromXml("xml/pages.xml");
-        System.out.println(res);
+        xmlParser = new MySAXParser();
+        List<Page> res2 = xmlParser.getPageListFromXml("xml/pages.xml");
+        System.out.println(res2);
+
+        xmlParser = new MyStAXParser();
+        List<Page> res3 = xmlParser.getPageListFromXml("xml/pages.xml");
+        System.out.println(res3);
 
     }
 }

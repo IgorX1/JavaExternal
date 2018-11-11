@@ -62,9 +62,9 @@ public class MySAXHandler extends DefaultHandler {
                     .isFree(isFree)
                     .build()
             );
+            resumeDefaultContainerVariableValues();
+            currentElem = defaultStringTagValue;
         }
-        resumeDefaultContainerVariableValues();
-        currentElem = defaultStringTagValue;
     }
 
     private void resumeDefaultContainerVariableValues(){
