@@ -3,6 +3,9 @@
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:template match="/">
         <HTML>
+        <HEAD>
+            <LINK href="cssStyles.css" rel="stylesheet" type="text/css"/>
+        </HEAD>
         <BODY>
         <TABLE BORDER="2">
         <TR>

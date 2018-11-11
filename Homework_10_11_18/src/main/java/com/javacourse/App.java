@@ -26,5 +26,9 @@ public class App {
         List<Page> res3 = xmlParser.getPageListFromXml("xml/pages.xml");
         System.out.println(res3);
 
+        HTMLTransformer.transformToHTML("xml/styles.xsl",
+                "xml/pages.xml",
+                "xml/res.html");
+
     }
 }
