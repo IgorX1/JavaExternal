@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Homework_10_11_18" />
+        <module name="Homework_11_10_18" />
         <module name="XmlParser" />
       </profile>
     </annotationProcessing>
