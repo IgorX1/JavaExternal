@@ -19,6 +19,11 @@ public class MySAXHandler extends DefaultHandler {
     boolean isFree = false;
     boolean hasEmail = false;
     boolean isDownloadable = false;
+
+    boolean isSetAuthorize = false;
+    boolean isSetTitle = false;
+    boolean isSetType = false;
+
     String currentElem = defaultStringTagValue;
 
     public List<Page> getPageEntitiesList() {
@@ -40,18 +45,24 @@ public class MySAXHandler extends DefaultHandler {
         currentElem = qName;
         if(qName.equals(Page.xmlNodeName))
             id = attributes.getValue("id");
-        if(qName.equals("chars")){
+        else if(qName.equals("chars")){
             if(attributes.getIndex("free")!=-1)
                 isFree = true;
             if(attributes.getIndex("downloadable")!=-1)
                 isDownloadable = true;
             if(attributes.getIndex("hasEmail")!=-1)
                 hasEmail = true;
-        }
+        }else if(qName.equals("title"))
+            isSetTitle = true;
+        else if(qName.equals("type"))
+            isSetType = true;
+        else if(qName.equals("authorize"))
+            isSetAuthorize = true;
     }
 
     @Override
     public void endElement(String uri, String localName, String qName) throws SAXException {
+        currentElem = qName;
         if(currentElem.equals(Page.xmlNodeName)){
             pageEntitiesList.add(new Page.PageBuilder(id)
                     .title(title)
@@ -81,13 +92,22 @@ public class MySAXHandler extends DefaultHandler {
     public void characters(char[] ch, int start, int length) throws SAXException {
         switch (currentElem){
             case "title":
-                title = new String(ch, start, length);
+                if(isSetTitle){
+                    title = new String(ch, start, length);
+                    isSetTitle = false;
+                }
                 break;
             case "type":
-                type = new String(ch, start, length);
+                if(isSetType) {
+                    type = new String(ch, start, length);
+                    isSetType = false;
+                }
                 break;
             case "authorise":
-                doNeedAuthorize = Boolean.parseBoolean(new String(ch, start, length));
+                if(isSetAuthorize){
+                    doNeedAuthorize = Boolean.parseBoolean(new String(ch, start, length));
+                    isSetAuthorize = false;
+                }
                 break;
         }
     }
