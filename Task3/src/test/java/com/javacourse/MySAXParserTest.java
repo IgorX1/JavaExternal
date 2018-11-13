@@ -3,49 +3,33 @@ package com.javacourse;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.XMLConstants;
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
+import javax.xml.validation.SchemaFactory;
+import java.io.File;
 import java.io.IOException;
 import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.hamcrest.Matchers.allOf;
-import static org.hamcrest.Matchers.contains;
-import static org.hamcrest.Matchers.is;
+import static com.javacourse.App.logger;
+import static com.javacourse.Constants.schemaPath;
+import static com.javacourse.TestingConstants.xml;
+import static com.javacourse.TestingConstants.xmlWrong;
 import static org.junit.Assert.*;
-import static com.javacourse.TestingConstants.*;
 
-public class MyDOMParserTest {
-
-    private MyDOMParser xmlParser;
-    private static NodeList nodes;
-
-    @BeforeClass
-    public static void setUpClass() throws ParserConfigurationException, IOException, SAXException {
-        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-        DocumentBuilder db = dbf.newDocumentBuilder();
-        db.setErrorHandler(new ConsoleErrorHandler());
-        Document xmlDoc = db.parse(new InputSource(new StringReader(xml)));
-        xmlDoc.getDocumentElement().normalize();
-        nodes = xmlDoc.getElementsByTagName(Page.xmlNodeName);
-    }
-
-    @Before
-    public void setUp() throws Exception {
-        xmlParser = new MyDOMParser();
-    }
+public class MySAXParserTest {
 
     @Test
-    public void getPageListFromXml_nodesAsInput_parsedCorrectly() {
-        List<Page> actual = xmlParser.parseXmlNodes(nodes);
+    public void parseTest() throws IOException, SAXException, ParserConfigurationException {
+        List<Page> actual = getParserPages();
         List<Page> expected = new ArrayList<>(Arrays.asList(new Page.PageBuilder("ID-1")
                         .title("Home page")
                         .type("ads")
@@ -66,6 +50,16 @@ public class MyDOMParserTest {
                         .hasEmail(true)
                         .build()
         ));
+
         assertEquals(actual, expected);
     }
+
+    List<Page> getParserPages() throws ParserConfigurationException, SAXException, IOException {
+        SAXParserFactory spf = SAXParserFactory.newInstance();
+        MySAXHandler handler = new MySAXHandler();
+        SAXParser parser = spf.newSAXParser();
+        parser.parse(new InputSource(new StringReader(xml)), handler);
+        return handler.getPageEntitiesList();
+    }
+
 }
