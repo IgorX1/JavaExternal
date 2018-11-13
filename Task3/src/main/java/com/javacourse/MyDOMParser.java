@@ -32,66 +32,73 @@ public class MyDOMParser implements XMLParser {
 
     @Override
     public List<Page> getPageListFromXml(String pathToXmlFile) {
-        List<Page> pageEntitiesList = new ArrayList<>();
+        NodeList pageList;
+        List<Page> pageEntitiesList = null;
         try {
-            NodeList pageList = getPageNodesFromFile(pathToXmlFile);
-            for (int i = 0; i < pageList.getLength(); ++i) {
-                Node pageNode = pageList.item(i);
-                if (pageNode.getNodeType() == Node.ELEMENT_NODE) {
-                    Element tempPage = (Element) pageNode;
-                    id = tempPage.getAttribute("id");
-                    NodeList pageChildren = tempPage.getChildNodes();
-
-                    for (int a = 0; a < pageChildren.getLength(); ++a) {
-                        if (pageChildren.item(a).getNodeType() == Node.ELEMENT_NODE) {
-                            Element tempElem = (Element) pageChildren.item(a);
-                            switch (tempElem.getTagName()) {
-                                case "title":
-                                    title = tempElem.getTextContent();
-                                    break;
-                                case "type":
-                                    type = tempElem.getTextContent();
-                                    break;
-                                case "authorize":
-                                    doNeedAuthorize = Boolean.parseBoolean(tempElem.getTextContent());
-                                    break;
-                                case "chars":
-                                    switch (tempElem.getAttribute("name")) {
-                                        case "free":
-                                            isFree = true;
-                                            break;
-                                        case "hasEmail":
-                                            hasEmail = true;
-                                            break;
-                                        case "downloadable":
-                                            isDownloadable = true;
-                                            break;
-                                    }
-                                    break;
-                            }
-
-                        }
-                    }
-
-                    pageEntitiesList.add(new Page.PageBuilder(id)
-                            .title(title)
-                            .type(type)
-                            .isDownloadable(isDownloadable)
-                            .doNeedAuthorize(doNeedAuthorize)
-                            .hasEmail(hasEmail)
-                            .isFree(isFree)
-                            .build()
-                    );
-
-                    resumeDefaultContainerVariableValues();
-
-                }
-            }
+            pageList = getPageNodesFromFile(pathToXmlFile);
+            pageEntitiesList = parseXmlNodes(pageList);
         } catch (ParserConfigurationException | SAXException | IOException e) {
             System.out.println("Technical error occurred while parsing your file");
             logger.error(e.getMessage());
         }
 
+        return pageEntitiesList;
+    }
+
+    List<Page> parseXmlNodes(NodeList pageList){
+        List<Page> pageEntitiesList = new ArrayList<>();
+        for (int i = 0; i < pageList.getLength(); ++i) {
+            Node pageNode = pageList.item(i);
+            if (pageNode.getNodeType() == Node.ELEMENT_NODE) {
+                Element tempPage = (Element) pageNode;
+                id = tempPage.getAttribute("id");
+                NodeList pageChildren = tempPage.getChildNodes();
+
+                for (int a = 0; a < pageChildren.getLength(); ++a) {
+                    if (pageChildren.item(a).getNodeType() == Node.ELEMENT_NODE) {
+                        Element tempElem = (Element) pageChildren.item(a);
+                        switch (tempElem.getTagName()) {
+                            case "title":
+                                title = tempElem.getTextContent();
+                                break;
+                            case "type":
+                                type = tempElem.getTextContent();
+                                break;
+                            case "authorize":
+                                doNeedAuthorize = Boolean.parseBoolean(tempElem.getTextContent());
+                                break;
+                            case "chars":
+                                switch (tempElem.getAttribute("name")) {
+                                    case "free":
+                                        isFree = true;
+                                        break;
+                                    case "hasEmail":
+                                        hasEmail = true;
+                                        break;
+                                    case "downloadable":
+                                        isDownloadable = true;
+                                        break;
+                                }
+                                break;
+                        }
+
+                    }
+                }
+
+                pageEntitiesList.add(new Page.PageBuilder(id)
+                        .title(title)
+                        .type(type)
+                        .isDownloadable(isDownloadable)
+                        .doNeedAuthorize(doNeedAuthorize)
+                        .hasEmail(hasEmail)
+                        .isFree(isFree)
+                        .build()
+                );
+
+                resumeDefaultContainerVariableValues();
+
+            }
+        }
         return pageEntitiesList;
     }
 

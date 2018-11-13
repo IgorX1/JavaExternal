@@ -1,5 +1,7 @@
 package com.javacourse;
 
+import java.util.Objects;
+
 public class Page {
     private String id;
     private String title;
@@ -138,5 +140,24 @@ public class Page {
         sb.append(", isDownloadable=").append(isDownloadable);
         sb.append('}');
         return sb.toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Page)) return false;
+        Page page = (Page) o;
+        return doNeedAuthorize == page.doNeedAuthorize &&
+                isFree == page.isFree &&
+                hasEmail == page.hasEmail &&
+                isDownloadable == page.isDownloadable &&
+                Objects.equals(id, page.id) &&
+                Objects.equals(title, page.title) &&
+                Objects.equals(type, page.type);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, title, type, doNeedAuthorize, isFree, hasEmail, isDownloadable);
     }
 }
