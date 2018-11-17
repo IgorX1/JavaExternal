@@ -1,28 +1,28 @@
-package com.javacourse;
+package com.javacourse.productModels;
 
 import java.math.BigDecimal;
 import java.util.Objects;
 
-public class Laptop {
+public class PC {
     private int code;
     private String model;
     private short speed;
     private short ram;
     private double hd;
     private BigDecimal price;
-    private byte screen;
+    private String cd;
 
-    public Laptop(int code, String model, short speed, short ram, double hd, BigDecimal price, byte screen) {
+    public PC(int code, String model, short speed, short ram, double hd, BigDecimal price, String cd) {
         this.code = code;
         this.model = model;
         this.speed = speed;
         this.ram = ram;
         this.hd = hd;
         this.price = price;
-        this.screen = screen;
+        this.cd = cd;
     }
 
-    public Laptop() {
+    public PC() {
     }
 
     public int getCode() {
@@ -73,24 +73,24 @@ public class Laptop {
         this.price = price;
     }
 
-    public byte getScreen() {
-        return screen;
+    public String getCd() {
+        return cd;
     }
 
-    public void setScreen(byte screen) {
-        this.screen = screen;
+    public void setCd(String cd) {
+        this.cd = cd;
     }
 
     @Override
     public String toString() {
-        final StringBuffer sb = new StringBuffer("Laptop{");
+        final StringBuffer sb = new StringBuffer("PC{");
         sb.append("code=").append(code);
         sb.append(", model='").append(model).append('\'');
         sb.append(", speed=").append(speed);
         sb.append(", ram=").append(ram);
         sb.append(", hd=").append(hd);
         sb.append(", price=").append(price);
-        sb.append(", screen=").append(screen);
+        sb.append(", cd='").append(cd).append('\'');
         sb.append('}');
         return sb.toString();
     }
@@ -98,19 +98,19 @@ public class Laptop {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Laptop)) return false;
-        Laptop laptop = (Laptop) o;
-        return code == laptop.code &&
-                speed == laptop.speed &&
-                ram == laptop.ram &&
-                Double.compare(laptop.hd, hd) == 0 &&
-                screen == laptop.screen &&
-                model.equals(laptop.model) &&
-                price.equals(laptop.price);
+        if (!(o instanceof PC)) return false;
+        PC pc = (PC) o;
+        return code == pc.code &&
+                speed == pc.speed &&
+                ram == pc.ram &&
+                Double.compare(pc.hd, hd) == 0 &&
+                model.equals(pc.model) &&
+                price.equals(pc.price) &&
+                cd.equals(pc.cd);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(code, model, speed, ram, hd, price, screen);
+        return Objects.hash(code, model, speed, ram, hd, price, cd);
     }
 }

@@ -1,4 +1,4 @@
-package com.javacourse;
+package com.javacourse.productModels;
 
 import java.util.Objects;
 
