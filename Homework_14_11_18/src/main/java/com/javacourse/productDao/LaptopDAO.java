@@ -11,7 +11,7 @@ public class LaptopDAO {
         Laptop resultingItem = null;
         ResultSet rs;
         try(Connection con= DatabaseConnectionPoolResource.getConnection();
-            PreparedStatement statement = con.prepareStatement("SELECT * from laptop where code=?");) {
+            PreparedStatement statement = con.prepareStatement("SELECT * from laptop where code=?")) {
             statement.setInt(1, code);
             rs = statement.executeQuery();
             if(rs.next()){
