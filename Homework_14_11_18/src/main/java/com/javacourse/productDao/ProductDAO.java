@@ -7,6 +7,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.LinkedList;
 import java.util.List;
 
 import static com.javacourse.App.logger;
@@ -20,7 +21,7 @@ public class ProductDAO extends AbstractDAO<String, Product>{
             statement.setString(1, id);
             ResultSet rs = statement.executeQuery();
             if(rs.next()){
-                resultingItem = constructProductItem(rs);
+                resultingItem = constructItem(rs);
             }
         } catch (SQLException e) {
             logger.error(e.getMessage());
@@ -28,32 +29,42 @@ public class ProductDAO extends AbstractDAO<String, Product>{
         return resultingItem;
     }
 
-    private Product constructProductItem(ResultSet rs) throws SQLException {
+    @Override
+    public List<Product> findAll() {
+        List<Product> resultingItems = new LinkedList<>();
+        try(Connection con=DatabaseConnectionPoolResource.getConnection();
+            PreparedStatement statement = con.prepareStatement("SELECT * FROM product order by price ASC;")){
+            ResultSet rs = statement.executeQuery();
+            while (rs.next()){
+                resultingItems.add(constructItem(rs));
+            }
+        }catch (SQLException e){
+            logger.error(e.getMessage());
+        }
+        return resultingItems;
+    }
+
+    @Override
+    public boolean delete(String id) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public boolean create(Product entity) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public Product update(Product entity) {
+        throw new UnsupportedOperationException();
+    }
+
+    private Product constructItem(ResultSet rs) throws SQLException {
         Product resultingItem = null;
         resultingItem = new Product();
         resultingItem.setMaker(rs.getString(1));
         resultingItem.setModel(rs.getString(2));
         resultingItem.setType(rs.getString(3));
         return resultingItem;
-    }
-
-    @Override
-    public List<Product> findAll() {
-        return null;
-    }
-
-    @Override
-    public boolean delete(String id) {
-        return false;
-    }
-
-    @Override
-    public boolean create(Product entity) {
-        return false;
-    }
-
-    @Override
-    public Product update(Product entity) {
-        return null;
     }
 }

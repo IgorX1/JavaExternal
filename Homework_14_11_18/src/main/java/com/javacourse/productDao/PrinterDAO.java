@@ -20,7 +20,7 @@ public class PrinterDAO extends AbstractDAO<Integer, Printer>{
             statement.setInt(1, id);
             ResultSet rs = statement.executeQuery();
             if(rs.next()){
-                resultingItem = constructPrinterItem(rs);
+                resultingItem = constructItem(rs);
             }
         } catch (SQLException e) {
             logger.error(e.getMessage());
@@ -34,28 +34,27 @@ public class PrinterDAO extends AbstractDAO<Integer, Printer>{
             PreparedStatement statement = con.prepareStatement("SELECT * FROM printer where color='y' order by price;")){
             ResultSet rs = statement.executeQuery();
             while (rs.next()){
-                resultingItems.add(constructPrinterItem(rs));
+                resultingItems.add(constructItem(rs));
             }
         }catch (SQLException e){
-
+            logger.error(e.getMessage());
         }
         return resultingItems;
     }
 
-    private Printer constructPrinterItem(ResultSet rs) throws SQLException {
-        Printer currentPrinter;
-        currentPrinter = new Printer();
-        currentPrinter.setCode(rs.getInt(1));
-        currentPrinter.setModel(rs.getString(2));
-        currentPrinter.setColor(rs.getString(3));
-        currentPrinter.setType(rs.getString(4));
-        currentPrinter.setPrice(rs.getBigDecimal(5));
-        return currentPrinter;
-    }
-
     @Override
     public List<Printer> findAll() {
-        throw new UnsupportedOperationException();
+        List<Printer> resultingItems = new LinkedList<>();
+        try(Connection con=DatabaseConnectionPoolResource.getConnection();
+            PreparedStatement statement = con.prepareStatement("SELECT * FROM printer order by price ASC;")){
+            ResultSet rs = statement.executeQuery();
+            while (rs.next()){
+                resultingItems.add(constructItem(rs));
+            }
+        }catch (SQLException e){
+            logger.error(e.getMessage());
+        }
+        return resultingItems;
     }
 
     @Override
@@ -72,4 +71,16 @@ public class PrinterDAO extends AbstractDAO<Integer, Printer>{
     public Printer update(Printer entity) {
         throw new UnsupportedOperationException();
     }
+
+    private Printer constructItem(ResultSet rs) throws SQLException {
+        Printer currentPrinter;
+        currentPrinter = new Printer();
+        currentPrinter.setCode(rs.getInt(1));
+        currentPrinter.setModel(rs.getString(2));
+        currentPrinter.setColor(rs.getString(3));
+        currentPrinter.setType(rs.getString(4));
+        currentPrinter.setPrice(rs.getBigDecimal(5));
+        return currentPrinter;
+    }
+
 }
