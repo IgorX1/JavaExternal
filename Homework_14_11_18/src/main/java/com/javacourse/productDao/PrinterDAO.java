@@ -72,6 +72,7 @@ public class PrinterDAO extends AbstractDAO<Integer, Printer>{
 
     @Override
     public boolean create(Printer entity) {
+        checkIfEntityIsAcceptableForInsert(entity);
         int changeNumber = 0;
         try(Connection con=DatabaseConnectionPoolResource.getConnection();
             PreparedStatement statement = con.prepareStatement("INSERT INTO printer(model, color, type, price) VALUE (?,?,?,?)")){
@@ -100,6 +101,11 @@ public class PrinterDAO extends AbstractDAO<Integer, Printer>{
         currentPrinter.setType(rs.getString(4));
         currentPrinter.setPrice(rs.getBigDecimal(5));
         return currentPrinter;
+    }
+
+    private void checkIfEntityIsAcceptableForInsert(Printer printer){
+        if(!"yYnN".contains(printer.getColor()))
+            throw new IllegalArgumentException();
     }
 
 }

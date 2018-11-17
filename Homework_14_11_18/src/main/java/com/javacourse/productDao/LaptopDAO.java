@@ -89,4 +89,18 @@ public class LaptopDAO extends AbstractDAO<Integer, Laptop> {
         return resultingItem;
     }
 
+    public List<String> findLaptopMakersWithProcessorLessThanGiven(int speed){
+        List<String> resultingItems = new LinkedList<>();
+        try(Connection con=DatabaseConnectionPoolResource.getConnection();
+            PreparedStatement statement = con.prepareStatement("SELECT distinct maker FROM laptop JOIN product p on laptop.model = p.model where speed < ?")){
+            ResultSet rs = statement.executeQuery();
+            while (rs.next()){
+                resultingItems.add(rs.getString(1));
+            }
+        }catch (SQLException e){
+            logger.error(e.getMessage());
+        }
+        return resultingItems;
+    }
+
 }
