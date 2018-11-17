@@ -1,7 +1,6 @@
 package com.javacourse.productDao;
 
 import com.javacourse.dbInterction.DatabaseConnectionPoolResource;
-import com.javacourse.productModels.Printer;
 import com.javacourse.productModels.Product;
 
 import java.sql.Connection;
