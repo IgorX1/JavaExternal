@@ -1,13 +1,10 @@
 package com.javacourse;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        LaptopDAO dao = new LaptopDAO();
+        System.out.println(dao.getLaptops());
     }
 }
