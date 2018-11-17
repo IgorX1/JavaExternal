@@ -11,12 +11,13 @@ import java.util.List;
 
 import static com.javacourse.App.logger;
 
-public class PrinterDAO {
-    public Printer getPrinterById(int code){
+public class PrinterDAO extends AbstractDAO<Integer, Printer>{
+    @Override
+    public Printer findById(Integer id) {
         Printer resultingItem = null;
         try(Connection con=DatabaseConnectionPoolResource.getConnection();
             PreparedStatement statement = con.prepareStatement("SELECT * from printer where code=?")) {
-            statement.setInt(1, code);
+            statement.setInt(1, id);
             ResultSet rs = statement.executeQuery();
             if(rs.next()){
                 resultingItem = constructPrinterItem(rs);
@@ -50,5 +51,25 @@ public class PrinterDAO {
         currentPrinter.setType(rs.getString(4));
         currentPrinter.setPrice(rs.getBigDecimal(5));
         return currentPrinter;
+    }
+
+    @Override
+    public List<Printer> findAll() {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public boolean delete(Integer id) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public boolean create(Printer entity) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public Printer update(Printer entity) {
+        throw new UnsupportedOperationException();
     }
 }

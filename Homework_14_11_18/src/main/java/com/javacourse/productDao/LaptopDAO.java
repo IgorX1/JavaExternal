@@ -2,18 +2,19 @@ package com.javacourse.productDao;
 
 import com.javacourse.productModels.Laptop;
 import com.javacourse.dbInterction.DatabaseConnectionPoolResource;
-import com.javacourse.productModels.Printer;
-
 import java.sql.*;
+import java.util.List;
+
 import static com.javacourse.App.logger;
 
-public class LaptopDAO {
+public class LaptopDAO extends AbstractDAO<Integer, Laptop> {
 
-    public Laptop getLaptopById(int code){
+    @Override
+    public Laptop findById(Integer id) {
         Laptop resultingItem = null;
         try(Connection con= DatabaseConnectionPoolResource.getConnection();
             PreparedStatement statement = con.prepareStatement("SELECT * from laptop where code=?")) {
-            statement.setInt(1, code);
+            statement.setInt(1, id);
             ResultSet rs = statement.executeQuery();
             if(rs.next()){
                 resultingItem = constructLaptopItem(rs);
@@ -34,5 +35,25 @@ public class LaptopDAO {
         resultingItem.setPrice(rs.getBigDecimal(6));
         resultingItem.setScreen(rs.getByte(7));
         return resultingItem;
+    }
+
+    @Override
+    public List<Laptop> findAll() {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public boolean delete(Integer id) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public boolean create(Laptop entity) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public Laptop update(Laptop entity) {
+        throw new UnsupportedOperationException();
     }
 }
