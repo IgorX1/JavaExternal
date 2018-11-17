@@ -9,12 +9,9 @@ public class LaptopDAO {
 
     public Laptop getLaptopById(int code){
         Laptop resultingItem = null;
-        Connection con = null;
-        PreparedStatement statement = null;
-        ResultSet rs = null;
-        try {
-            con = DatabaseConnectionPoolResource.getConnection();
-            statement = con.prepareStatement("SELECT * from laptop where code=?");
+        ResultSet rs;
+        try(Connection con= DatabaseConnectionPoolResource.getConnection();
+            PreparedStatement statement = con.prepareStatement("SELECT * from laptop where code=?");) {
             statement.setInt(1, code);
             rs = statement.executeQuery();
             if(rs.next()){
@@ -29,30 +26,6 @@ public class LaptopDAO {
             }
         } catch (SQLException e) {
             logger.error(e.getMessage());
-        }finally {
-            if (rs!=null) {
-                try {
-                    rs.close();
-                } catch (SQLException e) {
-                    logger.error(e.getMessage());
-                }
-            }
-
-            if (statement!=null) {
-                try {
-                    statement.close();
-                } catch (SQLException e) {
-                    logger.error(e.getMessage());
-                }
-            }
-
-            if(con!=null){
-                try {
-                    con.close();
-                } catch (SQLException e) {
-                    logger.error(e.getMessage());
-                }
-            }
         }
         return resultingItem;
     }
