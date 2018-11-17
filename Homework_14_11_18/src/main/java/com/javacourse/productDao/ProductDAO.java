@@ -17,7 +17,7 @@ public class ProductDAO extends AbstractDAO<String, Product>{
     public Product findById(String id) {
         Product resultingItem = null;
         try(Connection con= DatabaseConnectionPoolResource.getConnection();
-            PreparedStatement statement = con.prepareStatement("SELECT * from product where code=?")) {
+            PreparedStatement statement = con.prepareStatement("SELECT * from product where model=?")) {
             statement.setString(1, id);
             ResultSet rs = statement.executeQuery();
             if(rs.next()){
@@ -33,7 +33,7 @@ public class ProductDAO extends AbstractDAO<String, Product>{
     public List<Product> findAll() {
         List<Product> resultingItems = new LinkedList<>();
         try(Connection con=DatabaseConnectionPoolResource.getConnection();
-            PreparedStatement statement = con.prepareStatement("SELECT * FROM product order by price ASC;")){
+            PreparedStatement statement = con.prepareStatement("SELECT * FROM product order by model ASC;")){
             ResultSet rs = statement.executeQuery();
             while (rs.next()){
                 resultingItems.add(constructItem(rs));
@@ -46,7 +46,15 @@ public class ProductDAO extends AbstractDAO<String, Product>{
 
     @Override
     public boolean delete(String id) {
-        throw new UnsupportedOperationException();
+        int changeNumber = 0;
+        try(Connection con=DatabaseConnectionPoolResource.getConnection();
+            PreparedStatement statement = con.prepareStatement("DELETE FROM product where code=?")){
+            statement.setString(1, id);
+            changeNumber = statement.executeUpdate();
+        }catch (SQLException e){
+            logger.error(e.getMessage());
+        }
+        return changeNumber>0;
     }
 
     @Override

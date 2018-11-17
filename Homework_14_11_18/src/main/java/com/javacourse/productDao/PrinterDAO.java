@@ -59,7 +59,15 @@ public class PrinterDAO extends AbstractDAO<Integer, Printer>{
 
     @Override
     public boolean delete(Integer id) {
-        throw new UnsupportedOperationException();
+        int changeNumber = 0;
+        try(Connection con=DatabaseConnectionPoolResource.getConnection();
+            PreparedStatement statement = con.prepareStatement("DELETE FROM printer where code=?")){
+            statement.setInt(1, id);
+            changeNumber = statement.executeUpdate();
+        }catch (SQLException e){
+            logger.error(e.getMessage());
+        }
+        return changeNumber>0;
     }
 
     @Override
