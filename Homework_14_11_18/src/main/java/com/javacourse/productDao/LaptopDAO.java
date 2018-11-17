@@ -56,7 +56,20 @@ public class LaptopDAO extends AbstractDAO<Integer, Laptop> {
 
     @Override
     public boolean create(Laptop entity) {
-        throw new UnsupportedOperationException();
+        int changeNumber = 0;
+        try(Connection con=DatabaseConnectionPoolResource.getConnection();
+            PreparedStatement statement = con.prepareStatement("INSERT INTO laptop(model, speed, ram, hd, price, screen) VALUE (?,?,?,?,?,?)")){
+            statement.setString(1,entity.getModel());
+            statement.setShort(2,entity.getSpeed());
+            statement.setShort(3, entity.getRam());
+            statement.setDouble(4, entity.getHd());
+            statement.setBigDecimal(5, entity.getPrice());
+            statement.setByte(6, entity.getScreen());
+            changeNumber = statement.executeUpdate();
+        }catch (SQLException e){
+            logger.error(e.getMessage());
+        }
+        return changeNumber>0;
     }
 
     @Override

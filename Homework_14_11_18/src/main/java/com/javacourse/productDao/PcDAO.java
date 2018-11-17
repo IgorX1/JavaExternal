@@ -59,7 +59,20 @@ public class PcDAO extends AbstractDAO<Integer, Pc> {
 
     @Override
     public boolean create(Pc entity) {
-        throw new UnsupportedOperationException();
+        int changeNumber = 0;
+        try(Connection con=DatabaseConnectionPoolResource.getConnection();
+            PreparedStatement statement = con.prepareStatement("INSERT INTO pc(model, speed, ram, hd, cd, price) VALUE (?,?,?,?,?,?)")){
+            statement.setString(1,entity.getModel());
+            statement.setShort(2,entity.getSpeed());
+            statement.setShort(3, entity.getRam());
+            statement.setDouble(4, entity.getHd());
+            statement.setString(5, entity.getCd());
+            statement.setBigDecimal(6, entity.getPrice());
+            changeNumber = statement.executeUpdate();
+        }catch (SQLException e){
+            logger.error(e.getMessage());
+        }
+        return changeNumber>0;
     }
 
     @Override

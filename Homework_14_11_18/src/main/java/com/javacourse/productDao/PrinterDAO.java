@@ -72,7 +72,18 @@ public class PrinterDAO extends AbstractDAO<Integer, Printer>{
 
     @Override
     public boolean create(Printer entity) {
-        throw new UnsupportedOperationException();
+        int changeNumber = 0;
+        try(Connection con=DatabaseConnectionPoolResource.getConnection();
+            PreparedStatement statement = con.prepareStatement("INSERT INTO printer(model, color, type, price) VALUE (?,?,?,?)")){
+            statement.setString(1,entity.getModel());
+            statement.setString(2,entity.getColor());
+            statement.setString(3,entity.getType());
+            statement.setBigDecimal(4, entity.getPrice());
+            changeNumber = statement.executeUpdate();
+        }catch (SQLException e){
+            logger.error(e.getMessage());
+        }
+        return changeNumber>0;
     }
 
     @Override

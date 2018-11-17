@@ -68,7 +68,7 @@ public class ProductDAO extends AbstractDAO<String, Product>{
     }
 
     private Product constructItem(ResultSet rs) throws SQLException {
-        Product resultingItem = null;
+        Product resultingItem;
         resultingItem = new Product();
         resultingItem.setMaker(rs.getString(1));
         resultingItem.setModel(rs.getString(2));
