@@ -17,6 +17,5 @@ public class App
     public static void main( String[] args )
     {
         LaptopDAO ld = new LaptopDAO();
-        System.out.println(ld.create(new Laptop(7, )));
     }
 }

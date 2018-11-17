@@ -59,7 +59,17 @@ public class ProductDAO extends AbstractDAO<String, Product>{
 
     @Override
     public boolean create(Product entity) {
-        throw new UnsupportedOperationException();
+        int changeNumber = 0;
+        try(Connection con=DatabaseConnectionPoolResource.getConnection();
+            PreparedStatement statement = con.prepareStatement("INSERT INTO product(maker, model, type) VALUE (?,?,?)")){
+            statement.setString(2,entity.getMaker());
+            statement.setString(1,entity.getModel());
+            statement.setString(3,entity.getType());
+            changeNumber = statement.executeUpdate();
+        }catch (SQLException e){
+            logger.error(e.getMessage());
+        }
+        return changeNumber>0;
     }
 
     @Override
