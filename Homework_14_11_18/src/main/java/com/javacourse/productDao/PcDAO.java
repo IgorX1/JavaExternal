@@ -1,8 +1,7 @@
 package com.javacourse.productDao;
 
 import com.javacourse.dbInterction.DatabaseConnectionPoolResource;
-import com.javacourse.productModels.Laptop;
-import com.javacourse.productModels.PC;
+import com.javacourse.productModels.Pc;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,26 +11,30 @@ import java.sql.SQLException;
 import static com.javacourse.App.logger;
 
 public class PcDAO {
-    public PC getPcById(int code){
-        PC resultingItem = null;
-        ResultSet rs;
+    public Pc getPcById(int code){
+        Pc resultingItem = null;
         try(Connection con= DatabaseConnectionPoolResource.getConnection();
             PreparedStatement statement = con.prepareStatement("SELECT * from pc where code=?")) {
             statement.setInt(1, code);
-            rs = statement.executeQuery();
+            ResultSet rs = statement.executeQuery();
             if(rs.next()){
-                resultingItem = new PC();
-                resultingItem.setCode(rs.getInt(1));
-                resultingItem.setModel(rs.getString(2));
-                resultingItem.setSpeed(rs.getByte(3));
-                resultingItem.setRam(rs.getByte(4));
-                resultingItem.setHd(rs.getInt(5));
-                resultingItem.setCd(rs.getString(6));
-                resultingItem.setPrice(rs.getBigDecimal(7));
+                resultingItem = constructProductItem(rs);
             }
         } catch (SQLException e) {
             logger.error(e.getMessage());
         }
+        return resultingItem;
+    }
+
+    private Pc constructProductItem(ResultSet rs) throws SQLException {
+        Pc resultingItem = new Pc();
+        resultingItem.setCode(rs.getInt(1));
+        resultingItem.setModel(rs.getString(2));
+        resultingItem.setSpeed(rs.getByte(3));
+        resultingItem.setRam(rs.getByte(4));
+        resultingItem.setHd(rs.getInt(5));
+        resultingItem.setCd(rs.getString(6));
+        resultingItem.setPrice(rs.getBigDecimal(7));
         return resultingItem;
     }
 }

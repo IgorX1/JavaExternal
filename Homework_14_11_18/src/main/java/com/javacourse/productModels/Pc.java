@@ -3,7 +3,7 @@ package com.javacourse.productModels;
 import java.math.BigDecimal;
 import java.util.Objects;
 
-public class PC {
+public class Pc {
     private int code;
     private String model;
     private short speed;
@@ -12,7 +12,7 @@ public class PC {
     private BigDecimal price;
     private String cd;
 
-    public PC(int code, String model, short speed, short ram, double hd, BigDecimal price, String cd) {
+    public Pc(int code, String model, short speed, short ram, double hd, BigDecimal price, String cd) {
         this.code = code;
         this.model = model;
         this.speed = speed;
@@ -22,7 +22,7 @@ public class PC {
         this.cd = cd;
     }
 
-    public PC() {
+    public Pc() {
     }
 
     public int getCode() {
@@ -83,7 +83,7 @@ public class PC {
 
     @Override
     public String toString() {
-        final StringBuffer sb = new StringBuffer("PC{");
+        final StringBuffer sb = new StringBuffer("Pc{");
         sb.append("code=").append(code);
         sb.append(", model='").append(model).append('\'');
         sb.append(", speed=").append(speed);
@@ -98,15 +98,15 @@ public class PC {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof PC)) return false;
-        PC pc = (PC) o;
-        return code == pc.code &&
-                speed == pc.speed &&
-                ram == pc.ram &&
-                Double.compare(pc.hd, hd) == 0 &&
-                model.equals(pc.model) &&
-                price.equals(pc.price) &&
-                cd.equals(pc.cd);
+        if (!(o instanceof Pc)) return false;
+        Pc Pc = (Pc) o;
+        return code == Pc.code &&
+                speed == Pc.speed &&
+                ram == Pc.ram &&
+                Double.compare(Pc.hd, hd) == 0 &&
+                model.equals(Pc.model) &&
+                price.equals(Pc.price) &&
+                cd.equals(Pc.cd);
     }
 
     @Override

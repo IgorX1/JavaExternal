@@ -68,7 +68,7 @@ public class Printer {
         sb.append(", model='").append(model).append('\'');
         sb.append(", color='").append(color).append('\'');
         sb.append(", type='").append(type).append('\'');
-        sb.append(", price=").append(price);
+        sb.append(", price=").append(price.toString());
         sb.append('}');
         return sb.toString();
     }
