@@ -84,8 +84,8 @@ public class PcDAO extends AbstractDAO<Integer, Pc> {
         Pc resultingItem = new Pc();
         resultingItem.setCode(rs.getInt(1));
         resultingItem.setModel(rs.getString(2));
-        resultingItem.setSpeed(rs.getByte(3));
-        resultingItem.setRam(rs.getByte(4));
+        resultingItem.setSpeed(rs.getShort(3));
+        resultingItem.setRam(rs.getShort(4));
         resultingItem.setHd(rs.getInt(5));
         resultingItem.setCd(rs.getString(6));
         resultingItem.setPrice(rs.getBigDecimal(7));
