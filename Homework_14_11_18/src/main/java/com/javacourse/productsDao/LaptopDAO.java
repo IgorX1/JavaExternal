@@ -82,7 +82,7 @@ public class LaptopDAO extends AbstractDAO<Integer, Laptop> {
         resultingItem.setCode(rs.getInt(1));
         resultingItem.setModel(rs.getString(2));
         resultingItem.setSpeed(rs.getShort(3));
-        resultingItem.setRam(rs.getByte(4));
+        resultingItem.setRam(rs.getShort(4));
         resultingItem.setHd(rs.getInt(5));
         resultingItem.setPrice(rs.getBigDecimal(6));
         resultingItem.setScreen(rs.getByte(7));
