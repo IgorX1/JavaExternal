@@ -1,7 +1,8 @@
-package com.javacourse.productDao;
+package com.javacourse.productsDao;
 
 import com.javacourse.dbInterction.DatabaseConnectionPoolResource;
-import com.javacourse.productModels.Pc;
+import com.javacourse.productModels.Printer;
+import com.javacourse.productModels.Product;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,13 +13,13 @@ import java.util.List;
 
 import static com.javacourse.App.logger;
 
-public class PcDAO extends AbstractDAO<Integer, Pc> {
+public class ProductDAO extends AbstractDAO<String, Product>{
     @Override
-    public Pc findById(Integer id) {
-        Pc resultingItem = null;
+    public Product findById(String id) {
+        Product resultingItem = null;
         try(Connection con= DatabaseConnectionPoolResource.getConnection();
-            PreparedStatement statement = con.prepareStatement("SELECT * from pc where code=?")) {
-            statement.setInt(1, id);
+            PreparedStatement statement = con.prepareStatement("SELECT * from product where model=?")) {
+            statement.setString(1, id);
             ResultSet rs = statement.executeQuery();
             if(rs.next()){
                 resultingItem = constructItem(rs);
@@ -30,10 +31,10 @@ public class PcDAO extends AbstractDAO<Integer, Pc> {
     }
 
     @Override
-    public List<Pc> findAll() {
-        List<Pc> resultingItems = new LinkedList<>();
+    public List<Product> findAll() {
+        List<Product> resultingItems = new LinkedList<>();
         try(Connection con=DatabaseConnectionPoolResource.getConnection();
-            PreparedStatement statement = con.prepareStatement("SELECT * FROM pc order by price ASC;")){
+            PreparedStatement statement = con.prepareStatement("SELECT * FROM product order by model ASC;")){
             ResultSet rs = statement.executeQuery();
             while (rs.next()){
                 resultingItems.add(constructItem(rs));
@@ -45,11 +46,11 @@ public class PcDAO extends AbstractDAO<Integer, Pc> {
     }
 
     @Override
-    public boolean delete(Integer id) {
+    public boolean delete(String id) {
         int changeNumber = 0;
         try(Connection con=DatabaseConnectionPoolResource.getConnection();
-            PreparedStatement statement = con.prepareStatement("DELETE FROM pc where code=?")){
-            statement.setInt(1, id);
+            PreparedStatement statement = con.prepareStatement("DELETE FROM product where code=?")){
+            statement.setString(1, id);
             changeNumber = statement.executeUpdate();
         }catch (SQLException e){
             logger.error(e.getMessage());
@@ -58,16 +59,13 @@ public class PcDAO extends AbstractDAO<Integer, Pc> {
     }
 
     @Override
-    public boolean create(Pc entity) {
+    public boolean create(Product entity) {
         int changeNumber = 0;
         try(Connection con=DatabaseConnectionPoolResource.getConnection();
-            PreparedStatement statement = con.prepareStatement("INSERT INTO pc(model, speed, ram, hd, cd, price) VALUE (?,?,?,?,?,?)")){
+            PreparedStatement statement = con.prepareStatement("INSERT INTO product(maker, model, type) VALUE (?,?,?)")){
+            statement.setString(2,entity.getMaker());
             statement.setString(1,entity.getModel());
-            statement.setShort(2,entity.getSpeed());
-            statement.setShort(3, entity.getRam());
-            statement.setDouble(4, entity.getHd());
-            statement.setString(5, entity.getCd());
-            statement.setBigDecimal(6, entity.getPrice());
+            statement.setString(3,entity.getType());
             changeNumber = statement.executeUpdate();
         }catch (SQLException e){
             logger.error(e.getMessage());
@@ -76,20 +74,22 @@ public class PcDAO extends AbstractDAO<Integer, Pc> {
     }
 
     @Override
-    public Pc update(Pc entity) {
+    public Product update(Product entity) {
         throw new UnsupportedOperationException();
     }
 
-    private Pc constructItem(ResultSet rs) throws SQLException {
-        Pc resultingItem = new Pc();
-        resultingItem.setCode(rs.getInt(1));
+    private Product constructItem(ResultSet rs) throws SQLException {
+        Product resultingItem;
+        resultingItem = new Product();
+        resultingItem.setMaker(rs.getString(1));
         resultingItem.setModel(rs.getString(2));
-        resultingItem.setSpeed(rs.getByte(3));
-        resultingItem.setRam(rs.getByte(4));
-        resultingItem.setHd(rs.getInt(5));
-        resultingItem.setCd(rs.getString(6));
-        resultingItem.setPrice(rs.getBigDecimal(7));
+        resultingItem.setType(rs.getString(3));
         return resultingItem;
     }
 
+    static void checkIfEntityIsAcceptableForInsert(Product product) throws IllegalArgumentException{
+        if(!(product.getType().equals("PC") | product.getType().equals("Laptop") | product.getType().equals("Printer")))
+        throw new IllegalArgumentException("Wrong data:product");
+        //TODO check if table contains such key
+    }
 }

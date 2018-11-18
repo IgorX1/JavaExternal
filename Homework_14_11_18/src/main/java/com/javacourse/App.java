@@ -1,9 +1,13 @@
 package com.javacourse;
 
-import com.javacourse.productDao.LaptopDAO;
-import com.javacourse.productModels.Laptop;
+import com.javacourse.productModels.Printer;
+import com.javacourse.productModels.Product;
+import com.javacourse.productsDao.LaptopDAO;
+import com.javacourse.productsDao.PrinterDAO;
 import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
+
+import java.math.BigDecimal;
 
 public class App
 {
@@ -16,7 +20,16 @@ public class App
 
     public static void main( String[] args )
     {
-        LaptopDAO ld = new LaptopDAO();
+        PrinterDAO printerDAO = new PrinterDAO();
 
+        Printer printer = new Printer();
+        printer.setModel("1999");
+        printer.setType("Laser");
+        printer.setColor("y");
+        printer.setPrice(new BigDecimal(200));
+
+        Product product = new Product("1999", "F", "Printer");
+
+        System.out.println(printerDAO.createAsNewProduct(printer, product));
     }
 }

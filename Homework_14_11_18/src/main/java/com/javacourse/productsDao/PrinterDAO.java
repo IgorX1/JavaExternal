@@ -1,4 +1,4 @@
-package com.javacourse.productDao;
+package com.javacourse.productsDao;
 
 import com.javacourse.dbInterction.DatabaseConnectionPoolResource;
 import com.javacourse.productModels.Printer;
@@ -74,17 +74,60 @@ public class PrinterDAO extends AbstractDAO<Integer, Printer>{
 
     @Override
     public boolean create(Printer entity) {
-        checkIfEntityIsAcceptableForInsert(entity);
         int changeNumber = 0;
         try(Connection con=DatabaseConnectionPoolResource.getConnection();
             PreparedStatement statement = con.prepareStatement("INSERT INTO printer(model, color, type, price) VALUE (?,?,?,?)")){
+
+            checkIfEntityIsAcceptableForInsert(entity);
+
             statement.setString(1,entity.getModel());
             statement.setString(2,entity.getColor());
             statement.setString(3,entity.getType());
             statement.setBigDecimal(4, entity.getPrice());
             changeNumber = statement.executeUpdate();
-        }catch (SQLException e){
+        }catch (SQLException | IllegalArgumentException e){
             logger.error(e.getMessage());
+        }
+        return changeNumber>0;
+    }
+
+    public boolean createAsNewProduct(Printer printer, Product product){
+        int changeNumber = 0;
+        try(Connection con=DatabaseConnectionPoolResource.getConnection();
+            PreparedStatement productInsertStatement = con.prepareStatement("INSERT INTO product(maker, model, type) VALUE (?,?,?)");
+            PreparedStatement printerInsertStatement = con.prepareStatement("INSERT INTO printer(model, color, type, price) VALUE (?,?,?,?)")){
+
+            //TODO check that printer and product keys coincide
+            //Check if model values are acceptable for insert operation
+            checkIfEntityIsAcceptableForInsert(printer);
+            ProductDAO.checkIfEntityIsAcceptableForInsert(product);
+            if(!printer.getModel().equals(product.getModel()) || !product.getType().equals("Printer"))
+                throw new IllegalArgumentException("Wrong data:product and printer consistency");
+
+            con.setAutoCommit(false);
+
+            productInsertStatement.setString(1, product.getMaker());
+            productInsertStatement.setString(2, product.getModel());
+            productInsertStatement.setString(3, product.getType());
+
+            printerInsertStatement.setString(1, printer.getModel());
+            printerInsertStatement.setString(2, printer.getColor());
+            printerInsertStatement.setString(3, printer.getType());
+            printerInsertStatement.setBigDecimal(4, printer.getPrice());
+
+            try {
+                productInsertStatement.executeUpdate();
+                changeNumber = printerInsertStatement.executeUpdate();
+                con.commit();
+            } catch (SQLException e) {
+                logger.error(e.getMessage());
+                con.rollback();
+            }
+
+            con.setAutoCommit(true);
+        }catch (SQLException | IllegalArgumentException e){
+            logger.error(e.getMessage());
+
         }
         return changeNumber>0;
     }
@@ -105,9 +148,10 @@ public class PrinterDAO extends AbstractDAO<Integer, Printer>{
         return currentPrinter;
     }
 
-    private void checkIfEntityIsAcceptableForInsert(Printer printer){
+    static void checkIfEntityIsAcceptableForInsert(Printer printer) throws IllegalArgumentException{
         if(!"yYnN".contains(printer.getColor()))
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("Wrong data:printer");
+        //TODO check if table contains such key
     }
 
 }

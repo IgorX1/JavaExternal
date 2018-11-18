@@ -1,4 +1,4 @@
-package com.javacourse.productDao;
+package com.javacourse.productsDao;
 
 import java.util.List;
 

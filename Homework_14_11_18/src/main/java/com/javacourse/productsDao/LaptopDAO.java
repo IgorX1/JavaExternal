@@ -1,4 +1,4 @@
-package com.javacourse.productDao;
+package com.javacourse.productsDao;
 
 import com.javacourse.productModels.Laptop;
 import com.javacourse.dbInterction.DatabaseConnectionPoolResource;
