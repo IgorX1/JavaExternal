@@ -1,5 +1,7 @@
 package com.javacourse.productModels;
 
+import java.util.Objects;
+
 public class Product{
     private String model;
     private String maker;
@@ -58,4 +60,8 @@ public class Product{
                 type.equals(product.type);
     }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(model, maker, type);
+    }
 }

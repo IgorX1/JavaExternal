@@ -14,13 +14,23 @@ public class DatabaseConnectionPoolResource {
     private static Properties property = new Properties();
 
     static {
+        FileInputStream fis =null;
         try {
-            property.load(new FileInputStream("src/main/resources/database.properties"));
+            fis = new FileInputStream("src/main/resources/database.properties");
+            property.load(fis);
             ds.setUrl(property.getProperty("db.host"));
             ds.setUsername(property.getProperty("db.user"));
             ds.setPassword(property.getProperty("db.password"));
         } catch (IOException e) {
             logger.error(e.getMessage());
+        }finally {
+            if(fis!=null) {
+                try {
+                    fis.close();
+                } catch (IOException e) {
+                    logger.error(e.getMessage());
+                }
+            }
         }
     }
 

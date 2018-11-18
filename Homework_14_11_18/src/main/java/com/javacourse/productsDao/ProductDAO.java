@@ -1,7 +1,6 @@
 package com.javacourse.productsDao;
 
 import com.javacourse.dbInterction.DatabaseConnectionPoolResource;
-import com.javacourse.productModels.Printer;
 import com.javacourse.productModels.Product;
 
 import java.sql.Connection;
@@ -88,8 +87,7 @@ public class ProductDAO extends AbstractDAO<String, Product>{
     }
 
     static void checkIfEntityIsAcceptableForInsert(Product product) throws IllegalArgumentException{
-        if(!(product.getType().equals("PC") | product.getType().equals("Laptop") | product.getType().equals("Printer")))
+        if(!(product.getType().equals("PC") || product.getType().equals("Laptop") || product.getType().equals("Printer")))
         throw new IllegalArgumentException("Wrong data:product");
-        //TODO check if table contains such key
     }
 }

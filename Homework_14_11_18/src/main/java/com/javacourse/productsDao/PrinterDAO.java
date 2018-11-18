@@ -97,7 +97,6 @@ public class PrinterDAO extends AbstractDAO<Integer, Printer>{
             PreparedStatement productInsertStatement = con.prepareStatement("INSERT INTO product(maker, model, type) VALUE (?,?,?)");
             PreparedStatement printerInsertStatement = con.prepareStatement("INSERT INTO printer(model, color, type, price) VALUE (?,?,?,?)")){
 
-            //TODO check that printer and product keys coincide
             //Check if model values are acceptable for insert operation
             checkIfEntityIsAcceptableForInsert(printer);
             ProductDAO.checkIfEntityIsAcceptableForInsert(product);
@@ -151,7 +150,6 @@ public class PrinterDAO extends AbstractDAO<Integer, Printer>{
     static void checkIfEntityIsAcceptableForInsert(Printer printer) throws IllegalArgumentException{
         if(!"yYnN".contains(printer.getColor()))
             throw new IllegalArgumentException("Wrong data:printer");
-        //TODO check if table contains such key
     }
 
 }
