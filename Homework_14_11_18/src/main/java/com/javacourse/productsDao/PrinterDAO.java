@@ -136,7 +136,7 @@ public class PrinterDAO extends AbstractDAO<Integer, Printer>{
         throw new UnsupportedOperationException();
     }
 
-    private Printer constructItem(ResultSet rs) throws SQLException {
+    Printer constructItem(ResultSet rs) throws SQLException {
         Printer currentPrinter;
         currentPrinter = new Printer();
         currentPrinter.setCode(rs.getInt(1));

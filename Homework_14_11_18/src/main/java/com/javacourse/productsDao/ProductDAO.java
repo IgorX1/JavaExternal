@@ -77,7 +77,7 @@ public class ProductDAO extends AbstractDAO<String, Product>{
         throw new UnsupportedOperationException();
     }
 
-    private Product constructItem(ResultSet rs) throws SQLException {
+    Product constructItem(ResultSet rs) throws SQLException {
         Product resultingItem;
         resultingItem = new Product();
         resultingItem.setMaker(rs.getString(1));

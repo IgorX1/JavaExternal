@@ -80,7 +80,7 @@ public class PcDAO extends AbstractDAO<Integer, Pc> {
         throw new UnsupportedOperationException();
     }
 
-    private Pc constructItem(ResultSet rs) throws SQLException {
+    Pc constructItem(ResultSet rs) throws SQLException {
         Pc resultingItem = new Pc();
         resultingItem.setCode(rs.getInt(1));
         resultingItem.setModel(rs.getString(2));
