@@ -77,7 +77,7 @@ public class LaptopDAO extends AbstractDAO<Integer, Laptop> {
         throw new UnsupportedOperationException();
     }
 
-    private Laptop constructItem(ResultSet rs) throws SQLException {
+    Laptop constructItem(ResultSet rs) throws SQLException {
         Laptop resultingItem = new Laptop();
         resultingItem.setCode(rs.getInt(1));
         resultingItem.setModel(rs.getString(2));
