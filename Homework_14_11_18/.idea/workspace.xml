@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b9190f2-4f86-44ae-ac0d-253bb792d0cb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Task3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task3/src/main/java/com/javacourse/MySAXParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Task3/src/main/java/com/javacourse/MySAXParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task3/target/classes/com/javacourse/MySAXParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Task3/target/classes/com/javacourse/MySAXParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javacourse/productsDao/PrinterDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javacourse/productsDao/PrinterDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/javacourse/productsDao/PrinterDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/javacourse/productsDao/PrinterDAOTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,6 +50,13 @@
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="labor_sql@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="labor_sql: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="printer: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="labor_sql@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="collations" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
     </expand>
@@ -72,18 +76,22 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Database Element" value="1" />
-          <entry key="JAVA" value="4" />
+          <entry key="JAVA" value="6" />
           <entry key="PLAIN_TEXT" value="4" />
           <entry key="Scratch" value="1" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
-      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.vcs.git.usages">
+        <counts>
+          <entry key="git.branch.create.new" value="1" />
+        </counts>
+      </usages-collector>
       <usages-collector id="statistics.spring.boot.mvc.usages" />
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="154" />
-          <entry key="PLAIN_TEXT" value="9" />
+          <entry key="JAVA" value="274" />
+          <entry key="PLAIN_TEXT" value="25" />
           <entry key="Scratch" value="14" />
         </counts>
       </usages-collector>
@@ -91,15 +99,15 @@
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="154" />
+          <entry key="java" value="274" />
           <entry key="sql" value="14" />
-          <entry key="txt" value="9" />
+          <entry key="txt" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="battles" value="1" />
-          <entry key="java" value="4" />
+          <entry key="java" value="6" />
           <entry key="log" value="4" />
           <entry key="sql" value="1" />
           <entry key="xml" value="1" />
@@ -119,19 +127,26 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/log/logfile.log">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/javacourse/productsDao/PrinterDAOTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="73">
+              <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#939#940#0" expanded="true" />
+                <element signature="e#977#978#0" expanded="true" />
+                <element signature="e#1707#1708#0" expanded="true" />
+                <element signature="e#1732#1733#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/productsDao/LaptopDAO.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/productsDao/PrinterDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1584">
-              <caret line="80" column="44" selection-start-line="80" selection-start-column="44" selection-end-line="80" selection-end-column="44" />
+            <state relative-caret-position="183">
+              <caret line="150" column="71" selection-start-line="150" selection-start-column="71" selection-end-line="150" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -140,6 +155,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -147,6 +167,8 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/e9114bc9-1a50-45e8-b41f-4e54861f64c5/console.sql" />
         <option value="$PROJECT_DIR$/src/main/java/com/javacourse/LaptopDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javacourse/productsDao/LaptopDAO.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/javacourse/productsDao/PrinterDAOTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/productsDao/PrinterDAO.java" />
       </list>
     </option>
   </component>
@@ -295,7 +317,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542611346967" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542611974327" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
@@ -311,7 +333,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.PrinterDAOTest.checkIfEntityIsAcceptableForInsert">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.javacourse.App" />
       <module name="JDBCApplication" />
@@ -325,8 +347,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PrinterDAOTest.checkIfEntityIsAcceptableForInsert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JDBCApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.javacourse.productsDao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.javacourse.productsDao" />
+      <option name="MAIN_CLASS_NAME" value="com.javacourse.productsDao.PrinterDAOTest" />
+      <option name="METHOD_NAME" value="checkIfEntityIsAcceptableForInsert" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.App" />
+      <item itemvalue="JUnit.PrinterDAOTest.checkIfEntityIsAcceptableForInsert" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PrinterDAOTest.checkIfEntityIsAcceptableForInsert" />
         <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
@@ -343,15 +386,23 @@
       <updated>1542271870786</updated>
       <workItem from="1542271872098" duration="3131000" />
       <workItem from="1542575089096" duration="420000" />
-      <workItem from="1542610315872" duration="509000" />
+      <workItem from="1542610315872" duration="1232000" />
     </task>
+    <task id="LOCAL-00001" summary="Added some tests">
+      <created>1542611441068</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1542611441068</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4060000" />
+    <option name="totallyTimeSpent" value="4783000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18322147" />
@@ -363,7 +414,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32907802" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -391,6 +442,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added some tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some tests" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/dataSources.xml">
       <provider selected="true" editor-type-id="text-editor" />
@@ -411,6 +466,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/log/logfile.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/productsDao/LaptopDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1259">
+          <caret line="80" column="44" selection-start-line="80" selection-start-column="44" selection-end-line="80" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/App.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
@@ -418,17 +487,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/productsDao/LaptopDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/productsDao/PrinterDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1584">
-          <caret line="80" column="44" selection-start-line="80" selection-start-column="44" selection-end-line="80" selection-end-column="44" />
+        <state relative-caret-position="183">
+          <caret line="150" column="71" selection-start-line="150" selection-start-column="71" selection-end-line="150" selection-end-column="71" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/log/logfile.log">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/javacourse/productsDao/PrinterDAOTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="73">
+          <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#939#940#0" expanded="true" />
+            <element signature="e#977#978#0" expanded="true" />
+            <element signature="e#1707#1708#0" expanded="true" />
+            <element signature="e#1732#1733#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
