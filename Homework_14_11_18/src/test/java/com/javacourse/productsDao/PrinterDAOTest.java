@@ -28,7 +28,8 @@ public class PrinterDAOTest {
         assertEquals(expected, actual);
     }
 
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void checkIfEntityIsAcceptableForInsert() {
+
     }
 }
