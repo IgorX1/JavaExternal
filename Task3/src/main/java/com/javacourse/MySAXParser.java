@@ -21,11 +21,11 @@ public class MySAXParser extends DefaultHandler implements XMLParser {
         MySAXHandler handler = new MySAXHandler();
         List<Page> pageEntitiesList = null;
         try {
-            SAXParser parser = spf.newSAXParser();
             spf.setValidating(true);
             spf.setNamespaceAware(true);
             SchemaFactory sFactory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
             spf.setSchema(sFactory.newSchema(new File(schemaPath)));
+            SAXParser parser = spf.newSAXParser();
             parser.parse(new File(pathToXmlFile), handler);
             pageEntitiesList = handler.getPageEntitiesList();
         } catch (ParserConfigurationException | SAXException | IOException e) {

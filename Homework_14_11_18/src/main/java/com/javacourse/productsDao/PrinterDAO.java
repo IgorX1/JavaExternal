@@ -148,7 +148,7 @@ public class PrinterDAO extends AbstractDAO<Integer, Printer>{
     }
 
     static void checkIfEntityIsAcceptableForInsert(Printer printer) throws IllegalArgumentException{
-        if(!"yYnN".contains(printer.getColor()))
+        if(printer.getColor()==null || printer.getColor().equals("") || !"yYnN".contains(printer.getColor()))
             throw new IllegalArgumentException("Wrong data:printer");
     }
 

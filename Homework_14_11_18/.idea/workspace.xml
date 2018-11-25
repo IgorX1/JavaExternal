@@ -1,26 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="27becee7-3317-44d6-a13b-a4fdc6c8c8d7" name="Default Changelist" comment="" />
-    <ignored path="$PROJECT_DIR$/out/" />
+    <list default="true" id="8b9190f2-4f86-44ae-ac0d-253bb792d0cb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javacourse/productsDao/PrinterDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javacourse/productsDao/PrinterDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/javacourse/productsDao/PrinterDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/javacourse/productsDao/PrinterDAOTest.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="CheckStyle-IDEA-workspace">
-    <option name="configuration">
-      <map>
-        <entry key="last-active-plugin-version" value="5.22.1" />
-      </map>
-    </option>
-  </component>
-  <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/JDBCApplication$com_javacourse_in_Homework_14_11_18.ic" NAME="com.javacourse in Homework_14_11_18 Coverage Results" MODIFIED="1542577185876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.javacourse.*</FILTER>
-    </SUITE>
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -54,13 +45,6 @@
         <item name="labor_sql@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="labor_sql: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="laptop: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="labor_sql@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="labor_sql: schema" type="c314c289:MysqlImplModel$Schema" />
         <item name="pc: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
       <path>
@@ -73,74 +57,60 @@
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="labor_sql@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="labor_sql: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="product: table" type="98d5ac3d:MysqlImplModel$Table" />
+        <item name="collations" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
     </expand>
     <select />
   </component>
   <component name="FUSProjectUsageTrigger">
-    <session id="-1814206691">
+    <session id="1705008672">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
-          <entry key="project.open.time.11" value="2" />
-          <entry key="project.open.time.13" value="1" />
-          <entry key="project.open.time.14" value="1" />
-          <entry key="project.open.time.22" value="1" />
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="6" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="dummy" value="1" />
-          <entry key="java" value="6812" />
-          <entry key="properties" value="71" />
-          <entry key="sql" value="65" />
-          <entry key="txt" value="1010" />
-          <entry key="xml" value="9" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="6811" />
-          <entry key="PLAIN_TEXT" value="1011" />
-          <entry key="Properties" value="71" />
-          <entry key="SQL" value="1" />
-          <entry key="Scratch" value="65" />
-          <entry key="XML" value="9" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="java" value="165" />
-          <entry key="laptop" value="3" />
-          <entry key="log" value="13" />
-          <entry key="properties" value="3" />
-          <entry key="sql" value="11" />
-          <entry key="xml" value="8" />
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.18" value="1" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Database Element" value="3" />
-          <entry key="JAVA" value="165" />
-          <entry key="PLAIN_TEXT" value="13" />
-          <entry key="Properties" value="3" />
-          <entry key="Scratch" value="11" />
-          <entry key="XML" value="8" />
+          <entry key="Database Element" value="1" />
+          <entry key="JAVA" value="6" />
+          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="Scratch" value="1" />
+          <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
         <counts>
-          <entry key="git.branch.checkout.local" value="13" />
-          <entry key="git.branch.create.new" value="3" />
-          <entry key="git.branch.delete.local" value="3" />
-          <entry key="git.branch.delete.remote" value="1" />
-          <entry key="git.branch.merge" value="7" />
-          <entry key="git.branch.rename" value="1" />
+          <entry key="git.branch.create.new" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.spring.boot.mvc.usages" />
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="274" />
+          <entry key="PLAIN_TEXT" value="25" />
+          <entry key="Scratch" value="14" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.spring.boot.run.usages" />
+      <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="274" />
+          <entry key="sql" value="14" />
+          <entry key="txt" value="25" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="battles" value="1" />
+          <entry key="java" value="6" />
+          <entry key="log" value="4" />
+          <entry key="sql" value="1" />
+          <entry key="xml" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -150,107 +120,55 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="800">
-              <caret line="36" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="88">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/productsDao/LaptopDAO.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/javacourse/productsDao/PrinterDAOTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1843">
-              <caret line="79" column="17" selection-start-line="79" selection-start-column="17" selection-end-line="79" selection-end-column="17" />
+            <state relative-caret-position="73">
+              <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#939#940#0" expanded="true" />
+                <element signature="e#977#978#0" expanded="true" />
+                <element signature="e#1707#1708#0" expanded="true" />
+                <element signature="e#1732#1733#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/javacourse/productsDao/LaptopDAOTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/productsDao/PrinterDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="850">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/productsDao/PcDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1875">
-              <caret line="87" column="41" selection-start-line="87" selection-start-column="41" selection-end-line="87" selection-end-column="41" />
+            <state relative-caret-position="183">
+              <caret line="150" column="71" selection-start-line="150" selection-start-column="71" selection-end-line="150" selection-end-column="71" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="Class" />
-        <option value="JUnit4 Test Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="feature/unit-tests" />
+        <entry key="$PROJECT_DIR$/.." value="master" />
       </map>
     </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/a836db88-e5b2-45a0-bc5b-95280bd245de/console.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/PC.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/Laptop.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/Printer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/Product.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/config.properties" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/e9114bc9-1a50-45e8-b41f-4e54861f64c5/console.sql" />
         <option value="$PROJECT_DIR$/src/main/java/com/javacourse/LaptopDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/productDao/PCDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/DatabaseConnectionPoolResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/productModels/Printer.java" />
-        <option value="$PROJECT_DIR$/log/log4j.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/productDao/AbstractDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/productDao/PcDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/productDao/LaptopDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/queryController/Command.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/productDao/ProductDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/productDao/PrinterDAO.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/ef47a4f1-dbfd-4107-acf2-7d4ffd0ce08d/console.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/productModels/Product.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/dbInterction/DatabaseConnectionPoolResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/queryController/NoCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/queryController/ShowLaptopByKey.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/queryController/ShowAllProductCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/queryController/ShowAllPrinterCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/queryController/ShowLaptopByKeyCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/queryController/ShowAllLaptopsCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/queryController/ShowAllPcCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/queryController/ShowPcByKeyCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/queryController/ShowPrinterByKeyCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/queryController/ConsoleInputManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/queryController/ShowProductByKeyCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/queryController/MenuController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/queryController/ConsoleMenuFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javacourse/productsDao/LaptopDAO.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/javacourse/productsDao/LaptopDAOTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/productsDao/PcDAO.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/javacourse/productsDao/PcDAOTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/productsDao/PrinterDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/productsDao/ProductDAO.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/javacourse/productsDao/PrinterDAOTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/javacourse/productsDao/ProductDAOTest.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javacourse/productsDao/PrinterDAO.java" />
       </list>
     </option>
   </component>
@@ -269,23 +187,26 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
-    <option name="width" value="1750" />
-    <option name="height" value="970" />
-  </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
+    <option name="width" value="979" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="JDBCApplication" type="b2602c69:ProjectViewProjectNode" />
               <item name="Homework_14_11_18" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDBCApplication" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Homework_14_11_18" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="JDBCApplication" type="b2602c69:ProjectViewProjectNode" />
@@ -358,14 +279,36 @@
               <item name="JDBCApplication" type="b2602c69:ProjectViewProjectNode" />
               <item name="Homework_14_11_18" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDBCApplication" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Homework_14_11_18" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDBCApplication" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Homework_14_11_18" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="javacourse" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDBCApplication" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Homework_14_11_18" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="javacourse" type="462c0819:PsiDirectoryNode" />
+              <item name="productsDao" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="Scope" />
     </panes>
@@ -374,21 +317,9 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542577708764" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542611974327" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.javacourse.productsDao" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -402,94 +333,44 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="JUnit.PrinterDAOTest.checkIfEntityIsAcceptableForInsert">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.javacourse.App" />
-      <module name="Homework_14_11_18" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.javacourse.productModels.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Homework_14_11_18" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.javacourse.productsDao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.javacourse.productsDao" />
-      <option name="MAIN_CLASS_NAME" value="com.javacourse.productsDao.ProductDAOTest" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductDAOTest.checkIfEntityIsAcceptableForInsert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Homework_14_11_18" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.javacourse.productsDao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.javacourse.productsDao" />
-      <option name="MAIN_CLASS_NAME" value="com.javacourse.productsDao.ProductDAOTest" />
-      <option name="METHOD_NAME" value="checkIfEntityIsAcceptableForInsert" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductDAOTest.wrongEntityParams" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Homework_14_11_18" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.javacourse.productsDao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.javacourse.productsDao" />
-      <option name="MAIN_CLASS_NAME" value="com.javacourse.productsDao.ProductDAOTest" />
-      <option name="METHOD_NAME" value="wrongEntityParams" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="com.javacourse in Homework_14_11_18" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Homework_14_11_18" />
+      <module name="JDBCApplication" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.javacourse.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.javacourse" />
-      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PrinterDAOTest.checkIfEntityIsAcceptableForInsert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JDBCApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.javacourse.productsDao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.javacourse.productsDao" />
+      <option name="MAIN_CLASS_NAME" value="com.javacourse.productsDao.PrinterDAOTest" />
+      <option name="METHOD_NAME" value="checkIfEntityIsAcceptableForInsert" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.ProductDAOTest.wrongEntityParams" />
-      <item itemvalue="JUnit.ProductDAOTest.checkIfEntityIsAcceptableForInsert" />
-      <item itemvalue="JUnit.ProductDAOTest" />
-      <item itemvalue="JUnit.com.javacourse in Homework_14_11_18" />
       <item itemvalue="Application.App" />
+      <item itemvalue="JUnit.PrinterDAOTest.checkIfEntityIsAcceptableForInsert" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PrinterDAOTest.checkIfEntityIsAcceptableForInsert" />
         <item itemvalue="Application.App" />
-        <item itemvalue="JUnit.com.javacourse in Homework_14_11_18" />
-        <item itemvalue="JUnit.ProductDAOTest" />
-        <item itemvalue="JUnit.ProductDAOTest.checkIfEntityIsAcceptableForInsert" />
-        <item itemvalue="JUnit.ProductDAOTest.wrongEntityParams" />
       </list>
     </recent_temporary>
   </component>
@@ -498,289 +379,62 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="27becee7-3317-44d6-a13b-a4fdc6c8c8d7" name="Default Changelist" comment="" />
-      <created>1542218007443</created>
+      <changelist id="8b9190f2-4f86-44ae-ac0d-253bb792d0cb" name="Default Changelist" comment="" />
+      <created>1542271870786</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1542218007443</updated>
-      <workItem from="1542218009349" duration="1956000" />
-      <workItem from="1542442863636" duration="1251000" />
-      <workItem from="1542444155777" duration="17822000" />
-      <workItem from="1542492046086" duration="99000" />
-      <workItem from="1542529720799" duration="8749000" />
-      <workItem from="1542552147432" duration="4610000" />
+      <updated>1542271870786</updated>
+      <workItem from="1542271872098" duration="3131000" />
+      <workItem from="1542575089096" duration="420000" />
+      <workItem from="1542610315872" duration="1232000" />
     </task>
-    <task id="LOCAL-00001" summary="Created basic clas structure without functionality">
-      <created>1542231862963</created>
+    <task id="LOCAL-00001" summary="Added some tests">
+      <created>1542611441068</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1542231862963</updated>
+      <updated>1542611441068</updated>
     </task>
-    <task id="LOCAL-00002" summary="Added service functions to model classes">
-      <created>1542446857019</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1542446857019</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Added class which implements database connection pool functionality. Used it to connect to database and execute a query from dao">
-      <created>1542463688579</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1542463688579</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Enhanced code readability by making use of try-with-resources statements">
-      <created>1542464521973</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1542464521973</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Implemented queries by id for all DAO objects">
-      <created>1542464807551</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1542464807551</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Moved model creation to separate functions">
-      <created>1542466626620</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1542466626620</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Ready to do refactor">
-      <created>1542476900287</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1542476900287</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Inherited AnstractDAO by all DAO classes">
-      <created>1542478148259</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1542478148259</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Implemeted contract method for all dao classes">
-      <created>1542478572689</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1542478572689</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Implemented delete operation">
-      <created>1542479084986</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1542479084986</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Implemented create operation">
-      <created>1542480894161</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1542480894161</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Implemented create operation">
-      <created>1542481121990</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1542481121990</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Implemented some CRUD opreations">
-      <created>1542489115348</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1542489115348</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Implemented some CRUD opreations">
-      <created>1542491529137</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1542491529137</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Implemented commit-rollback mechanism for some complex insert operations">
-      <created>1542532527793</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1542532527793</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Refactored some code using FindBugs Plugin">
-      <created>1542533196942</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1542533196942</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Working on implementing Command GOF pattern">
-      <created>1542534194766</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1542534194766</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Command GOF pattern implemented for user-db interaction">
-      <created>1542551209445</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1542551209445</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Command GOF pattern implemented for user-db interaction and fixed some bugs">
-      <created>1542551791710</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1542551791710</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Ready to write unit-tests">
-      <created>1542553244493</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1542553244493</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Created some tests for model creating methods">
-      <created>1542554244547</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1542554244547</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Wrote some unit-tests using Mockito">
-      <created>1542577286062</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1542577286062</updated>
-    </task>
-    <option name="localTasksCounter" value="23" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="PcDAOTest_constructItem - 2018.11.18 at 23h 16m 21s.xml">
-      <configuration name="PcDAOTest.constructItem" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PcDAOTest_constructItem - 2018.11.18 at 23h 16m 39s.xml">
-      <configuration name="PcDAOTest.constructItem" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PcDAOTest_constructItem - 2018.11.18 at 23h 17m 07s.xml">
-      <configuration name="PcDAOTest.constructItem" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PrinterDAOTest_constructItem - 2018.11.18 at 23h 23m 57s.xml">
-      <configuration name="PrinterDAOTest.constructItem" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ProductDAOTest_constructItem - 2018.11.18 at 23h 28m 05s.xml">
-      <configuration name="ProductDAOTest.constructItem" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ProductDAOTest_constructItem - 2018.11.18 at 23h 28m 54s.xml">
-      <configuration name="ProductDAOTest.constructItem" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ProductDAOTest_checkIfEntityIsAcceptableForInsert - 2018.11.18 at 23h 37m 55s.xml">
-      <configuration name="ProductDAOTest.checkIfEntityIsAcceptableForInsert" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ProductDAOTest - 2018.11.18 at 23h 38m 42s.xml">
-      <configuration name="ProductDAOTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="com_javacourse_in_Homework_14_11_18 - 2018.11.18 at 23h 39m 36s.xml">
-      <configuration name="com.javacourse in Homework_14_11_18" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="com_javacourse_in_Homework_14_11_18 - 2018.11.18 at 23h 39m 49s.xml">
-      <configuration name="com.javacourse in Homework_14_11_18" configurationId="JUnit" />
-    </history-entry>
-  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34487000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+    <option name="totallyTimeSpent" value="4783000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21946308" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18322147" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info anchor="bottom" id="Metrics" weight="0.32907802" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4986577" weight="0.32907802" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32907802" />
-      <window_info anchor="bottom" id="FindBugs-IDEA" order="7" weight="0.32907802" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32907802" />
-      <window_info anchor="bottom" id="CheckStyle" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5013423" side_tool="true" weight="0.32907802" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32907802" />
-      <window_info anchor="bottom" id="Database Changes" order="12" weight="0.32907802" />
-      <window_info anchor="bottom" id="Version Control" order="13" />
-      <window_info anchor="bottom" id="Database Console" order="14" weight="0.32907802" />
-      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.3295302" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="right" id="Database" order="6" weight="0.17315437" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1590604" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4986577" weight="0.32907802" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="FindBugs-IDEA" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32907802" />
-      <window_info anchor="bottom" id="CheckStyle" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5013423" side_tool="true" weight="0.32907802" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32907802" />
-      <window_info anchor="bottom" id="Database Changes" order="12" weight="0.32907802" />
-      <window_info anchor="bottom" id="Version Control" order="13" />
-      <window_info anchor="bottom" id="Database Console" order="14" weight="0.32907802" />
+      <window_info anchor="bottom" id="Database Console" order="7" weight="0.32907802" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32907802" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="right" id="Database" order="6" weight="0.17315437" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-    </layout-to-restore>
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Database" order="7" weight="0.3295302" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
+    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -789,332 +443,67 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created basic clas structure without functionality" />
-    <MESSAGE value="Added service functions to model classes" />
-    <MESSAGE value="Added class which implements database connection pool functionality. Used it to connect to database and execute a query from dao" />
-    <MESSAGE value="Enhanced code readability by making use of try-with-resources statements" />
-    <MESSAGE value="Implemented queries by id for all DAO objects" />
-    <MESSAGE value="Moved model creation to separate functions" />
-    <MESSAGE value="Ready to do refactor" />
-    <MESSAGE value="Inherited AnstractDAO by all DAO classes" />
-    <MESSAGE value="Implemeted contract method for all dao classes" />
-    <MESSAGE value="Implemented delete operation" />
-    <MESSAGE value="Implemented create operation" />
-    <MESSAGE value="Implemented some CRUD opreations" />
-    <MESSAGE value="Implemented commit-rollback mechanism for some complex insert operations" />
-    <MESSAGE value="Refactored some code using FindBugs Plugin" />
-    <MESSAGE value="Working on implementing Command GOF pattern" />
-    <MESSAGE value="Command GOF pattern implemented for user-db interaction" />
-    <MESSAGE value="Command GOF pattern implemented for user-db interaction and fixed some bugs" />
-    <MESSAGE value="Ready to write unit-tests" />
-    <MESSAGE value="Created some tests for model creating methods" />
-    <MESSAGE value="Wrote some unit-tests using Mockito" />
-    <option name="LAST_COMMIT_MESSAGE" value="Wrote some unit-tests using Mockito" />
+    <MESSAGE value="Added some tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some tests" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/a836db88-e5b2-45a0-bc5b-95280bd245de/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="20" selection-start-column="20" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/util/Objects.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="75" column="26" selection-start-line="75" selection-start-column="26" selection-end-line="75" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.sql/java/sql/ResultSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="996" column="69" lean-forward="true" selection-start-line="996" selection-start-column="69" selection-end-line="996" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log/log4j.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://ef47a4f1-dbfd-4107-acf2-7d4ffd0ce08d/schema/labor_sql/table/laptop">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/productDao/LaptopDAO.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/productDao/PrinterDAO.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/productDao/PcDAO.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/productDao/ProductDAO.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/productDao/AbstractDAO.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/queryController/Command.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/queryController/NoCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ef47a4f1-dbfd-4107-acf2-7d4ffd0ce08d/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="21" selection-start-column="21" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/queryController/ShowAllProductCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="11" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/queryController/ShowAllPrinterCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/queryController/ShowPcByKeyCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="e#197#198#0" expanded="true" />
-            <element signature="e#231#232#0" expanded="true" />
-            <element signature="e#274#275#0" expanded="true" />
-            <element signature="e#366#367#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/queryController/ShowPrinterByKeyCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
-          <folding>
-            <element signature="e#251#252#0" expanded="true" />
-            <element signature="e#295#296#0" expanded="true" />
-            <element signature="e#338#339#0" expanded="true" />
-            <element signature="e#430#431#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/queryController/ShowProductByKeyCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-          <folding>
-            <element signature="e#213#214#0" expanded="true" />
-            <element signature="e#257#258#0" expanded="true" />
-            <element signature="e#319#320#0" expanded="true" />
-            <element signature="e#418#419#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/queryController/ShowLaptopByKeyCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="85" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log/logfile.log">
+    <entry file="file://$PROJECT_DIR$/.idea/dataSources.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/productModels/Pc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/queryController/ShowAllPcCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/productModels/Product.java">
+    <entry file="das://e9114bc9-1a50-45e8-b41f-4e54861f64c5/schema/labor_sql/table/battles" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/LaptopDAO.java" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e9114bc9-1a50-45e8-b41f-4e54861f64c5/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="37" selection-start-column="37" selection-end-column="37" />
-          <folding>
-            <element signature="e#1451#1452#0" expanded="true" />
-            <element signature="e#1506#1507#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/productModels/Printer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="757">
-          <caret line="70" column="53" selection-start-line="70" selection-start-column="53" selection-end-line="70" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#600#601#0" expanded="true" />
-            <element signature="e#632#633#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/productsDao/AbstractDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+          <caret column="17" selection-start-column="17" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/productModels/Laptop.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1532">
+        <state relative-caret-position="88">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/database.properties">
+    <entry file="file://$PROJECT_DIR$/log/logfile.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/dbInterction/DatabaseConnectionPoolResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/productsDao/PrinterDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="145" column="51" selection-start-line="145" selection-start-column="32" selection-end-line="145" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5410#5411#0" expanded="true" />
-            <element signature="e#5467#5468#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/productsDao/ProductDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="84" column="45" selection-start-line="84" selection-start-column="30" selection-end-line="84" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/javacourse/productsDao/PrinterDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="793">
-          <caret line="74" column="25" selection-start-line="74" selection-start-column="25" selection-end-line="74" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/javacourse/productsDao/ProductDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/queryController/ConsoleInputManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/queryController/ConsoleMenuFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/queryController/MenuController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="16" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/queryController/ShowAllLaptopsCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/javacourse/productsDao/PcDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/javacourse/productsDao/LaptopDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/productsDao/PcDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1875">
-          <caret line="87" column="41" selection-start-line="87" selection-start-column="41" selection-end-line="87" selection-end-column="41" />
+        <state relative-caret-position="66">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/productsDao/LaptopDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1843">
-          <caret line="79" column="17" selection-start-line="79" selection-start-column="17" selection-end-line="79" selection-end-column="17" />
+        <state relative-caret-position="1259">
+          <caret line="80" column="44" selection-start-line="80" selection-start-column="44" selection-end-line="80" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javacourse/productsDao/PrinterDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="150" column="71" selection-start-line="150" selection-start-column="71" selection-end-line="150" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/javacourse/productsDao/PrinterDAOTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#939#940#0" expanded="true" />
+            <element signature="e#977#978#0" expanded="true" />
+            <element signature="e#1707#1708#0" expanded="true" />
+            <element signature="e#1732#1733#0" expanded="true" />
           </folding>
         </state>
       </provider>
