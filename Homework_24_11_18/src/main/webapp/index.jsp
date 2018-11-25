@@ -3,13 +3,13 @@
     <title>Login page</title>
 </head>
 <body>
-    <form action="LoginServlet" method="post">
+    <form action="" method="post">
+        <input type="text" autocomplete="off" name="login" id="login"/>
         <label for="login">Login</label>
-        <input type="text" name="login" id="login"/>
         <br/>
-        <label for="password">Password</label>
         <input type="password" name="password" id="password"/>
-        <br/>
+        <label for="password">Password</label>
+        <br/><br/>
         <input type="submit" value="Log in"/>
     </form>
 </body>

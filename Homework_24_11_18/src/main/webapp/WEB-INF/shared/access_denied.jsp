@@ -1,17 +1,17 @@
 <%--
   Created by IntelliJ IDEA.
   User: kois
-  Date: 24.11.2018
-  Time: 23:51
+  Date: 26.11.2018
+  Time: 0:11
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Access denied</title>
 </head>
 <body>
-<h1>!!!+++!!!</h1>
-<%--<h2>{{(***)}}</h2>--%>
+<h1 style="color:red;">Access denied!</h1>
+<p><a href="index.jsp">HOME PAGE</a></p>
 </body>
 </html>

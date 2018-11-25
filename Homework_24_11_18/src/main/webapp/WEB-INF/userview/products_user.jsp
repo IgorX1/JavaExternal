@@ -15,8 +15,10 @@
     <h1>Product list</h1><br />
     <c:forEach var="product" items="${requestScope.products}">
         <ul>
-            <li>Model: ${product.getModel()}</li>
-        </ul>
+            <li>Model: ${product.model}</li>
+            <li>Maker: ${product.maker}</li>
+            <li>Type: ${product.type}</li>
+        </ul><br/>
     </c:forEach>
 </body>
 </html>

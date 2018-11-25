@@ -11,9 +11,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "ProductServlet", urlPatterns = {""})
+@WebServlet(urlPatterns="/ProductServlet")
 public class ProductServlet extends HttpServlet {
-    private static final String PRODUCT_LIST_PAGE = "products.jsp";
+    private static final String PRODUCT_LIST_PAGE = "products_user.jsp";
     private ProductDAO productDAO;
 
     @Override
