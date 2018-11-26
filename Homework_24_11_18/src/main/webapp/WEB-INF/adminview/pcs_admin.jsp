@@ -1,6 +1,13 @@
 <%--
   Created by IntelliJ IDEA.
   User: kois
+  Date: 26.11.2018
+  Time: 12:58
+  To change this template use File | Settings | File Templates.
+--%>
+<%--
+  Created by IntelliJ IDEA.
+  User: kois
   Date: 25.11.2018
   Time: 23:08
   To change this template use File | Settings | File Templates.
@@ -10,7 +17,7 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/styles.css"/>
-    <title>Products</title>
+    <title>Pcs</title>
 </head>
 <body>
 <table class="menu">
@@ -22,13 +29,15 @@
         <td><a href="${pageContext.request.contextPath}/logout">Log out</a></td>
     </tr>
 </table>
-<h1>All product list -- Home Page</h1>
-<h3>Hello ${sessionScope.login} (${sessionScope.role})</h3>
-<c:forEach var="product" items="${requestScope.products}">
+<h1>All pcs list (ADMIN)</h1>
+<c:forEach var="pc" items="${requestScope.pcs}">
     <ul>
-        <li>Model: ${product.model}</li>
-        <li>Maker: ${product.maker}</li>
-        <li>Type: ${product.type}</li>
+        <li>Model: ${pc.model}</li>
+        <li>Speed: ${pc.speed}</li>
+        <li>Hd: ${pc.hd}</li>
+        <li>Ram: ${pc.ram}</li>
+        <li>Cd: ${pc.cd}</li>
+        <li>Price: ${pc.price}</li>
     </ul><br/>
 </c:forEach>
 </body>

@@ -1,20 +1,28 @@
 package com.javacourse.servlet.filter;
 
 
+import com.javacourse.dao.ProductDAO;
 import com.javacourse.dao.UserDAO;
+import com.javacourse.model.Product;
 import com.javacourse.model.User;
 
 import javax.servlet.*;
+import javax.servlet.annotation.WebListener;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.List;
 import java.util.concurrent.atomic.AtomicReference;
 
+
 public class AuthorizationFilter implements Filter {
+
+    private ProductDAO productDAO;
+
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-
+        productDAO = new ProductDAO();
     }
 
     @Override
@@ -25,10 +33,12 @@ public class AuthorizationFilter implements Filter {
         final String login = req.getParameter("login");
         final String password = req.getParameter("password");
 
+        List<Product> products = productDAO.findAll();
+        req.setAttribute("products", products);
+
         @SuppressWarnings("unchecked")
         final AtomicReference<UserDAO> userDao = (AtomicReference<UserDAO>) req.getServletContext().getAttribute("userDao");
         final HttpSession session = req.getSession();
-
         if(isLoggedIn(session)){
             moveToProductPage(req, res, (User.ROLE)session.getAttribute("role"));
         }else if(doesExistInDB(session, userDao, login, password)){

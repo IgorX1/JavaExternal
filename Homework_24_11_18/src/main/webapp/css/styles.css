@@ -1,0 +1,16 @@
+.menu{
+    font-size: 24px;
+}
+
+.menu a{
+    color:green;
+    margin-left: 20px;
+}
+
+.menu a:hover{
+    color:blue;
+}
+
+.menu td{
+
+}

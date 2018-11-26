@@ -3,7 +3,7 @@
     <title>Login page</title>
 </head>
 <body>
-    <form action="" method="post">
+    <form action="ProductServlet" method="post">
         <input type="text" autocomplete="off" name="login" id="login"/>
         <label for="login">Login</label>
         <br/>

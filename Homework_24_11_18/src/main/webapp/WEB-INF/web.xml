@@ -5,6 +5,10 @@
          version="3.1">
     <display-name>ShopProject</display-name>
 
+    <servlet>
+        <servlet-name>pro</servlet-name>
+    </servlet>
+
     <filter>
         <filter-name>AuthorizationFilter</filter-name>
         <filter-class>com.javacourse.servlet.filter.AuthorizationFilter</filter-class>
@@ -12,7 +16,7 @@
 
     <filter-mapping>
         <filter-name>AuthorizationFilter</filter-name>
-        <url-pattern>/</url-pattern>
+        <url-pattern>/ProductServlet</url-pattern>
     </filter-mapping>
 
     <error-page>
