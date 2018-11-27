@@ -19,6 +19,7 @@ public class AdminAccessFilter implements Filter {
 
         if(isLoggedIn(session)){
             User.ROLE role = (User.ROLE) session.getAttribute("role");
+            //when USER tries to access ADMIN's pages
             if(role != User.ROLE.ADMIN){
                 response.sendRedirect(request.getContextPath() + "/pages/shared/access_denied.jsp");
             }else filterChain.doFilter(servletRequest, servletResponse);

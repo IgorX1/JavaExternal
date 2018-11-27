@@ -24,6 +24,22 @@
 </table>
 <h1>All product list -- Home Page</h1>
 <h3>Hello ${sessionScope.login} (${sessionScope.role})</h3>
+<div>
+    <h4><a>Add new item</a></h4>
+    <form method="post" action="/ProductServlet">
+        <input type="hidden" name="command" value="add" />
+        <input type="text" autocomplete="off" name="maker" id="maker" required/>
+        <label for="maker">Maker</label>
+        <br/>
+        <input type="text" name="model" id="model" required/>
+        <label for="model">Model</label>
+        <br/>
+        <input type="text" name="type" id="type" required/>
+        <label for="type">Type</label>
+        <br/><br/>
+        <input type="submit" value="Add item"/>
+    </form>
+</div>
 <c:forEach var="product" items="${requestScope.products}">
     <ul>
         <li>Model: ${product.model}</li>

@@ -1,9 +1,6 @@
 package com.javacourse.servlet.filter;
 
-
 import com.javacourse.dao.ProductDAO;
-import com.javacourse.dao.UserDAO;
-import com.javacourse.model.Product;
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
