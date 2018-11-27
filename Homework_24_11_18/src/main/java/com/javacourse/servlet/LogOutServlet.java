@@ -20,7 +20,7 @@ public class LogOutServlet extends HttpServlet {
         session.removeAttribute("password");
         session.removeAttribute("login");
         session.removeAttribute("role");
-
+        session.invalidate();
         response.sendRedirect("/");
     }
 }

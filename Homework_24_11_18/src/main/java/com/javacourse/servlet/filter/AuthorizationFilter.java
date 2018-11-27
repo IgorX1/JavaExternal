@@ -30,6 +30,10 @@ public class AuthorizationFilter implements Filter {
         final HttpServletRequest req = (HttpServletRequest) servletRequest;
         final HttpServletResponse res = (HttpServletResponse) servletResponse;
 
+        String loginUrl = req.getContextPath() + "index.jsp";
+        String realUrl = req.getRequestURI();
+        boolean loginRequest = req.getRequestURI().equals(loginUrl);
+
         final String login = req.getParameter("login");
         final String password = req.getParameter("password");
 
@@ -50,6 +54,7 @@ public class AuthorizationFilter implements Filter {
         }else{
             moveToProductPage(req, res, User.ROLE.UNKNOWN);
         }
+        filterChain.doFilter(req, res);
     }
 
     boolean isLoggedIn(HttpSession session){

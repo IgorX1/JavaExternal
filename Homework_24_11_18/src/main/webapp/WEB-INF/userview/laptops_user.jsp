@@ -22,11 +22,11 @@
 <body>
 <table class="menu">
     <tr>
-        <td><a href="#">Home</a></td>
-        <td><a href="#">Laptops</a></td>
-        <td><a href="#">Printers</a></td>
-        <td><a href="#">PCs</a></td>
-        <td><a href="/logout">Log out</a></td>
+        <td><a href="${pageContext.request.contextPath}/ProductServlet">Home</a></td>
+        <td><a href="${pageContext.request.contextPath}/LaptopServlet">Laptops</a></td>
+        <td><a href="${pageContext.request.contextPath}/PrinterServlet">Printers</a></td>
+        <td><a href="${pageContext.request.contextPath}/PcServlet">PCs</a></td>
+        <td><a href="${pageContext.request.contextPath}/logout">Log out</a></td>
     </tr>
 </table>
 <h1>All laptop list -- Home Page (USER)</h1>
