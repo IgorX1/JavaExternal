@@ -14,6 +14,13 @@
 </head>
 <body>
 <h1 style="color:red;">Error occurred while processing your request</h1>
+Request from ${pageContext.errorData.requestURI} is failed
+<br/>
+Servlet name or type: ${pageContext.errorData.servletName}
+<br/>
+Status code: ${pageContext.errorData.statusCode}
+<br/>
+Exception: ${pageContext.errorData.throwable}
 <p><a href="${pageContext.request.contextPath}/index.jsp">HOME PAGE</a></p>
 </body>
 </html>
