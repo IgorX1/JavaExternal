@@ -10,8 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.List;
-import java.util.concurrent.atomic.AtomicReference;
 
 @WebFilter(urlPatterns = {"/*"})
 public class AuthorizationFilter implements Filter {
@@ -30,9 +28,6 @@ public class AuthorizationFilter implements Filter {
         final HttpSession session = req.getSession(false);
 
         String loginURI = req.getContextPath() + "/login";
-
-        /*List<Product> products = productDAO.findAll();
-        req.setAttribute("products", products);*/
 
         if(isLoggedIn(session) || isLoginRequest(req, loginURI)){
             filterChain.doFilter(servletRequest, servletResponse);
