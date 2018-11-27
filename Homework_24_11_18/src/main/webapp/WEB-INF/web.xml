@@ -13,11 +13,12 @@
     <filter-mapping>
         <filter-name>AuthorizationFilter</filter-name>
         <url-pattern>/ProductServlet</url-pattern>
+        <url-pattern>/pages/*</url-pattern>
     </filter-mapping>
 
     <error-page>
         <error-code>404</error-code>
-        <location>/WEB-INF/shared/error_page.jsp</location>
+        <location>/pages/shared/error_page.jsp</location>
     </error-page>
 
     <session-config>

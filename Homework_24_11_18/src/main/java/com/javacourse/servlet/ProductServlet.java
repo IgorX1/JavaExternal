@@ -29,5 +29,7 @@ public class ProductServlet extends HttpServlet {
         List<Product> products = productDAO.findAll();
         request.setAttribute("products", products);
         request.getRequestDispatcher(PRODUCT_LIST_PAGE).forward(request,response);
+        response.getWriter().write("asdasdas");
+        response.getWriter().flush();
     }
 }

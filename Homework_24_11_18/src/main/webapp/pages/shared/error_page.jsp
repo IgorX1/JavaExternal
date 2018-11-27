@@ -13,7 +13,7 @@
     <title>Error</title>
 </head>
 <body>
-<h1 style="color:red;">Error occured while processing your request</h1>
-<p><a href="index.jsp">HOME PAGE</a></p>
+<h1 style="color:red;">Error occurred while processing your request</h1>
+<p><a href="${pageContext.request.contextPath}/index.jsp">HOME PAGE</a></p>
 </body>
 </html>

@@ -7,7 +7,7 @@ import com.javacourse.model.Product;
 import com.javacourse.model.User;
 
 import javax.servlet.*;
-import javax.servlet.annotation.WebListener;
+import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicReference;
 
-
+//@WebFilter(urlPatterns = {"/controller"})
 public class AuthorizationFilter implements Filter {
 
     private ProductDAO productDAO;
@@ -29,10 +29,6 @@ public class AuthorizationFilter implements Filter {
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         final HttpServletRequest req = (HttpServletRequest) servletRequest;
         final HttpServletResponse res = (HttpServletResponse) servletResponse;
-
-        String loginUrl = req.getContextPath() + "index.jsp";
-        String realUrl = req.getRequestURI();
-        boolean loginRequest = req.getRequestURI().equals(loginUrl);
 
         final String login = req.getParameter("login");
         final String password = req.getParameter("password");
@@ -71,11 +67,11 @@ public class AuthorizationFilter implements Filter {
                                    final HttpServletResponse res,
                                    final User.ROLE role) throws ServletException, IOException {
         if(role == User.ROLE.ADMIN){
-            req.getRequestDispatcher("WEB-INF/adminview/products_admin.jsp").forward(req, res);
+            req.getRequestDispatcher("pages/adminview/products_admin.jsp").forward(req, res);
         }else if(role == User.ROLE.USER){
-            req.getRequestDispatcher("WEB-INF/userview/products_user.jsp").forward(req, res);
+            req.getRequestDispatcher("pages/userview/products_user.jsp").forward(req, res);
         }else {
-            req.getRequestDispatcher("WEB-INF/shared/access_denied.jsp").forward(req, res);
+            req.getRequestDispatcher("pages/shared/access_denied.jsp").forward(req, res);
         }
     }
 

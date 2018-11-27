@@ -34,11 +34,11 @@ public class LaptopServlet extends HttpServlet {
         HttpSession session =  request.getSession();
         User.ROLE role = (User.ROLE) session.getAttribute("role");
         if(role == User.ROLE.ADMIN){
-            request.getRequestDispatcher("WEB-INF/adminview/laptops_admin.jsp").forward(request, response);
+            request.getRequestDispatcher("pages/adminview/laptops_admin.jsp").forward(request, response);
         }else if(role == User.ROLE.USER){
-            request.getRequestDispatcher("WEB-INF/userview/laptops_user.jsp").forward(request, response);
+            request.getRequestDispatcher("pages/userview/laptops_user.jsp").forward(request, response);
         }else {
-            request.getRequestDispatcher("WEB-INF/shared/access_denied.jsp").forward(request, response);
+            request.getRequestDispatcher("pages/shared/access_denied.jsp").forward(request, response);
         }
     }
 }

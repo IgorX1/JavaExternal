@@ -12,6 +12,6 @@
 </head>
 <body>
 <h1 style="color:red;">Access denied!</h1>
-<p><a href="index.jsp">HOME PAGE</a></p>
+<p><a href="${pageContext.request.contextPath}/index.jsp">HOME PAGE</a></p>
 </body>
 </html>

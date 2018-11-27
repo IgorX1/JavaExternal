@@ -32,11 +32,11 @@ public class PrinterServlet extends HttpServlet {
         HttpSession session =  request.getSession();
         User.ROLE role = (User.ROLE) session.getAttribute("role");
         if(role == User.ROLE.ADMIN){
-            request.getRequestDispatcher("WEB-INF/adminview/printers_admin.jsp").forward(request, response);
+            request.getRequestDispatcher("pages/adminview/printers_admin.jsp").forward(request, response);
         }else if(role == User.ROLE.USER){
-            request.getRequestDispatcher("WEB-INF/userview/printers_admin.jsp").forward(request, response);
+            request.getRequestDispatcher("pages/userview/printers_admin.jsp").forward(request, response);
         }else {
-            request.getRequestDispatcher("WEB-INF/shared/access_denied.jsp").forward(request, response);
+            request.getRequestDispatcher("pages/shared/access_denied.jsp").forward(request, response);
         }
     }
 }
