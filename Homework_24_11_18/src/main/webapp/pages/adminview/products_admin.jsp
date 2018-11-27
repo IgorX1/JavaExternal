@@ -26,7 +26,7 @@
 <h3>Hello ${sessionScope.login} (${sessionScope.role})</h3>
 <div>
     <h4><a>Add new item</a></h4>
-    <form method="post" action="/ProductServlet">
+    <form method="post" action="${pageContext.request.contextPath}/ProductServlet">
         <input type="hidden" name="command" value="add" />
         <input type="text" autocomplete="off" name="maker" id="maker" required/>
         <label for="maker">Maker</label>

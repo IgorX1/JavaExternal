@@ -30,7 +30,7 @@ public class AuthorizationServlet extends HttpServlet {
             }else if(userDao.get().getRoleByLoginPassword(userLogin, userPassword)== User.ROLE.USER){
                 session.setAttribute("role", User.ROLE.USER);
             }
-            response.sendRedirect("/ProductServlet");
+            response.sendRedirect("/ProductServlet?command=show");
         }else {
             response.sendRedirect("/pages/login.jsp");
         }

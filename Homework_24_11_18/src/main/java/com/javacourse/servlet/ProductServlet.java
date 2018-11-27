@@ -3,6 +3,8 @@ package com.javacourse.servlet;
 import com.javacourse.dao.ProductDAO;
 import com.javacourse.model.Product;
 import com.javacourse.model.User;
+import com.javacourse.servlet.commandManagement.ActionCommand;
+import com.javacourse.servlet.commandManagement.ActionFactory;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -22,10 +24,12 @@ public class ProductServlet extends HttpServlet {
         productDAO = new ProductDAO();
     }
 
+    //different cases are acceptable: add, update, delete
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        processUser(request, response);
     }
 
+    //case when we want to list all the product items
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Product> products = productDAO.findAll();
         request.setAttribute("products", products);
@@ -40,6 +44,13 @@ public class ProductServlet extends HttpServlet {
     }
 
     private void processUser(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException{
-
+        String page = null;
+        ActionCommand command = ActionFactory.defineCommand(request);
+        page = command.execute(request);
+        if(page!=null){
+            response.sendRedirect(page);
+        }else {
+            response.sendRedirect(request.getContextPath()+"/pages/shared/error_page.jsp");
+        }
     }
 }

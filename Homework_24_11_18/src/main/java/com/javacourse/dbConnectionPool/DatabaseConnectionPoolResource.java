@@ -25,7 +25,7 @@ public class DatabaseConnectionPoolResource {
         try {
             fis = new FileInputStream("E:\\Epam Java Course\\Homework\\JavaExternal\\Homework_24_11_18\\src\\main\\resources\\database.properties");
             property.load(fis);
-            ds.setDriverClassName("com.mysql.jdbc.Driver");
+            ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
             ds.setUrl(property.getProperty("db.host"));
             ds.setUsername(property.getProperty("db.user"));
             ds.setPassword(property.getProperty("db.password"));
