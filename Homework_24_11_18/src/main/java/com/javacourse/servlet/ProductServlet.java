@@ -38,4 +38,8 @@ public class ProductServlet extends HttpServlet {
             request.getRequestDispatcher("pages/userview/products_user.jsp").forward(request, response);
         }
     }
+
+    private void processUser(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException{
+
+    }
 }
