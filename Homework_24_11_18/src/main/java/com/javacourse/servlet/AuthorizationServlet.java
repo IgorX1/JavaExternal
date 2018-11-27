@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.concurrent.atomic.AtomicReference;
 
 @WebServlet(name = "login", urlPatterns = {"/login"})
-public class LoginServlet extends HttpServlet {
+public class AuthorizationServlet extends HttpServlet {
     //case when user submits authorization form
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String userLogin = request.getParameter("login");
@@ -27,11 +27,12 @@ public class LoginServlet extends HttpServlet {
             session.setAttribute("password", userPassword);
             if(userDao.get().getRoleByLoginPassword(userLogin, userPassword)== User.ROLE.ADMIN){
                 session.setAttribute("role", User.ROLE.ADMIN);
-                response.sendRedirect("pages/adminview/products_admin.jsp");
+                //response.sendRedirect("pages/adminview/products_admin.jsp");
             }else if(userDao.get().getRoleByLoginPassword(userLogin, userPassword)== User.ROLE.USER){
                 session.setAttribute("role", User.ROLE.USER);
-                response.sendRedirect("pages/userview/products_user.jsp");
+                //response.sendRedirect("pages/userview/products_user.jsp");
             }
+            response.sendRedirect("/ProductServlet");
         }else {
             response.sendRedirect("/pages/login.jsp");
         }

@@ -31,8 +31,8 @@ public class AuthorizationFilter implements Filter {
 
         String loginURI = req.getContextPath() + "/login";
 
-        List<Product> products = productDAO.findAll();
-        req.setAttribute("products", products);
+        /*List<Product> products = productDAO.findAll();
+        req.setAttribute("products", products);*/
 
         if(isLoggedIn(session) || isLoginRequest(req, loginURI)){
             filterChain.doFilter(servletRequest, servletResponse);
@@ -48,14 +48,8 @@ public class AuthorizationFilter implements Filter {
     }
 
     boolean isLoginRequest(HttpServletRequest request, String loginRequestUri){
-       String r = request.getRequestURI();
        return request.getRequestURI().equals(loginRequestUri);
     }
-
-    boolean doesExistInDB(HttpSession session, AtomicReference<UserDAO> userDao, String login, String password){
-        return userDao.get().userDoesExist(login, password);
-    }
-
 
     @Override
     public void destroy() {
