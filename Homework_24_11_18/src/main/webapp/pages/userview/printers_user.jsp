@@ -14,6 +14,11 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
+<fmt:setLocale value="${sessionScope.lang}"/>
+<fmt:setBundle basename="messages"/>
+
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/styles.css"/>
@@ -22,11 +27,11 @@
 <body>
 <table class="menu">
     <tr>
-        <td><a href="${pageContext.request.contextPath}/ProductServlet">Home</a></td>
-        <td><a href="${pageContext.request.contextPath}/LaptopServlet">Laptops</a></td>
-        <td><a href="${pageContext.request.contextPath}/PrinterServlet">Printers</a></td>
-        <td><a href="${pageContext.request.contextPath}/PcServlet">PCs</a></td>
-        <td><a href="${pageContext.request.contextPath}/logout">Log out</a></td>
+        <td><a href="${pageContext.request.contextPath}/ProductServlet"><fmt:message key="msg.menu.home"/> </a></td>
+        <td><a href="${pageContext.request.contextPath}/LaptopServlet"><fmt:message key="msg.menu.laptops"/> </a></td>
+        <td><a href="${pageContext.request.contextPath}/PrinterServlet"><fmt:message key="msg.menu.printers"/> </a></td>
+        <td><a href="${pageContext.request.contextPath}/PcServlet"><fmt:message key="msg.menu.pcs"/> </a></td>
+        <td><a href="${pageContext.request.contextPath}/logout"><fmt:message key="msg.menu.logout"/> </a></td>
     </tr>
 </table>
 <ul style="list-style: none;">

@@ -20,11 +20,11 @@
 <body>
 <table class="menu">
     <tr>
-        <td><a href="${pageContext.request.contextPath}/ProductServlet">Home</a></td>
-        <td><a href="${pageContext.request.contextPath}/LaptopServlet">Laptops</a></td>
-        <td><a href="${pageContext.request.contextPath}/PrinterServlet">Printers</a></td>
-        <td><a href="${pageContext.request.contextPath}/PcServlet">PCs</a></td>
-        <td><a href="${pageContext.request.contextPath}/logout">Log out</a></td>
+        <td><a href="${pageContext.request.contextPath}/ProductServlet"><fmt:message key="msg.menu.home"/> </a></td>
+        <td><a href="${pageContext.request.contextPath}/LaptopServlet"><fmt:message key="msg.menu.laptops"/> </a></td>
+        <td><a href="${pageContext.request.contextPath}/PrinterServlet"><fmt:message key="msg.menu.printers"/> </a></td>
+        <td><a href="${pageContext.request.contextPath}/PcServlet"><fmt:message key="msg.menu.pcs"/> </a></td>
+        <td><a href="${pageContext.request.contextPath}/logout"><fmt:message key="msg.menu.logout"/> </a></td>
     </tr>
 </table>
 <ul style="list-style: none;">
