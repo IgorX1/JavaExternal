@@ -22,6 +22,10 @@
         <td><a href="${pageContext.request.contextPath}/logout">Log out</a></td>
     </tr>
 </table>
+<ul style="list-style: none;">
+    <li style="display: inline-block;"><a href="?sessionLocale=ukr" title="UA"><img width="30px;" src="../../images/ukraine.jpg"/></a></li>
+    <li style="display: inline-block;"><a href="?sessionLocale=en" title="ENG"><img width="30px;" src="../../images/england.png"/></a></li>
+</ul>
 <h1>All pcs list (USER)</h1>
 <c:forEach var="pc" items="${requestScope.pcs}">
     <ul>
