@@ -5,8 +5,18 @@
          version="3.1">
     <display-name>ShopProject</display-name>
 
+    <!--Code related errors-->
     <error-page>
         <error-code>404</error-code>
+        <location>/pages/shared/error_page.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/pages/shared/error_page.jsp</location>
+    </error-page>
+    <!--Exception related errors-->
+    <error-page>
+        <exception-type>java.lang.Throwable</exception-type >
         <location>/pages/shared/error_page.jsp</location>
     </error-page>
 
