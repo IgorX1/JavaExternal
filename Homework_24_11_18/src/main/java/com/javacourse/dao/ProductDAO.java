@@ -56,7 +56,7 @@ public class ProductDAO extends AbstractDAO<String, Product>{
     public boolean delete(String id) {
         int changeNumber = 0;
         try(Connection con=DatabaseConnectionPoolResource.getConnection();
-            PreparedStatement statement = con.prepareStatement("DELETE FROM product where code=?")){
+            PreparedStatement statement = con.prepareStatement("DELETE FROM product where model=?")){
             statement.setString(1, id);
             changeNumber = statement.executeUpdate();
         }catch (SQLException e){

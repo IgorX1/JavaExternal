@@ -1,4 +1,6 @@
-package com.javacourse.servlet.commandManagement;
+package com.javacourse.servlet.commandManagement.productCommands;
+
+import com.javacourse.servlet.commandManagement.ActionCommand;
 
 public enum ProductCommandEnum {
     ADD{

@@ -1,7 +1,8 @@
-package com.javacourse.servlet.commandManagement;
+package com.javacourse.servlet.commandManagement.productCommands;
 
 import com.javacourse.dao.ProductDAO;
 import com.javacourse.model.Product;
+import com.javacourse.servlet.commandManagement.ActionCommand;
 
 import javax.servlet.http.HttpServletRequest;
 

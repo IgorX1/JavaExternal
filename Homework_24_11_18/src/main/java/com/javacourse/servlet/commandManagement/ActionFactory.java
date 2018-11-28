@@ -1,5 +1,8 @@
 package com.javacourse.servlet.commandManagement;
 
+import com.javacourse.servlet.commandManagement.productCommands.EmptyProductCommand;
+import com.javacourse.servlet.commandManagement.productCommands.ProductCommandEnum;
+
 import javax.servlet.http.HttpServletRequest;
 
 public class ActionFactory {

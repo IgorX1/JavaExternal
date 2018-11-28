@@ -45,6 +45,11 @@
         <li>Model: ${product.model}</li>
         <li>Maker: ${product.maker}</li>
         <li>Type: ${product.type}</li>
+        <form action="${pageContext.request.contextPath}/ProductServlet" method="post">
+            <input type="hidden" name="command" value="delete" />
+            <input type="hidden" name="id" value="${product.model}" />
+            <input type="submit" value="Delete"/>
+        </form>
     </ul><br/>
 </c:forEach>
 </body>
