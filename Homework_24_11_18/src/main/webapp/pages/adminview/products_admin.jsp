@@ -5,9 +5,14 @@
   Time: 23:08
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" session="true" %>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
-<html>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
+<fmt:setLocale value="${sessionScope.lang}"/>
+<fmt:setBundle basename="messages"/>
+
+<html lang="${sessionScope.lang}">
 <head>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/styles.css"/>
     <title>Products</title>
@@ -23,7 +28,7 @@
     </tr>
 </table>
 <h1>All product list -- Home Page</h1>
-<h3>Hello ${sessionScope.login} (${sessionScope.role})</h3>
+<h3><fmt:message key="msg.welcome"/> ${sessionScope.login} (${sessionScope.role})</h3>
 <div>
     <h4><a>Add new item</a></h4>
     <form method="post" action="${pageContext.request.contextPath}/ProductServlet">

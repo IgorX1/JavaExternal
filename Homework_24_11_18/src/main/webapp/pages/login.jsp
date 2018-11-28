@@ -17,7 +17,7 @@
         <input type="radio" name="lang" value="en" required checked>English
     </label>
     <label>
-        <input type="radio" name="lang" value="ua" required>Українська
+        <input type="radio" name="lang" value="ukr" required>Українська
     </label>    <br/>
     <input type="submit" value="Log in"/>
 </form>

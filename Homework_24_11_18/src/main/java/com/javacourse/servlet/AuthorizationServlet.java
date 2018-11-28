@@ -18,6 +18,7 @@ public class AuthorizationServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String userLogin = request.getParameter("login");
         String userPassword = request.getParameter("password");
+        String language = request.getParameter("lang");
 
         HttpSession session = request.getSession();
         @SuppressWarnings("unchecked")
@@ -25,6 +26,7 @@ public class AuthorizationServlet extends HttpServlet {
         if (userDao.get().userDoesExist(userLogin, userPassword)) {
             session.setAttribute("login", userLogin);
             session.setAttribute("password", userPassword);
+            session.setAttribute("lang", language);
             if(userDao.get().getRoleByLoginPassword(userLogin, userPassword)== User.ROLE.ADMIN){
                 session.setAttribute("role", User.ROLE.ADMIN);
             }else if(userDao.get().getRoleByLoginPassword(userLogin, userPassword)== User.ROLE.USER){
