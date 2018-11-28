@@ -39,6 +39,7 @@
         <br/><br/>
         <input type="submit" value="Add item"/>
     </form>
+    ${requestScope.error}
 </div>
 <c:forEach var="product" items="${requestScope.products}">
     <ul>

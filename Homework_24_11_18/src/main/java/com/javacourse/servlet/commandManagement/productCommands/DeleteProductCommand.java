@@ -12,12 +12,10 @@ public class DeleteProductCommand implements ActionCommand {
     @Override
     public String execute(HttpServletRequest request) {
         String id = request.getParameter("id");
-        //TODO: add functionality
         if(productDAO.delete(id)){
-
+            return "/ProductServlet";
         }else {
-
+            return "/ProductServlet?status=unsuccessful";
         }
-        return "/ProductServlet";
     }
 }

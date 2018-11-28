@@ -4,7 +4,7 @@ import com.javacourse.dao.ProductDAO;
 import com.javacourse.model.Product;
 import com.javacourse.model.User;
 import com.javacourse.servlet.commandManagement.ActionCommand;
-import com.javacourse.servlet.commandManagement.ActionFactory;
+import com.javacourse.servlet.commandManagement.productCommands.CRUDProductActionFactory;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -34,6 +34,9 @@ public class ProductServlet extends HttpServlet {
         List<Product> products = productDAO.findAll();
         request.setAttribute("products", products);
 
+        if(request.getParameter("status")!=null)
+            request.setAttribute("error", "Operation Unsuccessful !!!");
+
         HttpSession session = request.getSession();
         User.ROLE role = (User.ROLE) session.getAttribute("role");
         if(role== User.ROLE.ADMIN){
@@ -45,7 +48,7 @@ public class ProductServlet extends HttpServlet {
 
     private void processUser(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException{
         String page = null;
-        ActionCommand command = ActionFactory.defineCommand(request);
+        ActionCommand command = CRUDProductActionFactory.defineCommand(request);
         page = command.execute(request);
         if(page!=null){
             response.sendRedirect(page);

@@ -21,12 +21,9 @@ public class AddProductCommand implements ActionCommand {
 
         Product product = new Product(model, maker, type);
         if(productDAO.create(product)){
-            //return "/ProductServlet";
+            return "/ProductServlet";
         }else{
-            // if insert is unsuccessful
-            //TODO: add functionality
-            //return "/ProductServlet";
+            return "/ProductServlet?status=unsuccessful";
         }
-        return "/ProductServlet";
     }
 }
