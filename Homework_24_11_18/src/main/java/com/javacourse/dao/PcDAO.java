@@ -18,7 +18,6 @@ public class PcDAO extends AbstractDAO<Integer, Pc> {
 
     static {
         logger = Logger.getLogger(PcDAO.class);
-        DOMConfigurator.configure("log/log4j.xml");
     }
 
     @Override
