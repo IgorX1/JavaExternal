@@ -18,7 +18,6 @@ public class PrinterDAO extends AbstractDAO<Integer, Printer>{
 
     static {
         logger = Logger.getLogger(PrinterDAO.class);
-        DOMConfigurator.configure("log/log4j.xml");
     }
 
     @Override

@@ -18,7 +18,6 @@ public class ProductDAO extends AbstractDAO<String, Product>{
 
     public ProductDAO() {
         logger = Logger.getLogger(ProductDAO.class);
-        //DOMConfigurator.configure();
     }
 
     @Override

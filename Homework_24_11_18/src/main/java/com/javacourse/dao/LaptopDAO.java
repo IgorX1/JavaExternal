@@ -15,7 +15,6 @@ public class LaptopDAO extends AbstractDAO<Integer, Laptop> {
 
     static {
         logger = Logger.getLogger(LaptopDAO.class);
-        DOMConfigurator.configure("E:\\Epam Java Course\\Homework\\JavaExternal\\Homework_24_11_18\\log\\log4j.xml");
     }
 
     @Override

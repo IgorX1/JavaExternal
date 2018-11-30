@@ -17,13 +17,13 @@ public class DatabaseConnectionPoolResource {
 
     static {
         logger = Logger.getLogger(DatabaseConnectionPoolResource.class);
-        DOMConfigurator.configure("E:\\Epam Java Course\\Homework\\JavaExternal\\Homework_24_11_18\\log\\log4j.xml");
+        //DOMConfigurator.configure("E:\\Epam Java Course\\Homework\\JavaExternal\\Homework_24_11_18\\log\\log4j.xml");
     }
 
     static {
         FileInputStream fis =null;
         try {
-            fis = new FileInputStream("E:\\Epam Java Course\\Homework\\JavaExternal\\Homework_24_11_18\\src\\main\\resources\\database.properties");
+            fis = new FileInputStream("C:\\Users\\kois\\Desktop\\Java External\\JavaExternal\\Homework_24_11_18\\src\\main\\resources\\database.properties");
             property.load(fis);
             ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
             ds.setUrl(property.getProperty("db.host"));
