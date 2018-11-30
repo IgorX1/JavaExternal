@@ -1,0 +1,22 @@
+.menu{
+    font-size: 24px;
+}
+
+.menu a{
+    color:green;
+    margin-left: 20px;
+}
+
+.menu a:hover{
+    color:blue;
+}
+
+.menu td{
+
+}
+
+.addItem{
+    position: absolute;
+    right:100px;
+    top:100px;
+}
