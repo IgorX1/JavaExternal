@@ -13,6 +13,13 @@ import java.rmi.registry.Registry;
  */
 public class App 
 {
+    /**
+     * Client
+     * @param args
+     * @throws RemoteException
+     * @throws NotBoundException
+     * @throws MalformedURLException
+     */
     public static void main( String[] args ) throws RemoteException, NotBoundException, MalformedURLException {
         try {
             Registry registry = LocateRegistry.getRegistry(1888);

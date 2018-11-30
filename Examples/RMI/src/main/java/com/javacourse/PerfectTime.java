@@ -5,6 +5,9 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
 
+/**
+ * Server
+ */
 public class PerfectTime implements PerfectTimeI {
 
     public PerfectTime() throws RemoteException {
